@@ -63,6 +63,6 @@ if __name__ == "__main__":
     # args = parser.parse_args()
 
     config = Config()
-    for i in range(0,10):
+    for i in range(0,1):
         print("Currently running file index :- ",i)
         main(config, i)
