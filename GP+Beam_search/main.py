@@ -56,9 +56,11 @@ def main(config, file_index):
     run_gp(toolbox, points, seed_expr)
 
 if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser.add_argument('--file_index', type=int, required=True, help='Index of the file to use')
-    args = parser.parse_args()
+    # parser = ArgumentParser()
+    # parser.add_argument('--file_index', type=int, required=True, help='Index of the file to use')
+    # args = parser.parse_args()
 
     config = Config()
-    main(config, args.file_index)
+    for i in range(0,10):
+        print("Currently running file index :- ",i)
+        main(config, i)
