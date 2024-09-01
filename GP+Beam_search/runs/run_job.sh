@@ -13,9 +13,11 @@
 #SBATCH --mail-type=END,FAIL              
 #SBATCH --mail-user=samyakjha71@gmail.com 
 
-module load python pytorch/2.0            # Load necessary modules
+module load python/3.11
+# module load python pytorch/2.0            # Load necessary modules
 
 # Install the required Python packages
+pip install torch 
 pip install deap
 
 # Run your Python script
