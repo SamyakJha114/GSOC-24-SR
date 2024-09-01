@@ -6,12 +6,12 @@
 #SBATCH --nodes=1                         
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=1
-#SBATCH --cpus-per-task=16             
+#SBATCH --cpus-per-task=32          
 #SBATCH --time=00:30:00                   
 #SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs%j.out            
 #SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs%j.err             
 #SBATCH --mail-type=END,FAIL              
-#SBATCH --mail-user=your_email@domain.com 
+#SBATCH --mail-user=samyakjha71@domain.com 
 
 module load python pytorch/2.0            # Load necessary modules
 
