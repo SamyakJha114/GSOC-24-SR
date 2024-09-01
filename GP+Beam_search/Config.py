@@ -14,5 +14,5 @@ class Config:
         self.df_target_path = '/global/homes/s/samyak09/GSOC-SR/FeynmanEquations.csv'
         self.dataset_arrays_path = '/global/homes/s/samyak09/GSOC-SR/dataset_arrays'
         self.model_weights_path = '/global/homes/s/samyak09/GSOC-SR/default/best_checkpoint.pth'
-        self.random_init = True
+        self.random_init = False
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'

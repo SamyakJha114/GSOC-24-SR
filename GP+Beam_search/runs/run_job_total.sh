@@ -8,10 +8,10 @@
 #SBATCH --gpus-per-task=2
 #SBATCH --cpus-per-task=64          
 #SBATCH --time=09:00:00                   
-#SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs_total%j.out            
-#SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs_total%j.err             
+#SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_total%j.out            
+#SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_total%j.err             
 #SBATCH --mail-type=END,FAIL              
-#SBATCH --mail-user=samyakjha71@domain.com 
+#SBATCH --mail-user=samyakjha71@gmail.com 
 
 module load python pytorch/2.0            # Load necessary modules
 

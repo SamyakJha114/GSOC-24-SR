@@ -11,7 +11,7 @@
 #SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_only_gp%j.out            
 #SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_only_gp%j.err             
 #SBATCH --mail-type=END,FAIL              
-#SBATCH --mail-user=samyakjha71@domain.com 
+#SBATCH --mail-user=samyakjha71@gmail.com 
 
 module load python pytorch/2.0            # Load necessary modules
 
