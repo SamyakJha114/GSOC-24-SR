@@ -42,7 +42,7 @@ def main(config, file_index):
         max_input_points=33,
         device=config.device
     )
-    model.load_state_dict(torch.load(config.model_weights_path))
+    model.load_state_dict(torch.load(config.model_weights_path)["state_dict"])
 
     # Generate seed expressions
     random_numbers = [random.randint(0, 999) for _ in range(25)]
