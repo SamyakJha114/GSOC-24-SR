@@ -1,14 +1,17 @@
 #!/bin/bash
-#SBATCH --job-name=gp_run                 # Job name
-#SBATCH --account=m4392                   # Project account
-#SBATCH --partition=cpu                   # Use CPU partition
-#SBATCH --nodes=1                         # Number of nodes
-#SBATCH --ntasks-per-node=64              # Number of CPU cores per node
-#SBATCH --time=00:30:00                   # Time limit (hh:mm:ss)
-#SBATCH --output=gp_run_%j.out            # Standard output and error log
-#SBATCH --error=gp_run_%j.err             # Error log
-#SBATCH --mail-type=END,FAIL              # Notifications for job done & fail
-#SBATCH --mail-user=your_email@domain.com # Your email for notifications
+
+#SBATCH -A m4392                 
+#SBATCH -C gpu&hbm80g
+#SBATCH -q shared                  
+#SBATCH --nodes=1                         
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-task=1
+#SBATCH --cpus-per-task=16             
+#SBATCH --time=00:30:00                   
+#SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs%j.out            
+#SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs%j.err             
+#SBATCH --mail-type=END,FAIL              
+#SBATCH --mail-user=your_email@domain.com 
 
 module load python pytorch/2.0            # Load necessary modules
 
