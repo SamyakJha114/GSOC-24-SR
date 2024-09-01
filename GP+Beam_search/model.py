@@ -30,7 +30,7 @@ def apply_grammar_rules(seq, logits):
     elif last_token in range(4, 6):  # s+ or s-
         valid_token_mask[:, 6:16] = 0  # Constants
     else:
-        valid_token_mask[:, 1:] = 0  # Default to allowing all except <sos>
+        valid_token_mask[:, 3:] = 0  # Default to allowing all except <sos>
 
     return logits + valid_token_mask
 
@@ -88,13 +88,13 @@ class PositionalEncoding(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.register_buffer('pos_embedding_1', self.pos_embedding)
 
-    def forward(self, token_embedding:):
+    def forward(self, token_embedding):
 #         print(token_embedding.shape)
-        token_embedding = token_embedding.to(device)
-        self.pos_embedding = self.pos_embedding.to(device)
+        token_embedding = token_embedding
+        self.pos_embedding = self.pos_embedding
 #         token_embedding = token_embedding
 #         self.pos_embedding = self.pos_embedding
-        return self.dropout(token_embedding + self.pos_embedding[:, :token_embedding.size(1), :])
+        return self.dropout(token_embedding + self.pos_embedding[:,:token_embedding.size(1), :])
 
     
 class LinearPointEmbedder(nn.Module):
@@ -155,8 +155,8 @@ class Model_seq2seq(nn.Module):
                 src_padding_mask: Tensor,
                 tgt_padding_mask: Tensor,
                 memory_key_padding_mask: Tensor):
-        src_emb = self.src_tok_emb(src)
-        tgt_emb = self.positional_encoding(self.tgt_tok_emb(trg))
+        src_emb = self.src_tok_emb(src).to(self.device)
+        tgt_emb = self.positional_encoding(self.tgt_tok_emb(trg)).to(self.device)
 
         outs = self.transformer(src_emb, tgt_emb, src_mask, tgt_mask, None,
                                 src_padding_mask, tgt_padding_mask, memory_key_padding_mask)
@@ -180,6 +180,8 @@ class Model_seq2seq(nn.Module):
             required_args = 2
         elif op in range(19, 47):  # Unary operators
             required_args = 1
+        else :
+            return seq
             
             # Not an operator
 
@@ -286,10 +288,10 @@ class Model_seq2seq(nn.Module):
 
         # If no sequence ended with <eos>, ensure correctness and return the best candidate
         if not completed_sequences:
-            completed_sequences = [self.finish_tokens(seq, memory, src_padding_mask, beam_size) for seq, score in beam]
+            completed_sequences = [(self.finish_tokens(seq, memory, src_padding_mask, beam_size),score) for seq, score in beam]
 
         # Sort completed sequences by score and return the top ones
         completed_sequences = sorted(completed_sequences, key=lambda x: x[1], reverse=True)
 
-        return completed_sequences[:3]
+        return completed_sequences[:beam_size]
     
