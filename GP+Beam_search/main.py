@@ -50,6 +50,8 @@ def main(config, file_index):
         (datasets['test'], random_numbers, file_index, config.device, model, decoder_tokenizer)
     )
 
+    if config.random_init :
+        seed_expr = []
     # Genetic Programming setup
     pset = make_pset(num_vars)
     toolbox = setup_toolbox(pset, points)
