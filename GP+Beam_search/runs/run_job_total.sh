@@ -19,4 +19,4 @@ module load python pytorch/2.0            # Load necessary modules
 pip install deap
 
 # Run your Python script
-srun python main.py
+srun python GSOC-24-SR/GP+Beam_search/main.py
