@@ -80,12 +80,19 @@ def evalSymbReg(individual, points,pset):
 #         results = [future.result() for future in concurrent.futures.as_completed(futures)]
 #     return results
 
+def evaluate_chunk(eval_func, chunk):
+    """Evaluate a chunk of individuals."""
+    return [eval_func(ind) for ind in chunk]
+
 def parallel_evalSymbReg(eval_func, individuals, num_cores):
+    # Divide the population into chunks equal to the number of cores
     chunks = chunkify(individuals, num_cores)
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-        results = executor.map(lambda chunk: [eval_func(ind) for ind in chunk], chunks)
-
+        # Map the evaluation function to each chunk
+        results = executor.map(evaluate_chunk, [eval_func] * len(chunks), chunks)
+    
+    # Flatten the list of results
     return [fit for sublist in results for fit in sublist]
 
 def parallel_e_lexicase_selection(individuals, k, points, pset):
