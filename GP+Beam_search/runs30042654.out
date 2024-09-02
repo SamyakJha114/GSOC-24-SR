@@ -1,3 +1,0 @@
-Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutter/pytorch2.0.1/lib/python3.11/site-packages (1.4.1)
-Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
