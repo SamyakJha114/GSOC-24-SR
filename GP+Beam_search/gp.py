@@ -65,24 +65,24 @@ def make_pset(num_vars):
     return pset
 
 
-def evalSymbReg(individual, points, toolbox):
-    func = toolbox.compile(expr=individual) 
+def evalSymbReg(individual, points,pset):
+    func = gp.compile(expr=individual, pset=pset)
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
 
-def parallel_evalSymbReg(evalSymbReg,individuals, points, toolbox,num_cores):
+def parallel_evalSymbReg(eval_func, individuals, points, num_cores):
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-        futures = [executor.submit(evalSymbReg, ind, points, toolbox) for ind in individuals]
+        futures = [executor.submit(eval_func, ind, points) for ind in individuals]
         results = [future.result() for future in concurrent.futures.as_completed(futures)]
     return results
 
-def e_lexicase_selection(individuals, k, points, toolbox):
+def e_lexicase_selection(individuals, k, points, pset):
     selected = []
     for _ in range(k):
         remaining = individuals[:]
         random.shuffle(points)  # Shuffle the test cases
         for point in points:
-            errors = [abs(evalSymbReg(ind, [point], toolbox)[0]) for ind in remaining]
+            errors = [abs(evalSymbReg(ind, [point], pset)[0]) for ind in remaining]
             min_error = min(errors)
             remaining = [ind for ind, error in zip(remaining, errors) if error == min_error]
             if len(remaining) == 1:
@@ -114,9 +114,9 @@ def setup_toolbox(pset, points):
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
     toolbox.register("population", seed_population, toolbox=toolbox)
     toolbox.register("compile", gp.compile, pset=pset)
-    toolbox.register("evaluate", evalSymbReg, points=points, toolbox=toolbox)
-    toolbox.register("map", parallel_evalSymbReg, points=points, toolbox=toolbox,num_cores = num_cores)
-    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points, toolbox)) 
+    toolbox.register("evaluate", evalSymbReg, points=points, pset=pset)
+    toolbox.register("map", parallel_evalSymbReg, points=points,num_cores = num_cores)
+    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points,pset)) 
     toolbox.register("mate", gp.cxOnePoint)
     toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
 
@@ -130,7 +130,7 @@ def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)
 
     # Parallel fitness evaluation of the entire population
-    fitness_results = parallel_evalSymbReg(evalSymbReg,pop, points, toolbox, num_cores)
+    fitness_results = parallel_evalSymbReg(evalSymbReg,pop, points, num_cores)
     for ind, fit in zip(pop, fitness_results):
         ind.fitness.values = fit
 
