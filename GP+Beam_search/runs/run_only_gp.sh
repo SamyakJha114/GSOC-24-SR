@@ -21,4 +21,4 @@ pip install torch
 pip install deap
 
 # Run your Python script
-srun python GSOC-24-SR/GP+Beam_search/main.py
+srun python main.py

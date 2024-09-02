@@ -10,7 +10,7 @@ from utils import generate_seed_expressions
 from deap import tools, algorithms
 from gp import make_pset, setup_toolbox,run_gp
 from model import Model_seq2seq
-from config import Config
+from Config import Config
 
 def main(config, file_index):
     # Set random seeds for reproducibility

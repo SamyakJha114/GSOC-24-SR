@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/main.py", line 13, in <module>
+    from config import Config
+ModuleNotFoundError: No module named 'config'
+srun: error: nid008681: task 0: Exited with exit code 1
+srun: Terminating StepId=30043729.0
