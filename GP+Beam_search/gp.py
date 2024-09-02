@@ -82,7 +82,7 @@ def e_lexicase_selection(individuals, k, points):
     return selected
 
     # Seed population with predefined solutions
-def seed_population(pop_size,seed_exprs,pset):
+def seed_population(pop_size,seed_exprs,pset,toolbox):
     population = []
     count = 0
     for expr in seed_exprs:
@@ -102,7 +102,7 @@ def setup_toolbox(pset, points):
     toolbox = base.Toolbox()
     toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_=2)
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
-    toolbox.register("population", seed_population)
+    toolbox.register("population", seed_population,toolbox=toolbox)
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, toolbox=toolbox)
     toolbox.register("select", e_lexicase_selection, toolbox=toolbox)
