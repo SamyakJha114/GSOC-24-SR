@@ -90,8 +90,8 @@ class PositionalEncoding(nn.Module):
 
     def forward(self, token_embedding):
 #         print(token_embedding.shape)
-        token_embedding = token_embedding
-        self.pos_embedding = self.pos_embedding
+        token_embedding = token_embedding.to('cuda')
+        self.pos_embedding = self.pos_embedding.to('cuda')
 #         token_embedding = token_embedding
 #         self.pos_embedding = self.pos_embedding
         return self.dropout(token_embedding + self.pos_embedding[:,:token_embedding.size(1), :])
