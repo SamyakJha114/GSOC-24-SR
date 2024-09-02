@@ -56,6 +56,7 @@ operators = {
     sp.asech: 'asech',
     sp.acsch: 'acsch',
     sp.Min: 'min',
+    sp.Max: 'max',
     # Derivative
     sp.Derivative: 'derivative',
 }
@@ -85,6 +86,8 @@ operators_nargs = {
     'ln': 1,
     'abs': 1,
     'sign': 1,
+    'max': 2,
+    'min': 2,
     # Trigonometric Functions
     'sin': 1,
     'cos': 1,
@@ -141,18 +144,23 @@ integers_types = [
         sp.core.numbers.Zero,
         ]
 
-numbers_types = integers_types + [sp.core.numbers.Rational,
-        sp.core.numbers.Half, sp.core.numbers.Exp1, sp.core.numbers.Pi, "<class 'sympy.core.numbers.Pi'>",
-        sp.core.numbers.ImaginaryUnit]
+numbers_types = integers_types + [
+    sp.core.numbers.Rational,
+    sp.core.numbers.Half,
+    sp.core.numbers.Exp1,
+    sp.core.numbers.Pi,
+    sp.core.numbers.ImaginaryUnit,
+    sp.core.numbers.Float,
+]
 
 # don't continue evaluating at these, but stop
 atoms = [
-        str,
-        sp.core.symbol.Symbol,
-        sp.core.numbers.Exp1,
-        sp.core.numbers.Pi,
-        "<class 'sympy.core.numbers.Pi'>",
-        ] + numbers_types
+    str,
+    sp.core.symbol.Symbol,
+    sp.core.numbers.Exp1,
+    sp.core.numbers.Pi,
+    sp.core.numbers.ImaginaryUnit,
+] + numbers_types
 
 
 Inverse_trig = {
@@ -309,7 +317,7 @@ def sympy_to_prefix_rec(expression, ret):
     if f in atoms:
         if type(expression) in numbers_types:
             return ret + format_number(expression)
-        return ret+[str(expression)]
+        return ret + [str(expression)]
     f_str = operators[f]
     f_nargs = operators_nargs[f_str]
     args = expression.args
@@ -362,8 +370,8 @@ def repeat_operator_until_correct_binary(op, args, ret=[]):
 def format_number(number):
     if type(number) in integers_types:
         return format_integer(number)
-    elif type(number) == sp.core.numbers.Rational:
-        return format_rational(number)
+    elif type(number) == sp.core.numbers.Rational or type(number) == sp.core.numbers.Float:
+        return format_rational(sp.Rational(number))
     elif type(number) == sp.core.numbers.Half:
         return format_half()
     elif type(number) == sp.core.numbers.Exp1:
@@ -374,6 +382,9 @@ def format_number(number):
         return format_imaginary_unit()
     else:
         raise NotImplementedError
+        
+def format_float(number):
+    return [str(number)]
 
 def format_exp1():
     return ['E']
@@ -527,13 +538,18 @@ class DecoderTokenizer(Tokenizer):
 def convert_to_functional_form(expr):
     # Ensure the input is a SymPy expression
     expr = sp.sympify(expr)
+    
     for key,value in operators.items():
         if isinstance(expr, key):
             args = expr.args
             return f"{value}({', '.join(convert_to_functional_form(arg) for arg in args)})"
+        
     for item in numbers_types:
-        if type(expr) == item:
+        if type(expr) == sp.core.numbers.Rational or type(expr) == sp.core.numbers.Float:
+            return f"div({str(sp.Rational(expr).p)}, {str(sp.Rational(expr).q)})"
+        elif type(expr) == item:
             return str(expr)
+        
     if isinstance(expr, sp.Symbol):
         return str(expr)
     else:
