@@ -89,35 +89,43 @@ def parallel_evalSymbReg(eval_func, individuals,num_cores):
 #                 break
 #         selected.append(random.choice(remaining))
 #     return selected
-def parallel_e_lexicase_selection(individuals, k, points,pset):
+def parallel_e_lexicase_selection(individuals, k, points, pset):
     num_cores = multiprocessing.cpu_count()
     selected = []
     
-    # Parallel computation of errors for all individuals and all points
+    # Step 1: Parallel computation of errors for all individuals at all points
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
         futures = {
-            (ind, point): executor.submit(evalSymbReg, ind, [point], pset)
-            for ind in individuals for point in points
+            (i, point): executor.submit(evalSymbReg, ind, [point],pset)
+            for i, ind in enumerate(individuals) for point in points
         }
         errors_map = {
-            (ind, point): abs(future.result()[0])
-            for (ind, point), future in futures.items()
+            (i, point): abs(future.result()[0])
+            for (i, point), future in futures.items()
         }
 
+    # Step 2: Sequential lexicase selection process with epsilon
     for _ in range(k):
-        remaining = individuals[:]
+        remaining_indices = list(range(len(individuals)))
         random.shuffle(points)  # Shuffle the test cases
 
         for point in points:
             # Retrieve the precomputed errors for this point
-            errors = [errors_map[(ind, point)] for ind in remaining]
+            errors = [errors_map[(i, point)] for i in remaining_indices]
             min_error = min(errors)
-            remaining = [ind for ind, error in zip(remaining, errors) if error == min_error]
+            epsilon_threshold = min_error+ (min_error/2)
             
-            if len(remaining) == 1:
+            # Keep individuals with error within epsilon range
+            remaining_indices = [
+                i for i, error in zip(remaining_indices, errors)
+                if error <= epsilon_threshold
+            ]
+            
+            if len(remaining_indices) == 1:
                 break
         
-        selected.append(random.choice(remaining))
+        # Select one individual from the remaining ones
+        selected.append(individuals[random.choice(remaining_indices)])
     
     return selected
 
