@@ -70,7 +70,7 @@ def evalSymbReg(individual, points,pset):
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
 
-def parallel_evalSymbReg(eval_func, individuals, points, num_cores):
+def parallel_evalSymbReg(eval_func, individuals,num_cores):
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
         futures = [executor.submit(eval_func, ind) for ind in individuals]
         results = [future.result() for future in concurrent.futures.as_completed(futures)]
@@ -146,7 +146,7 @@ def setup_toolbox(pset, points):
     toolbox.register("population", seed_population, toolbox=toolbox)
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, pset=pset)
-    toolbox.register("map", parallel_evalSymbReg, points=points,num_cores = num_cores)
+    toolbox.register("map", parallel_evalSymbReg,num_cores = num_cores)
     toolbox.register("select", lambda individuals, k: parallel_e_lexicase_selection(individuals, k, points,pset)) 
     toolbox.register("mate", gp.cxOnePoint)
     toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
