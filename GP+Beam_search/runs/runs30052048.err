@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/main.py", line 68, in <module>
+    main(config, i)
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/main.py", line 30, in main
+    points, num_vars = load_data(config, file_index)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/data_preprocessing.py", line 95, in load_data
+    with open(config.input_path + config.test_file_paths[file_index]) as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/global/homes/s/samyak09/GSOC-SR/Feynman_with_unitsI.6.2a'
+srun: error: nid008357: task 0: Exited with exit code 1
+srun: Terminating StepId=30052048.0

@@ -92,7 +92,7 @@ def get_datasets(df, input_df, dataset_dir):
     return datasets
 
 def load_data(config, file_index):
-    with open(config.input_path + config.test_file_paths[file_index]) as file:
+    with open(config.input_path + '/' + config.test_file_paths[file_index]) as file:
         data = file.readlines()
 
     arr = np.array([i.split() for i in data], dtype=np.float32)
