@@ -95,14 +95,15 @@ def parallel_evalSymbReg(eval_func, individuals, num_cores):
     # Flatten the list of results
     return [fit for sublist in results for fit in sublist]
 
-def compute_errors(individuals_chunk, points, pset):
+def compute_errors(individuals_chunk, start_index, points, pset):
     """Compute errors for a chunk of individuals."""
     errors_map = {}
-    for i, ind in enumerate(individuals_chunk):
+    for local_i, ind in enumerate(individuals_chunk):
+        global_i = start_index + local_i
         for point in points:
-            key = (tuple(point[0]), point[1])  # Convert the first element of point to a tuple
+            key = (global_i, (tuple(point[0]), point[1]))  # Use global index here
             error = abs(evalSymbReg(ind, [point], pset)[0])
-            errors_map[(i, key)] = error
+            errors_map[key] = error
     return errors_map
 
 def parallel_e_lexicase_selection(individuals, k, points, pset):
@@ -110,11 +111,19 @@ def parallel_e_lexicase_selection(individuals, k, points, pset):
     selected = []
 
     # Step 1: Divide the population into chunks equal to the number of cores
-    chunks = chunkify(individuals, num_cores)
+    chunk_size = len(individuals) // num_cores
+    chunks = [individuals[i * chunk_size:(i + 1) * chunk_size] for i in range(num_cores)]
+    # Handle remainder individuals
+    if len(individuals) % num_cores:
+        chunks.append(individuals[num_cores * chunk_size:])
 
     # Step 2: Parallel computation of errors for each chunk
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-        results = executor.map(compute_errors, chunks, [points] * len(chunks), [pset] * len(chunks))
+        futures = [
+            executor.submit(compute_errors, chunk, i * chunk_size, points, pset)
+            for i, chunk in enumerate(chunks)
+        ]
+        results = [future.result() for future in concurrent.futures.as_completed(futures)]
 
     # Flatten the errors map
     errors_map = {}
