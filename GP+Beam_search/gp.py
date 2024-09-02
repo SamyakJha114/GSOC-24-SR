@@ -4,6 +4,7 @@ import numpy as np
 from deap import base, creator, tools, gp, algorithms
 import concurrent.futures
 import multiprocessing
+import os
 import random
 
 def logabs(x1):
@@ -90,7 +91,7 @@ def parallel_evalSymbReg(eval_func, individuals,num_cores):
 #         selected.append(random.choice(remaining))
 #     return selected
 def parallel_e_lexicase_selection(individuals, k, points, pset):
-    num_cores = multiprocessing.cpu_count()
+    num_cores = os.cpu_count()
     selected = []
 
     # Step 1: Parallel computation of errors for all individuals at all points
@@ -148,7 +149,7 @@ def seed_population(pop_size,seed_exprs,pset,toolbox):
     return population
 
 def setup_toolbox(pset, points):
-    num_cores = multiprocessing.cpu_count()
+    num_cores = os.cpu_count()
     toolbox = base.Toolbox()
     toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_=2)
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
@@ -164,7 +165,9 @@ def setup_toolbox(pset, points):
 
 def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     if num_cores is None:
-        num_cores = multiprocessing.cpu_count()
+        num_cores = os.cpu_count()
+
+    print("num_cores ", num_cores)
 
     pop_size = 100
     pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)

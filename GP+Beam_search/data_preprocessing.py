@@ -108,7 +108,7 @@ def load_data(config, file_index):
         num_vars = count
         points.append((temp, i[-1]))
     
-    points = points[:2000]
+    points = points[:20000]
     return points, num_vars
 
 def preprocess_data(config):
