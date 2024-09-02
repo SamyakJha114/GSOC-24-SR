@@ -47,7 +47,7 @@ def main(config, file_index):
     # Generate seed expressions
     random_numbers = [random.randint(0, 999) for _ in range(25)]
     seed_expr = generate_seed_expressions(
-        (datasets['test'], random_numbers, file_index, config.device, model, decoder_tokenizer)
+        datasets['test'], random_numbers, file_index, config.device, model, decoder_tokenizer
     )
 
     if config.random_init :
