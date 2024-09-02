@@ -67,13 +67,13 @@ def evalSymbReg(individual, points,toolbox):
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
 
-def e_lexicase_selection(individuals, k, points):
+def e_lexicase_selection(individuals, k, points, toolbox):
     selected = []
     for _ in range(k):
         remaining = individuals[:]
         random.shuffle(points)  # Shuffle the test cases
         for point in points:
-            errors = [abs(evalSymbReg(ind, [point])[0]) for ind in remaining]
+            errors = [abs(evalSymbReg(ind, [point], toolbox)[0]) for ind in remaining]
             min_error = min(errors)
             remaining = [ind for ind, error in zip(remaining, errors) if error == min_error]
             if len(remaining) == 1:
@@ -105,7 +105,7 @@ def setup_toolbox(pset, points):
     toolbox.register("population", seed_population,toolbox=toolbox)
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, toolbox=toolbox)
-    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points)) 
+    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points,toolbox)) 
     toolbox.register("mate", gp.cxOnePoint)
     toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
     toolbox.register("map", map)
