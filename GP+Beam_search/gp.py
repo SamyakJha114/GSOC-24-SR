@@ -89,7 +89,7 @@ def parallel_evalSymbReg(eval_func, individuals,num_cores):
 #                 break
 #         selected.append(random.choice(remaining))
 #     return selected
-def parallel_e_lexicase_selection(evalSymbReg, individuals, k, points,pset):
+def parallel_e_lexicase_selection(individuals, k, points,pset):
     num_cores = multiprocessing.cpu_count()
     selected = []
     
