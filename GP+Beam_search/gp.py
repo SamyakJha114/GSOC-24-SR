@@ -2,6 +2,8 @@ import math
 import operator
 import numpy as np
 from deap import base, creator, tools, gp, algorithms
+import concurrent.futures
+import multiprocessing
 import random
 
 def logabs(x1):
@@ -62,10 +64,17 @@ def make_pset(num_vars):
     pset.renameArguments(**rename_kwargs)
     return pset
 
-def evalSymbReg(individual, points,toolbox):
+
+def evalSymbReg(individual, points, toolbox):
     func = toolbox.compile(expr=individual) 
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
+
+def parallel_evalSymbReg(evalSymbReg,individuals, points, toolbox,num_cores):
+    with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
+        futures = [executor.submit(evalSymbReg, ind, points, toolbox) for ind in individuals]
+        results = [future.result() for future in concurrent.futures.as_completed(futures)]
+    return results
 
 def e_lexicase_selection(individuals, k, points, toolbox):
     selected = []
@@ -99,26 +108,31 @@ def seed_population(pop_size,seed_exprs,pset,toolbox):
     return population
 
 def setup_toolbox(pset, points):
+    num_cores = multiprocessing.cpu_count()
     toolbox = base.Toolbox()
     toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_=2)
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
-    toolbox.register("population", seed_population,toolbox=toolbox)
+    toolbox.register("population", seed_population, toolbox=toolbox)
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, toolbox=toolbox)
-    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points,toolbox)) 
+    toolbox.register("map", parallel_evalSymbReg, points=points, toolbox=toolbox,num_cores = num_cores)
+    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points, toolbox)) 
     toolbox.register("mate", gp.cxOnePoint)
     toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
-    toolbox.register("map", map)
-    
+
     return toolbox
 
-def run_gp(toolbox, points, seed_expr,pset):
-    pop_size = 100
-    pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr,pset = pset)
+def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
+    if num_cores is None:
+        num_cores = multiprocessing.cpu_count()
 
-    # Evaluate the entire population
-    for ind in pop:
-        ind.fitness.values = toolbox.evaluate(ind, points=points, toolbox=toolbox)
+    pop_size = 100
+    pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)
+
+    # Parallel fitness evaluation of the entire population
+    fitness_results = parallel_evalSymbReg(evalSymbReg,pop, points, toolbox, num_cores)
+    for ind, fit in zip(pop, fitness_results):
+        ind.fitness.values = fit
 
     hof = tools.HallOfFame(1)
     stats = tools.Statistics(lambda ind: ind.fitness.values)
@@ -140,5 +154,5 @@ def run_gp(toolbox, points, seed_expr,pset):
     TSS = 0.0
     mean_y = sum(y for _, y in points) / len(points)
     for _, y in points:
-        TSS += (y - mean_y)**2
-    print("R2_score:", float(hof[0].fitness.values[0]) / TSS)
+        TSS += (y - mean_y) ** 2
+    print("R2_score:", 1 - (float(hof[0].fitness.values[0]) / TSS))
