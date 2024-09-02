@@ -89,18 +89,18 @@ def parallel_evalSymbReg(eval_func, individuals,num_cores):
 #                 break
 #         selected.append(random.choice(remaining))
 #     return selected
-def parallel_e_lexicase_selection(individuals, k, points, pset):
+def parallel_e_lexicase_selection(evalSymbReg, individuals, k, points,pset):
     num_cores = multiprocessing.cpu_count()
     selected = []
     
     # Step 1: Parallel computation of errors for all individuals at all points
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
         futures = {
-            (i, point): executor.submit(evalSymbReg, ind, [point],pset)
+            (i, tuple(point) if isinstance(point, list) else point): executor.submit(evalSymbReg, ind, [point],pset)
             for i, ind in enumerate(individuals) for point in points
         }
         errors_map = {
-            (i, point): abs(future.result()[0])
+            (i, tuple(point) if isinstance(point, list) else point): abs(future.result()[0])
             for (i, point), future in futures.items()
         }
 
@@ -110,10 +110,11 @@ def parallel_e_lexicase_selection(individuals, k, points, pset):
         random.shuffle(points)  # Shuffle the test cases
 
         for point in points:
+            point = tuple(point) if isinstance(point, list) else point  # Convert to tuple if necessary
             # Retrieve the precomputed errors for this point
             errors = [errors_map[(i, point)] for i in remaining_indices]
             min_error = min(errors)
-            epsilon_threshold = min_error+ (min_error/2)
+            epsilon_threshold = min_error + (min_error/2)
             
             # Keep individuals with error within epsilon range
             remaining_indices = [
