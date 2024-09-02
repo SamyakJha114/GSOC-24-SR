@@ -65,47 +65,55 @@ def make_pset(num_vars):
     pset.renameArguments(**rename_kwargs)
     return pset
 
+def chunkify(lst, n):
+    """Divide a list into n approximately equal-sized chunks."""
+    return [lst[i::n] for i in range(n)]
 
 def evalSymbReg(individual, points,pset):
     func = gp.compile(expr=individual, pset=pset)
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
 
-def parallel_evalSymbReg(eval_func, individuals,num_cores):
-    with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-        futures = [executor.submit(eval_func, ind) for ind in individuals]
-        results = [future.result() for future in concurrent.futures.as_completed(futures)]
-    return results
+# def parallel_evalSymbReg(eval_func, individuals,num_cores):
+#     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
+#         futures = [executor.submit(eval_func, ind) for ind in individuals]
+#         results = [future.result() for future in concurrent.futures.as_completed(futures)]
+#     return results
 
-# def e_lexicase_selection(individuals, k, points, pset):
-#     selected = []
-#     for _ in range(k):
-#         remaining = individuals[:]
-#         random.shuffle(points)  # Shuffle the test cases
-#         for point in points:
-#             errors = [abs(evalSymbReg(ind, [point], pset)[0]) for ind in remaining]
-#             min_error = min(errors)
-#             remaining = [ind for ind, error in zip(remaining, errors) if error == min_error]
-#             if len(remaining) == 1:
-#                 break
-#         selected.append(random.choice(remaining))
-#     return selected
+def parallel_evalSymbReg(eval_func, individuals, num_cores):
+    chunks = chunkify(individuals, num_cores)
+
+    with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
+        results = executor.map(lambda chunk: [eval_func(ind) for ind in chunk], chunks)
+
+    return [fit for sublist in results for fit in sublist]
+
 def parallel_e_lexicase_selection(individuals, k, points, pset):
-    num_cores = os.cpu_count()
+    num_cores = multiprocessing.cpu_count()
     selected = []
 
-    # Step 1: Parallel computation of errors for all individuals at all points
-    with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-        futures = {
-            (i, (tuple(point[0]), point[1])): executor.submit(evalSymbReg, ind, [point], pset)
-            for i, ind in enumerate(individuals) for point in points
-        }
-        errors_map = {
-            (i, (tuple(point[0]), point[1])): abs(future.result()[0])
-            for (i, point), future in futures.items()
-        }
+    # Step 1: Divide the population into chunks equal to the number of cores
+    chunks = chunkify(individuals, num_cores)
 
-    # Step 2: Sequential lexicase selection process with epsilon
+    def compute_errors(chunk):
+        errors_map = {}
+        for i, ind in enumerate(chunk):
+            for point in points:
+                key = (tuple(point[0]), point[1])  # Convert the first element of point to a tuple
+                error = abs(evalSymbReg(ind, [point], pset)[0])
+                errors_map[(i, key)] = error
+        return errors_map
+
+    # Step 2: Parallel computation of errors for each chunk
+    with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
+        results = executor.map(compute_errors, chunks)
+
+    # Flatten the errors map
+    errors_map = {}
+    for result in results:
+        errors_map.update(result)
+
+    # Step 3: Sequential lexicase selection process with epsilon
     for _ in range(k):
         remaining_indices = list(range(len(individuals)))
         random.shuffle(points)  # Shuffle the test cases
@@ -149,7 +157,7 @@ def seed_population(pop_size,seed_exprs,pset,toolbox):
     return population
 
 def setup_toolbox(pset, points):
-    num_cores = os.cpu_count()
+    num_cores = multiprocessing.cpu_count()
     toolbox = base.Toolbox()
     toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_=2)
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
@@ -165,7 +173,7 @@ def setup_toolbox(pset, points):
 
 def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     if num_cores is None:
-        num_cores = os.cpu_count()
+        num_cores = multiprocessing.cpu_count()
 
     print("num_cores ", num_cores)
 
