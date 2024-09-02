@@ -105,7 +105,7 @@ def setup_toolbox(pset, points):
     toolbox.register("population", seed_population,toolbox=toolbox)
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, toolbox=toolbox)
-    toolbox.register("select", e_lexicase_selection, toolbox=toolbox)
+    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points)) 
     toolbox.register("mate", gp.cxOnePoint)
     toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
     toolbox.register("map", map)
