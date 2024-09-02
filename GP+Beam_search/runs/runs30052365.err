@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 2606, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 2630, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 100
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/main.py", line 68, in <module>
+    main(config, i)
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/main.py", line 31, in main
+    train_df, df_target, datasets = preprocess_data(config)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/data_preprocessing.py", line 116, in preprocess_data
+    df_target = load_and_clean_data(config.df_target_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/data_preprocessing.py", line 39, in load_and_clean_data
+    formula = df_target['Formula'][i]
+              ~~~~~~~~~~~~~~~~~~~~^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/pandas/core/series.py", line 1040, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/pandas/core/series.py", line 1156, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 100
+srun: error: nid008396: task 0: Exited with exit code 1
+srun: Terminating StepId=30052365.0

@@ -11,7 +11,7 @@ class Config:
             'I.43.31', 'II.4.23', 'II.21.32', 'II.35.21', 'II.38.3'
         ]
         self.train_df_path = '/global/homes/s/samyak09/GSOC-SR/train_df.csv'
-        self.df_target_path = '/global/homes/s/samyak09/GSOC-SR/FeynmanEquations.csv'
+        self.df_target_path = '/global/homes/s/samyak09/GSOC-SR/FeynmanEquationsModified.csv'
         self.dataset_arrays_path = '/global/homes/s/samyak09/GSOC-SR/dataset_arrays'
         self.model_weights_path = '/global/homes/s/samyak09/GSOC-SR/default/best_checkpoint.pth'
         self.random_init = False

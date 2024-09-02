@@ -113,6 +113,7 @@ def load_data(config, file_index):
 def preprocess_data(config):
     train_df = pd.read_csv(config.train_df_path)
     train_df.rename(columns={'filename': 'Filename'}, inplace=True)
-    df_target = load_and_clean_data(config.df_target_path)
+    df_target = pd.read_csv(config.df_target_path)
+    # df_target = load_and_clean_data(config.df_target_path)
     datasets = get_datasets(df_target, train_df, config.dataset_arrays_path)
     return train_df, df_target, datasets
