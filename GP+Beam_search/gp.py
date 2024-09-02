@@ -72,22 +72,53 @@ def evalSymbReg(individual, points,pset):
 
 def parallel_evalSymbReg(eval_func, individuals, points, num_cores):
     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-        futures = [executor.submit(eval_func, ind, points) for ind in individuals]
+        futures = [executor.submit(eval_func, ind) for ind in individuals]
         results = [future.result() for future in concurrent.futures.as_completed(futures)]
     return results
 
-def e_lexicase_selection(individuals, k, points, pset):
+# def e_lexicase_selection(individuals, k, points, pset):
+#     selected = []
+#     for _ in range(k):
+#         remaining = individuals[:]
+#         random.shuffle(points)  # Shuffle the test cases
+#         for point in points:
+#             errors = [abs(evalSymbReg(ind, [point], pset)[0]) for ind in remaining]
+#             min_error = min(errors)
+#             remaining = [ind for ind, error in zip(remaining, errors) if error == min_error]
+#             if len(remaining) == 1:
+#                 break
+#         selected.append(random.choice(remaining))
+#     return selected
+def parallel_e_lexicase_selection(individuals, k, points,pset):
+    num_cores = multiprocessing.cpu_count()
     selected = []
+    
+    # Parallel computation of errors for all individuals and all points
+    with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
+        futures = {
+            (ind, point): executor.submit(evalSymbReg, ind, [point], pset)
+            for ind in individuals for point in points
+        }
+        errors_map = {
+            (ind, point): abs(future.result()[0])
+            for (ind, point), future in futures.items()
+        }
+
     for _ in range(k):
         remaining = individuals[:]
         random.shuffle(points)  # Shuffle the test cases
+
         for point in points:
-            errors = [abs(evalSymbReg(ind, [point], pset)[0]) for ind in remaining]
+            # Retrieve the precomputed errors for this point
+            errors = [errors_map[(ind, point)] for ind in remaining]
             min_error = min(errors)
             remaining = [ind for ind, error in zip(remaining, errors) if error == min_error]
+            
             if len(remaining) == 1:
                 break
+        
         selected.append(random.choice(remaining))
+    
     return selected
 
     # Seed population with predefined solutions
@@ -116,7 +147,7 @@ def setup_toolbox(pset, points):
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, pset=pset)
     toolbox.register("map", parallel_evalSymbReg, points=points,num_cores = num_cores)
-    toolbox.register("select", lambda individuals, k: e_lexicase_selection(individuals, k, points,pset)) 
+    toolbox.register("select", lambda individuals, k: parallel_e_lexicase_selection(individuals, k, points,pset)) 
     toolbox.register("mate", gp.cxOnePoint)
     toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
 
