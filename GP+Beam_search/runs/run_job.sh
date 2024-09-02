@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=2
 #SBATCH --cpus-per-task=64    
-#SBATCH --time=03:00:00                   
+#SBATCH --time=02:00:00                   
 #SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs%j.out            
 #SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs%j.err             
 #SBATCH --mail-type=END,FAIL              
