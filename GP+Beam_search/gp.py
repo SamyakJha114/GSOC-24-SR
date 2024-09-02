@@ -130,7 +130,7 @@ def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)
 
     # Parallel fitness evaluation of the entire population
-    fitness_results = parallel_evalSymbReg(evalSymbReg,pop, points, num_cores)
+    fitness_results = parallel_evalSymbReg(toolbox.evaluate,pop, points, num_cores)
     for ind, fit in zip(pop, fitness_results):
         ind.fitness.values = fit
 
