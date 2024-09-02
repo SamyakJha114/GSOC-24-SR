@@ -62,7 +62,7 @@ def make_pset(num_vars):
     pset.renameArguments(**rename_kwargs)
     return pset
 
-def evalSymbReg(individual, points):
+def evalSymbReg(individual, points,toolbox):
     func = toolbox.compile(expr=individual) 
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
@@ -82,7 +82,7 @@ def e_lexicase_selection(individuals, k, points):
     return selected
 
     # Seed population with predefined solutions
-def seed_population(pop_size,seed_exprs):
+def seed_population(pop_size,seed_exprs,pset):
     population = []
     count = 0
     for expr in seed_exprs:
@@ -102,7 +102,7 @@ def setup_toolbox(pset, points):
     toolbox = base.Toolbox()
     toolbox.register("expr", gp.genHalfAndHalf, pset=pset, min_=1, max_=2)
     toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.expr)
-    toolbox.register("population", seed_population, toolbox=toolbox)
+    toolbox.register("population", seed_population)
     toolbox.register("compile", gp.compile, pset=pset)
     toolbox.register("evaluate", evalSymbReg, points=points, toolbox=toolbox)
     toolbox.register("select", e_lexicase_selection, toolbox=toolbox)
@@ -112,9 +112,9 @@ def setup_toolbox(pset, points):
     
     return toolbox
 
-def run_gp(toolbox, points, seed_expr):
+def run_gp(toolbox, points, seed_expr,pset):
     pop_size = 100
-    pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr)
+    pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr,pset = pset)
 
     # Evaluate the entire population
     for ind in pop:

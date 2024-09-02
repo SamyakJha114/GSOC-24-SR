@@ -55,7 +55,7 @@ def main(config, file_index):
     # Genetic Programming setup
     pset = make_pset(num_vars)
     toolbox = setup_toolbox(pset, points)
-    run_gp(toolbox, points, seed_expr)
+    run_gp(toolbox, points, seed_expr,pset)
 
 if __name__ == "__main__":
     # parser = ArgumentParser()
