@@ -59,8 +59,8 @@ def main(config, file_index):
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument('--random_init', type=bool, required=True, help='Whether or not to randomly initialize the population')
-    parser.add_argument('--number_of_eq', type=int, required=True, help='number of equations to test at a time')
+    parser.add_argument('--random_init', type=bool, help='Whether or not to randomly initialize the population')
+    parser.add_argument('--number_of_eq', type=int, help='number of equations to test at a time')
     args = parser.parse_args()
 
     config = Config(args)
