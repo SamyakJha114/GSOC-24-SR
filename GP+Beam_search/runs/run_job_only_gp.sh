@@ -8,8 +8,8 @@
 #SBATCH --gpus-per-task=2
 #SBATCH --cpus-per-task=64          
 #SBATCH --time=08:00:00                   
-#SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_total%j.out            
-#SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_total%j.err             
+#SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_only_gp%j.out            
+#SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/runs/runs_only_gp%j.err             
 #SBATCH --mail-type=END,FAIL              
 #SBATCH --mail-user=samyakjha71@gmail.com 
 
@@ -21,5 +21,5 @@ pip install torch
 pip install deap
 
 # Run your Python script
-srun python main.py --random_init=False \
+srun python main.py --random_init=True \
     --number_of_eq=10
