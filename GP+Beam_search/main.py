@@ -58,11 +58,12 @@ def main(config, file_index):
     run_gp(toolbox, points, seed_expr,pset)
 
 if __name__ == "__main__":
-    # parser = ArgumentParser()
-    # parser.add_argument('--file_index', type=int, required=True, help='Index of the file to use')
-    # args = parser.parse_args()
+    parser = ArgumentParser()
+    parser.add_argument('--random_init', type=bool, required=True, help='Whether or not to randomly initialize the population')
+    parser.add_argument('--number_of_eq', type=int, required=True, help='number of equations to test at a time')
+    args = parser.parse_args()
 
-    config = Config()
-    for i in range(0,1):
+    config = Config(args)
+    for i in range(0,args.number_of_eq):
         print("Currently running file index :- ",i)
         main(config, i)
