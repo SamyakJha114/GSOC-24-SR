@@ -26,6 +26,8 @@ Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutte
 Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
 Currently running file index :-  0
 Length of seed expression array :- 73
+num_cores  128
 73 69
 gen	nevals	avg        	std        	min       	max        
 0  	0     	7.14092e+11	7.10513e+12	0.00705239	7.14092e+13
+1  	57    	1.42818e+12	9.99729e+12	0.00503916	7.14092e+13
