@@ -10,3 +10,22 @@
   sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
 /global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
   sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+Beam_search/gp.py:74: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 30087061.0 ON nid008604 CANCELLED AT 2024-09-03T14:12:36 ***
+slurmstepd: error: *** JOB 30087061 ON nid008604 CANCELLED AT 2024-09-03T14:12:36 ***

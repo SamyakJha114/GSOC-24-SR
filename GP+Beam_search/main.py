@@ -64,6 +64,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     config = Config(args)
+    print(args.random_init)
+    print(config.random_init)
     for i in range(0,args.number_of_eq):
         print("Currently running file index :- ",i)
         main(config, i)
