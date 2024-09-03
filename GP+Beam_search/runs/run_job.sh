@@ -21,5 +21,4 @@ pip install torch
 pip install deap
 
 # Run your Python script
-srun python main.py --random_init False \
-    --number_of_eq 1
+srun python main.py --random_init False --number_of_eq 1

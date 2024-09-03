@@ -50,7 +50,7 @@ def main(config, file_index):
         datasets['test'], random_numbers, file_index, config.device, model, decoder_tokenizer
     )
 
-    if config.random_init == True:
+    if config.random_init == 'True':
         seed_expr = []
     # Genetic Programming setup
     pset = make_pset(num_vars)
@@ -59,7 +59,7 @@ def main(config, file_index):
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument('--random_init', type=bool, help='Whether or not to randomly initialize the population')
+    parser.add_argument('--random_init', type=str,default= 'False',help='Whether or not to randomly initialize the population')
     parser.add_argument('--number_of_eq', type=int, help='number of equations to test at a time')
     args = parser.parse_args()
 
