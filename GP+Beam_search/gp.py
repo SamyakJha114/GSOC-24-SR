@@ -209,7 +209,7 @@ def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     stats.register("min", np.min)
     stats.register("max", np.max)
 
-    ngen = 15
+    ngen = 20
     cxpb, mutpb = 0.5, 0.2
 
     # Use the eaSimple algorithm

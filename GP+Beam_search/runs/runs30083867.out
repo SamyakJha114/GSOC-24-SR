@@ -1,0 +1,50 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (2.4.0)
+Requirement already satisfied: filelock in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.15.4)
+Requirement already satisfied: typing-extensions>=4.8.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (4.9.0)
+Requirement already satisfied: sympy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.2.1)
+Requirement already satisfied: jinja2 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.1.2)
+Requirement already satisfied: fsspec in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (2023.12.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: triton==3.0.0 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.0.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.6.68)
+Requirement already satisfied: MarkupSafe>=2.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from jinja2->torch) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from sympy->torch) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (1.4.1)
+Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
+Currently running file index :-  0
+Length of seed expression array :- 73
+num_cores  128
+73 69
+gen	nevals	avg      	std        	min       	max      
+0  	0     	7.175e+11	7.13903e+12	0.00705559	7.175e+13
+1  	60    	7.175e+11	7.13903e+12	0.0049935 	7.175e+13
+2  	58    	1.435e+12	1.0045e+13 	0.0049935 	7.175e+13
+3  	62    	7.175e+11	7.13903e+12	0.0049935 	7.175e+13
+4  	59    	9.49391  	61.0839    	0.0049463 	572.251  
+5  	62    	1.38108  	10.1436    	0.00490219	101.274  
+6  	66    	2.9179   	23.334     	0.00277109	234.09   
+7  	57    	22.2945  	153.345    	0.00277109	1507.86  
+8  	69    	2.64891e+08	2.63563e+09	0.00277109	2.64891e+10
+9  	52    	1.36256    	6.53446    	0.00277109	49.6445    
+10 	65    	29.4942    	209.946    	0.00277109	2058.02    
+11 	60    	3.73798e+06	3.71915e+07	0.00277109	3.73789e+08
+12 	57    	596.125    	4206.35    	0.00277109	34072.2    
+13 	63    	15.7698    	73.8052    	0.00213178	451.78     
+14 	70    	1.46018    	6.96361    	0.00213178	62.7578    
+15 	56    	1.71097    	11.622     	0.00213178	112.118    
+Best individual: protected_div(protected_log(protected_log(add(abs(1), sub(pi, 1)))), s_1)
+Fitness: (0.002131776845695421,)
+R2_score: 0.9999781451215733
