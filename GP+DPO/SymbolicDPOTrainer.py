@@ -10,7 +10,7 @@ from utils import freeze_reference_model,generate_seed_expressions,PreferenceDat
 PAD_IDX = 0
 
 class SymbolicDPOTrainer:
-    def __init__(self, model, reference_model, decoder_tokenizer, dataset, num_vars, points,file_index ,beta=0.001, device='cuda'):
+    def __init__(self, model, reference_model, decoder_tokenizer, dataset, num_vars, points,original_points,file_index ,beta=0.001, device='cuda'):
         self.model = model
         self.reference_model = reference_model
         freeze_reference_model(self.reference_model)
@@ -18,6 +18,7 @@ class SymbolicDPOTrainer:
         self.dataset = dataset
         self.num_vars = num_vars
         self.points = points
+        self.original_points = original_points
         self.beta = beta
         self.device = device
         self.src = None
@@ -182,7 +183,7 @@ class SymbolicDPOTrainer:
             seed_expr = generate_seed_expressions(self.dataset,random_numbers,self.file_index,self.device,self.model,self.decoder_tokenizer)
             pset = make_pset(self.num_vars)
             toolbox = setup_toolbox(pset, self.points)
-            population, stats, hof = run_gp(toolbox, self.points, seed_expr,pset)
+            population, stats, hof = run_gp(toolbox, self.points,self.original_points,seed_expr,pset)
             print("best :- ",hof[0])
             preference_pairs = generate_preference_pairs(population, self.points,pset)
             self.train_transformer_dpo(preference_pairs)

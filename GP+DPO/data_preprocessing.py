@@ -91,26 +91,48 @@ def get_datasets(df, input_df, dataset_dir):
 
     return datasets
 
-def load_data(config, file_index):
+def load_data(config, file_index, noise_std_percentage=0):
     with open(config.input_path + '/' + config.test_file_paths[file_index]) as file:
         data = file.readlines()
 
     arr = np.array([i.split() for i in data], dtype=np.float32)
 
     points = []
+    original_points = []
     num_vars = 0
+    targets = []
+
+    # Separate input variables and target variables
     for i in arr:
         count = 0
         temp = []
-        for j in i[:-1]:
+        for j in i[:-1]:  # All elements except the last one are input variables
             count += 1
             temp.append(j)
         num_vars = count
-        points.append((temp, i[-1]))
+        targets.append(i[-1])  # The last element is the target variable
+        original_points.append((temp, i[-1]))  # Store the original point
+        points.append((temp, i[-1]))  # Store the original point (will modify later)
 
     print(len(points))
-    points = points[:50000]
-    return points, num_vars
+    points = points[:20000]
+    original_points = original_points[:20000]
+
+    # Convert targets to a numpy array to calculate standard deviation
+    targets = np.array(targets)
+
+    # Calculate the standard deviation of the target variable
+    target_std = np.std(targets)
+
+    # Add Gaussian noise to the target variable based on the specified percentage
+    noise_std = noise_std_percentage / 100 * target_std
+    noisy_targets = targets + np.random.normal(0, noise_std, targets.shape)
+
+    # Update the points with the noisy target variable
+    for idx in range(len(points)):
+        points[idx] = (points[idx][0], noisy_targets[idx])
+
+    return points, original_points, num_vars
 
 def preprocess_data(config):
     train_df = pd.read_csv(config.train_df_path)

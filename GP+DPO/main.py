@@ -10,7 +10,7 @@ from SymbolicDPOTrainer import SymbolicDPOTrainer
 from model import Model_seq2seq
 from Config import Config
 
-def main(config, file_index):
+def main(config, file_index,noise_std):
     # Set random seeds for reproducibility
     random.seed(config.seed)
     os.environ["PYTHONHASHSEED"] = str(config.seed)
@@ -25,7 +25,7 @@ def main(config, file_index):
     decoder_tokenizer = DecoderTokenizer(config.decoder_vocab_path)
 
     # Load and preprocess data
-    points, num_vars = load_data(config, file_index)
+    points,original_points,num_vars = load_data(config, file_index,noise_std)
     train_df, df_target, datasets = preprocess_data(config)
 
     # Initialize and load the model
@@ -61,6 +61,7 @@ def main(config, file_index):
         dataset = datasets['test'],
         num_vars = num_vars, 
         points = points,
+        original_points=original_points,
         file_index = file_index)
 
     trainer.training_loop()
@@ -68,8 +69,9 @@ def main(config, file_index):
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument('--file_index', type=int, help='which test file to run on')
+    parser.add_argument('--noise_std', type=int,default = 0,help='which test file to run on')
     args = parser.parse_args()
 
     config = Config()
 
-    main(config, args.file_index)
+    main(config, args.file_index,args.noise_std)
