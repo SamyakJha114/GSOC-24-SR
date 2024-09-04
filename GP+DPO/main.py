@@ -10,7 +10,7 @@ from SymbolicDPOTrainer import SymbolicDPOTrainer
 from model import Model_seq2seq
 from Config import Config
 
-def main(config, file_index,noise_std):
+def main(config, file_index,noise_std,beta):
     # Set random seeds for reproducibility
     random.seed(config.seed)
     os.environ["PYTHONHASHSEED"] = str(config.seed)
@@ -63,7 +63,7 @@ def main(config, file_index,noise_std):
         points = points,
         original_points=original_points,
         file_index = file_index,
-        beta = 1)
+        beta = beta)
 
     trainer.training_loop()
 
@@ -71,8 +71,9 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument('--file_index', type=int, help='which test file to run on')
     parser.add_argument('--noise_std', type=int,default = 0,help='which test file to run on')
+    parser.add_argument('--beta', type=float,default = 0.01,help='The value of beta')
     args = parser.parse_args()
 
     config = Config()
 
-    main(config, args.file_index,args.noise_std)
+    main(config, args.file_index,args.noise_std,args.beta)

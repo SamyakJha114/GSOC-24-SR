@@ -10,7 +10,7 @@ from utils import freeze_reference_model,generate_seed_expressions,PreferenceDat
 PAD_IDX = 0
 
 class SymbolicDPOTrainer:
-    def __init__(self, model, reference_model, decoder_tokenizer, dataset, num_vars, points,original_points,file_index ,beta=0.001, device='cuda'):
+    def __init__(self, model, reference_model, decoder_tokenizer, dataset, num_vars, points,original_points,file_index ,beta=0.01, device='cuda'):
         self.model = model
         self.reference_model = reference_model
         freeze_reference_model(self.reference_model)

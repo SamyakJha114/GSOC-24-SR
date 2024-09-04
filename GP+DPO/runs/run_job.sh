@@ -21,4 +21,4 @@ pip install torch
 pip install deap
 
 # Run your Python script
-srun python main.py --file_index 0
+srun python main.py --file_index 0 --beta 1.0  
