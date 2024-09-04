@@ -2,7 +2,7 @@
 
 #SBATCH -A m4392                 
 #SBATCH -C gpu&hbm80g
-#SBATCH -q shared                  
+#SBATCH -q regular                
 #SBATCH --nodes=1                         
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=2
