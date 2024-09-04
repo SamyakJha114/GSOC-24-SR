@@ -21,4 +21,4 @@ pip install torch
 pip install deap
 
 # Run your Python script
-srun python main.py 
+srun python main.py --noise_std 10

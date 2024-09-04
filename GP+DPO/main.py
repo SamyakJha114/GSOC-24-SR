@@ -69,11 +69,15 @@ def main(config, file_index,noise_std,beta):
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument('--file_index', type=int, help='which test file to run on')
-    parser.add_argument('--noise_std', type=int,default = 0,help='which test file to run on')
+    # parser.add_argument('--file_index', type=int, help='which test file to run on')
+    parser.add_argument('--noise_std', type=int,default = 0,help='the std of the gaussian noise to be added')
     parser.add_argument('--beta', type=float,default = 0.01,help='The value of beta')
     args = parser.parse_args()
 
     config = Config()
 
-    main(config, args.file_index,args.noise_std,args.beta)
+    for i in range(1,10):
+        print("current file index :- ", i)
+        if i == 1 or i == 2:
+            continue
+        main(config, i, args.noise_std,args.beta)

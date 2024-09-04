@@ -70,3 +70,20 @@ gen	nevals	avg        	std        	min    	max
 9  	58    	48382.4    	349289     	0.258109	3.13071e+06
 10 	56    	583014     	5.79936e+06	0.258109	5.82859e+07
 11 	67    	9.14033e+12	8.15043e+13	0.258109	8.14033e+14
+12 	51    	4.45732e+09	4.43186e+10	0.258109	4.45422e+11
+13 	67    	inf        	nan        	0.258109	inf        
+14 	57    	2.65852e+08	2.63526e+09	0.258109	2.64862e+10
+15 	53    	1.03336e+07	7.23127e+07	0.258109	5.34212e+08
+Best individual: mul(protected_log(protected_exp(s_1)), s_2)
+Fitness: (0.25810856408903005,)
+R2_score with noisy data: 0.9999997997271576
+R2_score with original data: 1.0
+Currently running file index :-  2
+1000000
+Length of seed expression array :- 75
+num_cores  128
+0 0
+gen	nevals	avg       	std        	min    	max       
+0  	0     	7.8634e+11	7.82398e+12	622.426	7.8634e+13
+1  	52    	8.65274e+06	7.85775e+07	614.63 	7.88504e+08
+2  	59    	1e+12      	9.94987e+12	598.654	1e+14      
