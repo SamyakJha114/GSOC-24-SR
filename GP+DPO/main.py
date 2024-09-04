@@ -62,7 +62,8 @@ def main(config, file_index,noise_std):
         num_vars = num_vars, 
         points = points,
         original_points=original_points,
-        file_index = file_index)
+        file_index = file_index,
+        beta = 1)
 
     trainer.training_loop()
 
