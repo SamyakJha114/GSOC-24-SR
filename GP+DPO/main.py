@@ -76,7 +76,7 @@ if __name__ == "__main__":
 
     config = Config()
 
-    for i in range(1,10):
+    for i in range(0,10):
         print("current file index :- ", i)
         if i == 1 or i == 2:
             continue

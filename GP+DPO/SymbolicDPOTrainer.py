@@ -33,7 +33,7 @@ class SymbolicDPOTrainer:
         losses = -F.logsigmoid(self.beta * (pi_logratios - ref_logratios))
         rewards = self.beta * (pi_logps - ref_logps).detach()
         return losses, rewards
-    def train_transformer_dpo(self, preference_pairs, epochs=10, batch_size=1, lr=1e-4):
+    def train_transformer_dpo(self, preference_pairs, epochs=10, batch_size=16, lr=1e-4):
         train, test = train_test_split(preference_pairs,test_size = 0.1,random_state = 42)
         train_dataset = PreferenceDataset(train,self.decoder_tokenizer)
         test_dataset = PreferenceDataset(test,self.decoder_tokenizer)
