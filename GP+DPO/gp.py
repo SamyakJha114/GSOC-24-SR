@@ -75,12 +75,6 @@ def evalSymbReg(individual, points,pset):
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
 
-# def parallel_evalSymbReg(eval_func, individuals,num_cores):
-#     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-#         futures = [executor.submit(eval_func, ind) for ind in individuals]
-#         results = [future.result() for future in concurrent.futures.as_completed(futures)]
-#     return results
-
 def evaluate_chunk(eval_func, chunk):
     """Evaluate a chunk of individuals."""
     return [eval_func(ind) for ind in chunk]
@@ -159,9 +153,12 @@ def parallel_e_lexicase_selection(individuals, k, points, pset):
 
     # Seed population with predefined solutions
 def seed_population(pop_size,seed_exprs,pset,toolbox):
+    num_vars = len(pset.arguments) 
     population = []
     count = 0
     for expr in seed_exprs:
+        for i in range(num_vars + 1, 13):
+            seed_exprs = [expr.replace(f's_{i}', 's_1') for expr in seed_exprs]
         try :
             ind = creator.Individual.from_string(expr, pset)
             count += 1
