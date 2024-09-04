@@ -35,8 +35,8 @@ class SymbolicDPOTrainer:
         return losses, rewards
     def train_transformer_dpo(self, preference_pairs, epochs=10, batch_size=1, lr=1e-4):
         train, test = train_test_split(preference_pairs,test_size = 0.1,random_state = 42)
-        train_dataset = PreferenceDataset(train)
-        test_dataset = PreferenceDataset(test)
+        train_dataset = PreferenceDataset(train,self.decoder_tokenizer)
+        test_dataset = PreferenceDataset(test,self.decoder_tokenizer)
         train_dataloader = DataLoader(train_dataset, batch_size=1,shuffle=True, drop_last=True)
         test_dataloader = DataLoader(test_dataset,batch_size =1,shuffle=False, drop_last=True)
         optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
@@ -175,7 +175,7 @@ class SymbolicDPOTrainer:
             scheduler.step()
             print(f"Epoch [{epoch+1}/{epochs}], TEST Loss: {total_test_loss/len(test_dataloader)}")                    
                 
-    def training_loop(self, num_cycles=4, pop_size=100, ngen=7, cxpb=0.5, mutpb=0.2):
+    def training_loop(self, num_cycles=4):
         random_numbers = [random.randint(0, 999) for _ in range(25)]
         for cycle in range(num_cycles):
             print(f"Cycle {cycle+1}/{num_cycles}")
