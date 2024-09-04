@@ -37,6 +37,7 @@ def main(config, file_index):
                 tgt_vocab_size=59,
                 input_emb_size=64,
                 max_input_points=33,
+                device=config.device,
                 )
 
     reference_model = Model_seq2seq(num_encoder_layers=2,
@@ -47,7 +48,9 @@ def main(config, file_index):
                 tgt_vocab_size=59,
                 input_emb_size=64,
                 max_input_points=33,
+                device=config.device,
                 )
+    
     path = '/kaggle/input/gsoc-symba-seq2seq/default/best_checkpoint.pth'
     model.load_state_dict(torch.load(path)["state_dict"])
     reference_model.load_state_dict(torch.load(path)["state_dict"])

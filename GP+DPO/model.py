@@ -14,7 +14,6 @@ def rightmost_operator_pos(expr_arr):
             return i
 
     return -1
-
 def apply_grammar_rules(seq, logits):
     """Applies grammar rules to restrict the next token generation based on the sequence context."""
     if seq.size(1) == 0:

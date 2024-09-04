@@ -25,7 +25,6 @@ def protected_exp(x1):
         return math.exp(x1) if x1 < 100 else 0.0
     except OverflowError:
         return 0.0
-
 def protected_log(x1):
     try:
         return math.log(abs(x1)) if abs(x1) > 0.001 else 0.
