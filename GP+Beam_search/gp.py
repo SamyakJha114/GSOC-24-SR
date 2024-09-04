@@ -54,7 +54,7 @@ def make_pset(num_vars):
     pset.addPrimitive(abs, 1)
     pset.addPrimitive(math.tanh, 1)
     for i in range(1, 5):
-        pset.addTerminal(i)
+        pset.addTerminal(int(i))
     pset.addPrimitive(protected_div, 2)
     pset.addPrimitive(protected_pow, 2)
     pset.addPrimitive(protected_exp, 1)

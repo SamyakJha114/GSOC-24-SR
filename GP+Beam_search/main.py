@@ -61,11 +61,12 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument('--random_init', type=str,default= 'False',help='Whether or not to randomly initialize the population')
     parser.add_argument('--number_of_eq', type=int, help='number of equations to test at a time')
+    parser.add_argument('--start_index', type=int, help='number of equations to test at a time')
     args = parser.parse_args()
 
     config = Config(args)
     print(args.random_init)
     print(config.random_init)
-    for i in range(0,args.number_of_eq):
+    for i in range(args.start_index,args.number_of_eq):
         print("Currently running file index :- ",i)
         main(config, i)

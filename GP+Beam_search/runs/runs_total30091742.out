@@ -1,0 +1,185 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (2.4.0)
+Requirement already satisfied: filelock in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.15.4)
+Requirement already satisfied: typing-extensions>=4.8.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (4.9.0)
+Requirement already satisfied: sympy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.2.1)
+Requirement already satisfied: jinja2 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.1.2)
+Requirement already satisfied: fsspec in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (2023.12.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: triton==3.0.0 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.0.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.6.68)
+Requirement already satisfied: MarkupSafe>=2.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from jinja2->torch) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from sympy->torch) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (1.4.1)
+Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
+False
+False
+Currently running file index :-  0
+1000000
+Length of seed expression array :- 73
+num_cores  128
+73 69
+gen	nevals	avg       	std        	min       	max       
+0  	0     	7.1722e+11	7.13625e+12	0.00707649	7.1722e+13
+1  	51    	0.745984  	4.3883     	0.00707649	38.4174   
+2  	66    	69.6662   	637.18     	0.00674208	6396.41   
+3  	62    	689.771   	6368.41    	0.00530246	63976.9   
+4  	53    	1.98128   	8.47103    	0.00275189	62.7974   
+5  	61    	2.64465   	19.8916    	0.00275189	198.65    
+6  	55    	77.0915   	757.766    	0.00268161	7616.51   
+7  	55    	4116.95   	30378.2    	0.00118833	274195    
+8  	53    	5.61147e+43	5.58334e+44	0.00118833	5.61147e+45
+9  	64    	18.6154    	116.319    	0.00118833	956.552    
+10 	61    	0.687741   	3.22181    	0.00118833	25.5435    
+11 	66    	172.433    	1545.89    	0.00118833	15518.4    
+12 	52    	2822.5     	27284.1    	0.00118833	274183     
+13 	71    	4.78569    	36.9341    	0.00118833	368.862    
+14 	59    	8.22263e+08	8.18141e+09	0.00118833	8.22263e+10
+15 	52    	0.951893   	6.17118    	0.00118833	58.8579    
+Best individual: protected_div(sub(protected_div(4, 2), sub(sin(tan(1)), cos(s_1))), 6)
+Fitness: (0.0011883282353697927,)
+R2_score: 0.999995133661015
+Currently running file index :-  1
+1000000
+Length of seed expression array :- 74
+num_cores  128
+74 68
+gen	nevals	avg        	std        	min        	max        
+0  	0     	9.99998e+11	9.94986e+12	2.90468e-13	9.99998e+13
+1  	52    	643528     	6.40031e+06	2.90468e-13	6.43258e+07
+2  	67    	298.798    	2519.32    	2.90468e-13	25284      
+3  	58    	25834.5    	255786     	2.21172e-13	2.57087e+06
+4  	55    	289285     	2.42983e+06	2.21172e-13	2.40567e+07
+5  	64    	302.378    	2516.2     	2.21172e-13	25290.2    
+6  	58    	766.853    	5103.96    	2.21172e-13	43539.4    
+7  	66    	44710.4    	443597     	2.21172e-13	4.45844e+06
+8  	51    	2.89896e+16	2.88443e+17	2.21172e-13	2.89896e+18
+9  	60    	3.86392e+07	3.83826e+08	2.21172e-13	3.85766e+09
+10 	53    	6.74387e+18	6.71006e+19	2.21172e-13	6.74387e+20
+11 	72    	9.14033e+12	8.15043e+13	2.21172e-13	8.14033e+14
+12 	58    	4.45417e+09	4.43184e+10	2.21172e-13	4.45417e+11
+13 	70    	65313.1    	481154     	2.21172e-13	4.45912e+06
+14 	60    	2.64863e+08	2.63534e+09	2.21172e-13	2.64862e+10
+15 	55    	407.047    	3050.5     	2.21172e-13	30614.3    
+Best individual: mul(s_1, mul(s_2, 1))
+Fitness: (2.211722556572451e-13,)
+R2_score: 1.0
+Currently running file index :-  2
+1000000
+Length of seed expression array :- 75
+num_cores  128
+75 56
+gen	nevals	avg       	std        	min    	max       
+0  	0     	7.8634e+11	7.82398e+12	615.854	7.8634e+13
+1  	55    	158647    	613160     	615.854	2.79576e+06
+2  	68    	74803.9   	382180     	600.026	3.58295e+06
+3  	52    	2.00001e+12	1.4e+13    	620.566	1e+14      
+4  	59    	inf        	nan        	620.566	inf        
+5  	66    	2.65064e+45	2.63735e+46	620.566	2.65064e+47
+6  	47    	inf        	nan        	620.566	inf        
+7  	56    	inf        	nan        	618.35 	inf        
+8  	52    	inf        	nan        	589.683	inf        
+9  	55    	inf        	nan        	589.901	inf        
+10 	55    	inf        	nan        	572.869	inf        
+11 	67    	inf        	nan        	553.295	inf        
+12 	60    	1.7445e+10 	1.73536e+11	553.295	1.74411e+12
+13 	68    	5.64703e+81	5.61872e+82	646.757	5.64703e+83
+14 	67    	5.64703e+81	5.61872e+82	646.171	5.64703e+83
+15 	51    	5.64703e+81	5.61872e+82	646.409	5.64703e+83
+Best individual: mul(sub(protected_pow(s_4, 1), protected_pow(pi, 1)), tan(2))
+Fitness: (553.2952020439737,)
+R2_score: 0.9999828829561747
+Currently running file index :-  3
+1000000
+Length of seed expression array :- 67
+num_cores  128
+67 66
+gen	nevals	avg        	std        	min    	max        
+0  	0     	9.99997e+11	9.94985e+12	26.7873	9.99997e+13
+1  	49    	1.23967e+06	1.23305e+07	26.7873	1.23926e+08
+2  	60    	7.36972e+13	7.33266e+14	26.7873	7.3696e+15 
+3  	57    	6.3394e+06 	2.91634e+07	31.5192	2.0536e+08 
+4  	51    	1.72482e+06	1.25158e+07	9.13842	1.19865e+08
+5  	61    	2.23559e+81	2.22439e+82	2.77406	2.23559e+83
+6  	62    	4.47119e+81	3.12983e+82	5.96986	2.23559e+83
+7  	60    	9.25965e+81	9.21324e+82	5.43723	9.25965e+83
+8  	48    	2.79303e+15	2.77903e+16	3.70167	2.79303e+17
+9  	59    	3.86204e+07	3.84267e+08	4.00691	3.86203e+09
+10 	68    	1e+12      	9.94987e+12	4.01288	1e+14      
+11 	68    	6.19712e+12	5.25605e+13	3.98286	5.19713e+14
+12 	56    	6.20158e+12	5.256e+13  	3.34862	5.19713e+14
+13 	65    	1650.03    	10861.6    	3.34862	89644.4    
+14 	54    	2.6485e+08 	2.6352e+09 	3.05744	2.64847e+10
+15 	54    	174345     	1.52512e+06	3.05744	1.52228e+07
+Best individual: mul(s_1, add(protected_log(s_2), s_2))
+Fitness: (2.7740561840333133,)
+R2_score: 0.9999990469994933
+Currently running file index :-  4
+1000000
+Length of seed expression array :- 75
+num_cores  128
+75 68
+gen	nevals	avg        	std        	min    	max        
+0  	0     	7.85858e+11	7.81919e+12	71.5118	7.85858e+13
+1  	58    	1468       	10342      	71.5118	101939     
+2  	64    	1541.49    	10442.1    	71.5118	101939     
+3  	52    	4.04559e+80	4.02531e+81	71.5118	4.04559e+82
+4  	54    	4.35002e+80	3.13239e+81	70.8621	2.69451e+82
+5  	66    	7.32514e+38	7.28842e+39	69.3148	7.32514e+40
+6  	52    	70276.2    	697656     	70.8621	7.01187e+06
+7  	59    	7.84799e+11	7.80865e+12	70.8621	7.84799e+13
+8  	46    	9.4779e+81 	9.43039e+82	70.8222	9.4779e+83 
+9  	58    	62509.2    	612451     	70.8222	6.15579e+06
+10 	58    	6.5664e+38 	6.53349e+39	67.1265	6.5664e+40 
+11 	69    	4.67819e+11	4.65474e+12	67.1265	4.67819e+13
+12 	58    	inf        	nan        	70.8222	inf        
+13 	72    	4.91174e+06	4.87972e+07	66.6362	4.90437e+08
+14 	66    	8.26838e+08	8.18046e+09	60.8659	8.22201e+10
+15 	53    	912.679    	4300.32    	70.0509	31189.6    
+Best individual: add(protected_log(s_1), add(s_1, mul(s_2, s_3)))
+Fitness: (60.865886263351314,)
+R2_score: 0.9999883342064442
+Currently running file index :-  5
+1000000
+Length of seed expression array :- 68
+num_cores  128
+68 64
+gen	nevals	avg        	std       	min   	max        
+0  	0     	7.85076e+11	7.8114e+12	387.03	7.85076e+13
+1  	53    	2.52199e+18	1.76141e+19	323.298	1.2582e+20 
+2  	63    	1.2582e+18 	1.25189e+19	256.709	1.2582e+20 
+3  	61    	1.0225e+82 	1.00284e+83	220.382	1.00794e+84
+4  	56    	1.0225e+82 	1.00284e+83	220.382	1.00794e+84
+5  	62    	2.79303e+15	2.77903e+16	196.491	2.79303e+17
+6  	62    	5.81994e+39	5.79077e+40	165.846	5.81994e+41
+7  	58    	inf        	nan        	155.718	inf        
+8  	50    	1.45454e+84	1.44725e+85	155.718	1.45454e+86
+9  	61    	3247.78    	13856.6    	136.787	81767.6    
+10 	58    	9.8244e+80 	9.77516e+81	136.787	9.8244e+82 
+11 	69    	3.43615e+287	inf        	155.658	3.43615e+289
+12 	56    	8.024e+12   	7.98377e+13	91.5312	8.02399e+14 
+13 	68    	1.95823e+06 	1.56964e+07	91.5312	1.52859e+08 
+14 	55    	50939.2     	487993     	91.5312	4.9049e+06  
+15 	58    	1.55508e+54 	1.54729e+55	91.5312	1.55508e+56 
+Best individual: mul(add(tan(tanh(s_3)), s_2), add(s_3, s_1))
+Fitness: (91.53117001160926,)
+R2_score: 0.999995082979119
+Currently running file index :-  6
+1000000
+Length of seed expression array :- 48
+num_cores  128
+48 42
+gen	nevals	avg       	std        	min      	max       
+0  	0     	7.8534e+11	7.81403e+12	0.0026201	7.8534e+13
