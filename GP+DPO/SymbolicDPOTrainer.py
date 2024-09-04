@@ -179,7 +179,7 @@ class SymbolicDPOTrainer:
         for cycle in range(num_cycles):
             print(f"Cycle {cycle+1}/{num_cycles}")
 #             random_numbers = [random.randint(0, 999) for _ in range(100)]
-            seed_expr = generate_seed_expressions(random_numbers)
+            seed_expr = generate_seed_expressions(self.dataset,random_numbers,self.file_index,self.device,self.model,self.decoder_tokenizer)
             pset = make_pset(self.num_vars)
             toolbox = setup_toolbox(pset, self.points)
             population, stats, hof = run_gp(toolbox, self.points, seed_expr,pset)
