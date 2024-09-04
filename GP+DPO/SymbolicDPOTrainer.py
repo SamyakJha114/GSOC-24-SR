@@ -187,7 +187,7 @@ class SymbolicDPOTrainer:
             preference_pairs = generate_preference_pairs(population, self.points,pset)
             self.train_transformer_dpo(preference_pairs)
             state_dict = self.model.state_dict()
-            torch.save(state_dict, 'model_weights.pth')
+            torch.save(state_dict, '/pscratch/sd/s/samyak09/model_weights.pth')
             self.beta = self.beta*5
             
         return self.model, population, stats, hof
