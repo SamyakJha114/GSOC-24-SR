@@ -50,8 +50,7 @@ def main(config, file_index):
                 max_input_points=33,
                 device=config.device,
                 )
-    
-    path = '/kaggle/input/gsoc-symba-seq2seq/default/best_checkpoint.pth'
+    path = config.model_weights_path
     model.load_state_dict(torch.load(path)["state_dict"])
     reference_model.load_state_dict(torch.load(path)["state_dict"])
 
