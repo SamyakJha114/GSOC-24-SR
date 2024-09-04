@@ -12,7 +12,7 @@ from gp import make_pset, setup_toolbox,run_gp
 from model import Model_seq2seq
 from Config import Config
 
-def main(config, file_index):
+def main(config, file_index,noise_std):
     # Set random seeds for reproducibility
     random.seed(config.seed)
     os.environ["PYTHONHASHSEED"] = str(config.seed)
@@ -27,7 +27,7 @@ def main(config, file_index):
     decoder_tokenizer = DecoderTokenizer(config.decoder_vocab_path)
 
     # Load and preprocess data
-    points, num_vars = load_data(config, file_index)
+    points,original_points,num_vars = load_data(config, file_index,noise_std)
     train_df, df_target, datasets = preprocess_data(config)
 
     # Initialize and load the model
@@ -55,18 +55,22 @@ def main(config, file_index):
     # Genetic Programming setup
     pset = make_pset(num_vars)
     toolbox = setup_toolbox(pset, points)
-    run_gp(toolbox, points, seed_expr,pset)
+    run_gp(toolbox, points,original_points,seed_expr,pset)
 
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument('--random_init', type=str,default= 'False',help='Whether or not to randomly initialize the population')
     parser.add_argument('--number_of_eq', type=int, help='number of equations to test at a time')
-    parser.add_argument('--start_index', type=int, help='number of equations to test at a time')
+    parser.add_argument('--start_index', type=int,default = 0,help='number of equations to test at a time')
+    parser.add_argument('--noise_std', type=int,default = 0,help='std of the noise being added ')
+
     args = parser.parse_args()
 
     config = Config(args)
     print(args.random_init)
     print(config.random_init)
     for i in range(args.start_index,args.number_of_eq):
+        if i == 6:
+            continue
         print("Currently running file index :- ",i)
-        main(config, i)
+        main(config, i,args.noise_std)

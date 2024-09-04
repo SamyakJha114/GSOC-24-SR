@@ -188,7 +188,7 @@ def setup_toolbox(pset, points):
 
     return toolbox
 
-def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
+def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     if num_cores is None:
         num_cores = multiprocessing.cpu_count()
 
@@ -198,7 +198,7 @@ def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)
 
     # Parallel fitness evaluation of the entire population
-    fitness_results = parallel_evalSymbReg(toolbox.evaluate,pop,num_cores)
+    fitness_results = parallel_evalSymbReg(toolbox.evaluate, pop, num_cores)
     for ind, fit in zip(pop, fitness_results):
         ind.fitness.values = fit
 
@@ -218,9 +218,21 @@ def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     print("Best individual:", hof[0])
     print("Fitness:", hof[0].fitness.values)
 
-    # Calculate R2 score
-    TSS = 0.0
-    mean_y = sum(y for _, y in points) / len(points)
+    # Calculate R2 score with noisy data
+    TSS_noisy = 0.0
+    mean_y_noisy = sum(y for _, y in points) / len(points)
     for _, y in points:
-        TSS += (y - mean_y) ** 2
-    print("R2_score:", 1 - (float(hof[0].fitness.values[0]) / TSS))
+        TSS_noisy += (y - mean_y_noisy) ** 2
+    R2_score_noisy = 1 - (float(hof[0].fitness.values[0]) / TSS_noisy)
+    print("R2_score with noisy data:", R2_score_noisy)
+
+    # Calculate R2 score with original data
+    fitness_original = evalSymbReg(hof[0], original_points, pset)
+    TSS_original = 0.0
+    mean_y_original = sum(y for _, y in original_points) / len(original_points)
+    for _, y in original_points:
+        TSS_original += (y - mean_y_original) ** 2
+    R2_score_original = 1 - (float(fitness_original[0]) / TSS_original)
+    print("R2_score with original data:", R2_score_original)
+
+    return pop, log, hof
