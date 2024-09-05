@@ -1,0 +1,350 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (2.4.0)
+Requirement already satisfied: filelock in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.15.4)
+Requirement already satisfied: typing-extensions>=4.8.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (4.9.0)
+Requirement already satisfied: sympy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.2.1)
+Requirement already satisfied: jinja2 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.1.2)
+Requirement already satisfied: fsspec in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (2023.12.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: triton==3.0.0 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.0.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.6.68)
+Requirement already satisfied: MarkupSafe>=2.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from jinja2->torch) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from sympy->torch) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (1.4.1)
+Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
+current file index :-  7
+1000000
+Cycle 1/4
+Length of seed expression array :- 67
+num_cores  128
+67 64
+gen	nevals	avg        	std        	min      	max        
+0  	0     	4.91271e+16	4.88801e+17	0.0263635	4.91263e+18
+1  	60    	inf        	nan        	0.0053641	inf        
+2  	67    	inf        	nan        	0.00479431	inf        
+3  	72    	inf        	nan        	0.00260735	inf        
+4  	65    	inf        	nan        	0.00260735	inf        
+5  	67    	inf        	nan        	0.00260735	inf        
+6  	70    	inf        	nan        	0.00258521	inf        
+7  	53    	inf        	nan        	0.00258521	inf        
+Best individual: mul(protected_log(cos(tan(3))), mul(-1, s_1))
+Fitness: (0.002585206439227067,)
+R2_score with noisy data: 0.9999459774891256
+R2_score with original data: 0.9999459774891256
+best :-  mul(protected_log(cos(tan(3))), mul(-1, s_1))
+GENERATING PREFERENCE PAIRS
+184
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [1/10], TEST Loss: 0.18511681493959928
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [2/10], TEST Loss: 0.14406680845116315
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [3/10], TEST Loss: 0.12179483296839815
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [4/10], TEST Loss: 0.10229568222635671
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [5/10], TEST Loss: 0.10071015985388505
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [6/10], TEST Loss: 0.1002932446273534
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [7/10], TEST Loss: 0.09955395478755236
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [8/10], TEST Loss: 0.09882066756682961
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [9/10], TEST Loss: 0.09875974225762643
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [10/10], TEST Loss: 0.09875566845661715
+Cycle 2/4
+Length of seed expression array :- 75
+num_cores  128
+75 0
+gen	nevals	avg   	std        	min       	max        
+0  	0     	509709	3.68869e+06	0.00530045	3.37959e+07
+1  	63    	12300.3	100258     	0.00240557	987932     
+2  	69    	24011.2	167635     	0.00240534	1.37531e+06
+3  	65    	1.17326e+12	1.16738e+13	0.00240534	1.17326e+14
+4  	64    	1.43367    	7.03314    	0.00240557	50.6461    
+5  	62    	124.093    	1232.18    	0.00240557	12384.1    
+6  	61    	1232.33    	12193.9    	0.00240557	122558     
+7  	58    	2.62831    	17.0283    	0.00196064	131.826    
+Best individual: sin(sin(protected_div(s_1, protected_exp(4))))
+Fitness: (0.0019606376751716034,)
+R2_score with noisy data: 0.9999590289701741
+R2_score with original data: 0.9999590289701741
+best :-  sin(sin(protected_div(s_1, protected_exp(4))))
+GENERATING PREFERENCE PAIRS
+176
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [1/10], TEST Loss: 0.030607150263556884
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [2/10], TEST Loss: 0.013673288641028434
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [3/10], TEST Loss: 0.012319431296354032
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [4/10], TEST Loss: 0.009765857205275254
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [5/10], TEST Loss: 0.009495845249959464
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [6/10], TEST Loss: 0.009619112379079
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [7/10], TEST Loss: 0.008993035959156495
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [8/10], TEST Loss: 0.00925249005807929
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [9/10], TEST Loss: 0.009242723914632557
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [10/10], TEST Loss: 0.009260366555183018
+Cycle 3/4
+Length of seed expression array :- 75
+num_cores  128
+75 50
+gen	nevals	avg  	std        	min      	max  
+0  	0     	1e+12	9.94987e+12	0.0190293	1e+14
+1  	55    	1421.49	8294.17    	0.00530045	78673.4
+2  	71    	3043.49	21814      	0.00530045	209780 
+3  	58    	102.867	776.905    	0.00354702	7337.79
+4  	72    	89232.5	885546     	0.00354702	8.90028e+06
+5  	66    	10879  	98269.7    	0.00239675	987931     
+6  	60    	24.0292	165.584    	0.00239675	1394.36    
+7  	61    	2.65064e+45	2.63735e+46	0.00181699	2.65064e+47
+Best individual: protected_div(1, protected_exp(mul(protected_sqrt(s_2), 2)))
+Fitness: (0.001816994916349345,)
+R2_score with noisy data: 0.9999620306424517
+R2_score with original data: 0.9999620306424517
+best :-  protected_div(1, protected_exp(mul(protected_sqrt(s_2), 2)))
+GENERATING PREFERENCE PAIRS
+190
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [1/10], TEST Loss: 0.01631892891073128
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [2/10], TEST Loss: 0.011096392957579453
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [3/10], TEST Loss: 0.00024772248120827784
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [4/10], TEST Loss: 3.3210919094044004e-05
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [5/10], TEST Loss: 3.645672079250604e-05
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [6/10], TEST Loss: 3.908696908793484e-05
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [7/10], TEST Loss: 4.118638739358366e-05
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [8/10], TEST Loss: 3.7593462433444114e-05
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [9/10], TEST Loss: 4.0947466648947246e-05
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [10/10], TEST Loss: 3.911651533843041e-05
+Cycle 4/4
+Length of seed expression array :- 50
+num_cores  128
+50 50
+gen	nevals	avg	std	min     	max
+0  	0     	inf	nan	0.084558	inf
+1  	64    	3.82058e+79	3.80143e+80	0.0536953	3.82058e+81
+2  	57    	1.60444e+81	9.9233e+81 	0.00530045	7.00639e+82
+3  	63    	5.83265e+81	1.90164e+82	0.00530045	7.00639e+82
+4  	45    	4.62923e+81	1.69219e+82	0.00530045	7.00639e+82
+5  	62    	3.74736e+81	1.42955e+82	0.00530045	7.00639e+82
+6  	63    	3.48358e+82	2.07133e+83	0.00530045	1.8315e+84 
+7  	50    	2.75994e+81	1.91489e+82	0.00530045	1.86256e+83
+Best individual: sub(s_4, s_4)
+Fitness: (0.00530044780231169,)
+R2_score with noisy data: 0.9998892376660159
+R2_score with original data: 0.9998892376660159
+best :-  sub(s_4, s_4)
+GENERATING PREFERENCE PAIRS
+178
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [1/10], TEST Loss: 1.0148783027738926e-06
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [2/10], TEST Loss: 8.468909320780205e-11
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [3/10], TEST Loss: 9.220255566375292e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [4/10], TEST Loss: 2.39092241247155e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [5/10], TEST Loss: 2.329486269469512e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [6/10], TEST Loss: 2.2940738248427503e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [7/10], TEST Loss: 2.3329735455562877e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [8/10], TEST Loss: 2.2398589915951573e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [9/10], TEST Loss: 2.467521345068014e-13
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [10/10], TEST Loss: 2.348576871347339e-13
+current file index :-  8
+1000000
+Cycle 1/4
+Length of seed expression array :- 75
+num_cores  128
+75 65
+gen	nevals	avg        	std        	min    	max        
+0  	0     	7.82349e+11	7.78427e+12	10.2564	7.82349e+13
+1  	70    	1.08842e+84	1.07889e+85	10.2564	1.08436e+86
+2  	64    	8.85118e+79	8.80681e+80	10.2564	8.85118e+81
+3  	74    	1.48239e+06	1.47158e+07	10.2564	1.47903e+08
+4  	54    	inf        	nan        	10.2564	inf        
+5  	70    	3.47761e+06	2.47117e+07	10.2564	2.04095e+08
+6  	57    	8.9572e+31 	8.9123e+32 	10.2564	8.9572e+33 
+7  	54    	2892.44    	15481.4    	7.55393	111676     
+Best individual: mul(s_2, protected_div(s_1, tan(1)))
+Fitness: (7.5539257254040235,)
+R2_score with noisy data: 0.9999851034282459
+R2_score with original data: 0.9999851034282459
+best :-  mul(s_2, protected_div(s_1, tan(1)))
+GENERATING PREFERENCE PAIRS
+179
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [1/10], TEST Loss: 0.28177476053436595
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [2/10], TEST Loss: 0.24894249728984302
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [3/10], TEST Loss: 0.2146486404041449
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [4/10], TEST Loss: 0.19023464164800113
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [5/10], TEST Loss: 0.1892715079916848
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [6/10], TEST Loss: 0.18795228376984596
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [7/10], TEST Loss: 0.18696499657299784
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [8/10], TEST Loss: 0.18572928135593733
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [9/10], TEST Loss: 0.18576515403886637
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [10/10], TEST Loss: 0.18575615104701784
+Cycle 2/4
+Length of seed expression array :- 75
+num_cores  128
+75 75
+gen	nevals	avg	std	min    	max
+0  	0     	inf	nan	24.7258	inf
+1  	64    	inf	nan	17.5833	inf
+2  	60    	inf	nan	17.5833	inf
+3  	56    	inf	nan	15.2699	inf
+4  	67    	inf	nan	7.03229	inf
+5  	63    	inf	nan	6.89928	inf
+6  	58    	inf	nan	6.89928	inf
+7  	59    	inf	nan	7.03229	inf
+Best individual: add(mul(s_2, protected_sqrt(add(3, s_1))), sub(s_1, pi))
+Fitness: (6.899277710610174,)
+R2_score with noisy data: 0.999986394414083
+R2_score with original data: 0.999986394414083
+best :-  add(mul(s_2, protected_sqrt(add(3, s_1))), sub(s_1, pi))
+GENERATING PREFERENCE PAIRS
+188
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [1/10], TEST Loss: 0.009931083456122954
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [2/10], TEST Loss: 0.006364556270694409
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [3/10], TEST Loss: 0.004848719916098114
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [4/10], TEST Loss: 0.003758094456555371
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [5/10], TEST Loss: 0.0038526503698162024
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [6/10], TEST Loss: 0.0038534853837949128
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [7/10], TEST Loss: 0.003981042047885957
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [8/10], TEST Loss: 0.003825709345140862
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [9/10], TEST Loss: 0.0038144927813463206
+TRAINING THE TRANSFORMER
+TESTING
+Epoch [10/10], TEST Loss: 0.0038273951594371618
+Cycle 3/4
+Length of seed expression array :- 75
+num_cores  128
+75 75
+gen	nevals	avg         	std         	min    	max        
+0  	0     	1.75875e+146	4.18665e+146	39.8062	1.1725e+147
+1  	59    	inf         	nan         	21.8888	inf        
+2  	73    	1.56535e+82 	1.17054e+83 	14.5845	1.07734e+84
+3  	61    	9.13201e+80 	9.08522e+81 	14.5845	9.131e+82  
+4  	61    	1.17294e+82 	1.07483e+83 	16.7684	1.07734e+84
+5  	60    	4.28326e+79 	4.26179e+80 	14.8746	4.28326e+81
+6  	64    	8.56653e+79 	5.99657e+80 	14.1749	4.28326e+81
+7  	43    	2712.9      	15814.8     	14.1749	118362     
+Best individual: add(protected_sqrt(4), protected_pow(s_2, protected_sqrt(protected_sqrt(4))))
+Fitness: (14.174913570424772,)
+R2_score with noisy data: 0.9999720466384253
+R2_score with original data: 0.9999720466384253
+best :-  add(protected_sqrt(4), protected_pow(s_2, protected_sqrt(protected_sqrt(4))))
+GENERATING PREFERENCE PAIRS
+190

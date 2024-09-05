@@ -236,7 +236,7 @@ def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     return pop, log, hof
 
 
-def generate_preference_pairs(population, points,pset,top_n=2,middle_n =3,compare_with_n=100):
+def generate_preference_pairs(population, points,pset,top_n=10,middle_n = 20,compare_with_n=100):
     print("GENERATING PREFERENCE PAIRS")
     top_individuals = tools.selBest(population, top_n)
     compare_individuals = tools.selBest(population[middle_n:], compare_with_n)
