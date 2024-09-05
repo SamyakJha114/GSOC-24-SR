@@ -1,0 +1,180 @@
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:03<00:03,  3.57s/it]100%|██████████| 2/2 [00:07<00:00,  3.50s/it]100%|██████████| 2/2 [00:07<00:00,  3.51s/it]
+/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+  0%|          | 0/10 [00:00<?, ?it/s]/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/nn/functional.py:5193: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+ 10%|█         | 1/10 [00:29<04:22, 29.17s/it] 20%|██        | 2/10 [00:53<03:29, 26.16s/it] 30%|███       | 3/10 [01:16<02:52, 24.68s/it] 40%|████      | 4/10 [01:38<02:23, 23.95s/it] 50%|█████     | 5/10 [02:01<01:56, 23.31s/it] 60%|██████    | 6/10 [02:23<01:31, 22.93s/it] 70%|███████   | 7/10 [02:45<01:08, 22.68s/it] 80%|████████  | 8/10 [03:07<00:45, 22.55s/it] 90%|█████████ | 9/10 [03:30<00:22, 22.46s/it]100%|██████████| 10/10 [03:52<00:00, 22.37s/it]100%|██████████| 10/10 [03:52<00:00, 23.22s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:173: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:176: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:11<00:11, 11.55s/it]100%|██████████| 2/2 [00:22<00:00, 11.01s/it]100%|██████████| 2/2 [00:22<00:00, 11.09s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:24<03:38, 24.30s/it] 20%|██        | 2/10 [00:48<03:14, 24.29s/it] 30%|███       | 3/10 [01:12<02:49, 24.28s/it] 40%|████      | 4/10 [01:37<02:25, 24.28s/it] 50%|█████     | 5/10 [02:01<02:01, 24.28s/it] 60%|██████    | 6/10 [02:25<01:37, 24.28s/it] 70%|███████   | 7/10 [02:49<01:12, 24.28s/it] 80%|████████  | 8/10 [03:14<00:48, 24.33s/it] 90%|█████████ | 9/10 [03:38<00:24, 24.34s/it]100%|██████████| 10/10 [04:03<00:00, 24.34s/it]100%|██████████| 10/10 [04:03<00:00, 24.31s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:08<00:08,  8.94s/it]100%|██████████| 2/2 [00:17<00:00,  8.90s/it]100%|██████████| 2/2 [00:17<00:00,  8.91s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:22<03:26, 22.97s/it] 20%|██        | 2/10 [00:46<03:04, 23.04s/it] 30%|███       | 3/10 [01:09<02:41, 23.01s/it] 40%|████      | 4/10 [01:32<02:18, 23.05s/it] 50%|█████     | 5/10 [01:55<01:55, 23.02s/it] 60%|██████    | 6/10 [02:18<01:31, 23.00s/it] 70%|███████   | 7/10 [02:41<01:08, 22.99s/it] 80%|████████  | 8/10 [03:04<00:45, 22.99s/it] 90%|█████████ | 9/10 [03:27<00:23, 23.03s/it]100%|██████████| 10/10 [03:50<00:00, 23.03s/it]100%|██████████| 10/10 [03:50<00:00, 23.02s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:08<00:08,  8.31s/it]100%|██████████| 2/2 [00:12<00:00,  5.68s/it]100%|██████████| 2/2 [00:12<00:00,  6.07s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:25<03:50, 25.58s/it] 20%|██        | 2/10 [00:51<03:24, 25.51s/it] 30%|███       | 3/10 [01:16<02:58, 25.45s/it] 40%|████      | 4/10 [01:41<02:32, 25.37s/it] 50%|█████     | 5/10 [02:06<02:06, 25.32s/it] 60%|██████    | 6/10 [02:32<01:41, 25.30s/it] 70%|███████   | 7/10 [02:57<01:15, 25.27s/it] 80%|████████  | 8/10 [03:22<00:50, 25.29s/it] 90%|█████████ | 9/10 [03:47<00:25, 25.27s/it]100%|██████████| 10/10 [04:13<00:00, 25.26s/it]100%|██████████| 10/10 [04:13<00:00, 25.32s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:06<00:06,  6.79s/it]100%|██████████| 2/2 [00:13<00:00,  6.81s/it]100%|██████████| 2/2 [00:13<00:00,  6.81s/it]
+/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+  0%|          | 0/10 [00:00<?, ?it/s]/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/nn/functional.py:5193: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+ 10%|█         | 1/10 [00:29<04:28, 29.83s/it] 20%|██        | 2/10 [00:55<03:40, 27.61s/it] 30%|███       | 3/10 [01:20<03:03, 26.23s/it] 40%|████      | 4/10 [01:44<02:31, 25.24s/it] 50%|█████     | 5/10 [02:07<02:02, 24.48s/it] 60%|██████    | 6/10 [02:30<01:36, 24.03s/it] 70%|███████   | 7/10 [02:53<01:11, 23.74s/it] 80%|████████  | 8/10 [03:16<00:47, 23.55s/it] 90%|█████████ | 9/10 [03:39<00:23, 23.42s/it]100%|██████████| 10/10 [04:03<00:00, 23.34s/it]100%|██████████| 10/10 [04:03<00:00, 24.30s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:173: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+<string>:1: RuntimeWarning: overflow encountered in scalar multiply
+  0%|          | 0/2 [00:00<?, ?it/s]/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+<string>:1: RuntimeWarning: overflow encountered in scalar multiply
+ 50%|█████     | 1/2 [00:10<00:10, 10.58s/it]100%|██████████| 2/2 [00:21<00:00, 10.54s/it]100%|██████████| 2/2 [00:21<00:00, 10.54s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:23<03:31, 23.54s/it] 20%|██        | 2/10 [00:47<03:08, 23.52s/it] 30%|███       | 3/10 [01:10<02:44, 23.52s/it] 40%|████      | 4/10 [01:34<02:21, 23.56s/it] 50%|█████     | 5/10 [01:57<01:57, 23.55s/it] 60%|██████    | 6/10 [02:21<01:34, 23.54s/it] 70%|███████   | 7/10 [02:44<01:10, 23.54s/it] 80%|████████  | 8/10 [03:08<00:47, 23.53s/it] 90%|█████████ | 9/10 [03:31<00:23, 23.53s/it]100%|██████████| 10/10 [03:55<00:00, 23.54s/it]100%|██████████| 10/10 [03:55<00:00, 23.54s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:09<00:09,  9.27s/it]100%|██████████| 2/2 [00:15<00:00,  7.38s/it]100%|██████████| 2/2 [00:15<00:00,  7.66s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:24<03:43, 24.81s/it] 20%|██        | 2/10 [00:49<03:18, 24.80s/it] 30%|███       | 3/10 [01:14<02:53, 24.85s/it] 40%|████      | 4/10 [01:39<02:28, 24.82s/it] 50%|█████     | 5/10 [02:04<02:04, 24.81s/it] 60%|██████    | 6/10 [02:28<01:39, 24.83s/it] 70%|███████   | 7/10 [02:53<01:14, 24.82s/it] 80%|████████  | 8/10 [03:18<00:49, 24.81s/it] 90%|█████████ | 9/10 [03:43<00:24, 24.80s/it]100%|██████████| 10/10 [04:08<00:00, 24.80s/it]100%|██████████| 10/10 [04:08<00:00, 24.81s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:07<00:07,  7.37s/it]100%|██████████| 2/2 [00:14<00:00,  7.39s/it]100%|██████████| 2/2 [00:14<00:00,  7.38s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:24<03:44, 24.97s/it] 20%|██        | 2/10 [00:49<03:19, 24.89s/it] 30%|███       | 3/10 [01:14<02:54, 24.86s/it] 40%|████      | 4/10 [01:39<02:29, 24.86s/it] 50%|█████     | 5/10 [02:04<02:04, 24.85s/it] 60%|██████    | 6/10 [02:29<01:39, 24.85s/it] 70%|███████   | 7/10 [02:54<01:14, 24.88s/it] 80%|████████  | 8/10 [03:18<00:49, 24.87s/it] 90%|█████████ | 9/10 [03:43<00:24, 24.86s/it]100%|██████████| 10/10 [04:08<00:00, 24.86s/it]100%|██████████| 10/10 [04:08<00:00, 24.86s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:176: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:173: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:07<00:07,  7.26s/it]100%|██████████| 2/2 [00:14<00:00,  7.22s/it]100%|██████████| 2/2 [00:14<00:00,  7.23s/it]
+/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+  0%|          | 0/10 [00:00<?, ?it/s]/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/nn/functional.py:5193: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+ 10%|█         | 1/10 [00:27<04:11, 27.91s/it] 20%|██        | 2/10 [00:50<03:20, 25.03s/it] 30%|███       | 3/10 [01:13<02:46, 23.79s/it] 40%|████      | 4/10 [01:35<02:18, 23.05s/it] 50%|█████     | 5/10 [01:57<01:53, 22.64s/it] 60%|██████    | 6/10 [02:19<01:29, 22.40s/it] 70%|███████   | 7/10 [02:40<01:06, 22.25s/it] 80%|████████  | 8/10 [03:02<00:44, 22.14s/it] 90%|█████████ | 9/10 [03:24<00:22, 22.06s/it]100%|██████████| 10/10 [03:46<00:00, 22.00s/it]100%|██████████| 10/10 [03:46<00:00, 22.66s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:07<00:07,  7.62s/it]100%|██████████| 2/2 [00:15<00:00,  7.56s/it]100%|██████████| 2/2 [00:15<00:00,  7.57s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:22<03:21, 22.44s/it] 20%|██        | 2/10 [00:44<02:59, 22.44s/it] 30%|███       | 3/10 [01:07<02:37, 22.50s/it] 40%|████      | 4/10 [01:29<02:14, 22.48s/it] 50%|█████     | 5/10 [01:52<01:52, 22.50s/it] 60%|██████    | 6/10 [02:14<01:29, 22.47s/it] 70%|███████   | 7/10 [02:37<01:07, 22.44s/it] 80%|████████  | 8/10 [02:59<00:44, 22.43s/it] 90%|█████████ | 9/10 [03:22<00:22, 22.42s/it]100%|██████████| 10/10 [03:44<00:00, 22.42s/it]100%|██████████| 10/10 [03:44<00:00, 22.45s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:07<00:07,  7.51s/it]100%|██████████| 2/2 [00:15<00:00,  7.54s/it]100%|██████████| 2/2 [00:15<00:00,  7.53s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:21<03:15, 21.78s/it] 20%|██        | 2/10 [00:43<02:53, 21.74s/it] 30%|███       | 3/10 [01:05<02:32, 21.77s/it] 40%|████      | 4/10 [01:27<02:10, 21.77s/it] 50%|█████     | 5/10 [01:48<01:48, 21.75s/it] 60%|██████    | 6/10 [02:10<01:27, 21.77s/it] 70%|███████   | 7/10 [02:32<01:05, 21.76s/it] 80%|████████  | 8/10 [02:54<00:43, 21.76s/it] 90%|█████████ | 9/10 [03:15<00:21, 21.76s/it]100%|██████████| 10/10 [03:37<00:00, 21.75s/it]100%|██████████| 10/10 [03:37<00:00, 21.76s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+  0%|          | 0/2 [00:00<?, ?it/s]/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+ 50%|█████     | 1/2 [00:07<00:07,  7.46s/it]100%|██████████| 2/2 [00:14<00:00,  7.42s/it]100%|██████████| 2/2 [00:14<00:00,  7.43s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:23<03:28, 23.16s/it] 20%|██        | 2/10 [00:46<03:04, 23.08s/it] 30%|███       | 3/10 [01:09<02:41, 23.05s/it] 40%|████      | 4/10 [01:32<02:18, 23.03s/it] 50%|█████     | 5/10 [01:55<01:55, 23.01s/it] 60%|██████    | 6/10 [02:18<01:32, 23.01s/it] 70%|███████   | 7/10 [02:41<01:09, 23.01s/it] 80%|████████  | 8/10 [03:04<00:45, 23.00s/it] 90%|█████████ | 9/10 [03:27<00:22, 22.99s/it]100%|██████████| 10/10 [03:50<00:00, 22.99s/it]100%|██████████| 10/10 [03:50<00:00, 23.01s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:04<00:04,  4.65s/it]100%|██████████| 2/2 [00:09<00:00,  4.65s/it]100%|██████████| 2/2 [00:09<00:00,  4.65s/it]
+/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+  0%|          | 0/10 [00:00<?, ?it/s]/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/torch/nn/functional.py:5193: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+ 10%|█         | 1/10 [00:29<04:26, 29.60s/it] 20%|██        | 2/10 [00:54<03:36, 27.01s/it] 30%|███       | 3/10 [01:19<03:00, 25.84s/it] 40%|████      | 4/10 [01:43<02:31, 25.21s/it] 50%|█████     | 5/10 [02:07<02:03, 24.77s/it] 60%|██████    | 6/10 [02:31<01:38, 24.51s/it] 70%|███████   | 7/10 [02:55<01:13, 24.35s/it] 80%|████████  | 8/10 [03:19<00:48, 24.24s/it] 90%|█████████ | 9/10 [03:43<00:24, 24.16s/it]100%|██████████| 10/10 [04:07<00:00, 24.17s/it]100%|██████████| 10/10 [04:07<00:00, 24.77s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:173: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+  0%|          | 0/2 [00:00<?, ?it/s]/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py:75: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+ 50%|█████     | 1/2 [00:05<00:05,  5.77s/it]100%|██████████| 2/2 [00:11<00:00,  5.83s/it]100%|██████████| 2/2 [00:11<00:00,  5.82s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:23<03:31, 23.50s/it] 20%|██        | 2/10 [00:46<03:07, 23.45s/it] 30%|███       | 3/10 [01:10<02:44, 23.44s/it] 40%|████      | 4/10 [01:33<02:20, 23.43s/it] 50%|█████     | 5/10 [01:57<01:57, 23.43s/it] 60%|██████    | 6/10 [02:20<01:33, 23.42s/it] 70%|███████   | 7/10 [02:44<01:10, 23.44s/it] 80%|████████  | 8/10 [03:07<00:46, 23.44s/it] 90%|█████████ | 9/10 [03:30<00:23, 23.45s/it]100%|██████████| 10/10 [03:54<00:00, 23.46s/it]100%|██████████| 10/10 [03:54<00:00, 23.45s/it]
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:176: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:04<00:04,  4.58s/it]100%|██████████| 2/2 [00:09<00:00,  4.58s/it]100%|██████████| 2/2 [00:09<00:00,  4.58s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:19<02:56, 19.66s/it] 20%|██        | 2/10 [00:39<02:37, 19.65s/it] 30%|███       | 3/10 [00:58<02:17, 19.65s/it] 40%|████      | 4/10 [01:18<01:57, 19.64s/it] 50%|█████     | 5/10 [01:38<01:38, 19.64s/it] 60%|██████    | 6/10 [01:57<01:18, 19.64s/it] 70%|███████   | 7/10 [02:17<00:58, 19.64s/it] 80%|████████  | 8/10 [02:37<00:39, 19.68s/it] 90%|█████████ | 9/10 [02:56<00:19, 19.67s/it]100%|██████████| 10/10 [03:16<00:00, 19.70s/it]100%|██████████| 10/10 [03:16<00:00, 19.67s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:04<00:04,  4.11s/it]100%|██████████| 2/2 [00:08<00:00,  4.12s/it]100%|██████████| 2/2 [00:08<00:00,  4.12s/it]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:24<03:38, 24.26s/it] 20%|██        | 2/10 [00:48<03:14, 24.26s/it] 30%|███       | 3/10 [01:12<02:49, 24.25s/it] 40%|████      | 4/10 [01:37<02:25, 24.25s/it] 50%|█████     | 5/10 [02:01<02:01, 24.25s/it] 60%|██████    | 6/10 [02:25<01:36, 24.24s/it] 70%|███████   | 7/10 [02:49<01:12, 24.24s/it] 80%|████████  | 8/10 [03:13<00:48, 24.24s/it] 90%|█████████ | 9/10 [03:38<00:24, 24.26s/it]100%|██████████| 10/10 [04:02<00:00, 24.26s/it]100%|██████████| 10/10 [04:02<00:00, 24.25s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+Traceback (most recent call last):
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 643, in generate
+    prim = random.choice(pset.primitives[type_])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/random.py", line 373, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py", line 83, in <module>
+    main(config, i, args.noise_std,args.beta)
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py", line 68, in main
+    trainer.training_loop()
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/SymbolicDPOTrainer.py", line 186, in training_loop
+    population, stats, hof = run_gp(toolbox, self.points,self.original_points,seed_expr,pset)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py", line 214, in run_gp
+    pop, log = algorithms.eaSimple(pop, toolbox, cxpb, mutpb, ngen, stats=stats, halloffame=hof, verbose=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/algorithms.py", line 168, in eaSimple
+    offspring = varAnd(offspring, toolbox, cxpb, mutpb)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/algorithms.py", line 79, in varAnd
+    offspring[i], = toolbox.mutate(offspring[i])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 770, in mutUniform
+    individual[slice_] = expr(pset=pset, type_=type_)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 590, in genHalfAndHalf
+    return method(pset, min_, max_, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 573, in genGrow
+    return generate(pset, min_, max_, condition, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 646, in generate
+    raise IndexError("The gp.generate function tried to add "
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 643, in generate
+    prim = random.choice(pset.primitives[type_])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/random.py", line 373, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: The gp.generate function tried to add a primitive of type '<class 'int'>', but there is none available.
+srun: error: nid008212: task 0: Exited with exit code 1
+srun: Terminating StepId=30140213.0
