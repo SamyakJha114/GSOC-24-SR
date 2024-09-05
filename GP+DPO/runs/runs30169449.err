@@ -1,0 +1,50 @@
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+Traceback (most recent call last):
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 643, in generate
+    prim = random.choice(pset.primitives[type_])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/random.py", line 373, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py", line 83, in <module>
+    main(config, i, args.noise_std,args.beta)
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/main.py", line 68, in main
+    trainer.training_loop()
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/SymbolicDPOTrainer.py", line 186, in training_loop
+    population, stats, hof = run_gp(toolbox, self.points,self.original_points,seed_expr,pset)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/gp.py", line 214, in run_gp
+    pop, log = algorithms.eaSimple(pop, toolbox, cxpb, mutpb, ngen, stats=stats, halloffame=hof, verbose=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/algorithms.py", line 168, in eaSimple
+    offspring = varAnd(offspring, toolbox, cxpb, mutpb)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/algorithms.py", line 79, in varAnd
+    offspring[i], = toolbox.mutate(offspring[i])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 770, in mutUniform
+    individual[slice_] = expr(pset=pset, type_=type_)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 590, in genHalfAndHalf
+    return method(pset, min_, max_, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 550, in genFull
+    return generate(pset, min_, max_, condition, type_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 646, in generate
+    raise IndexError("The gp.generate function tried to add "
+  File "/global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages/deap/gp.py", line 643, in generate
+    prim = random.choice(pset.primitives[type_])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/random.py", line 373, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: The gp.generate function tried to add a primitive of type '<class 'int'>', but there is none available.
+srun: error: nid008589: task 0: Exited with exit code 1
+srun: Terminating StepId=30169449.0
