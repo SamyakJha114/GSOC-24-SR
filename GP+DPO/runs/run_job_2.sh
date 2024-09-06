@@ -7,7 +7,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=2
 #SBATCH --cpus-per-task=64    
-#SBATCH --time=09:00:00                   
+#SBATCH --time=06:00:00                   
 #SBATCH --output=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/runs/runs%j.out            
 #SBATCH --error=/global/homes/s/samyak09/GSOC-SR/GSOC-24-SR/GP+DPO/runs/runs%j.err             
 #SBATCH --mail-type=END,FAIL              
