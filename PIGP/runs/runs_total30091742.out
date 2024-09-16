@@ -49,6 +49,7 @@ gen	nevals	avg       	std        	min       	max
 14 	59    	8.22263e+08	8.18141e+09	0.00118833	8.22263e+10
 15 	52    	0.951893   	6.17118    	0.00118833	58.8579    
 Best individual: protected_div(sub(protected_div(4, 2), sub(sin(tan(1)), cos(s_1))), 6)
+
 Fitness: (0.0011883282353697927,)
 R2_score: 0.999995133661015
 Currently running file index :-  1
