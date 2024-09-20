@@ -63,7 +63,7 @@ def main(config):
     trainer.training_loop()
 
 if __name__ == "__main__":
-    parser = ArgumentParser()
+    # parser = ArgumentParser()
     # parser.add_argument('--file_index', type=int, help='which test file to run on')
     # args = parser.parse_args()
 

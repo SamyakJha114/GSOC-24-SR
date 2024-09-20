@@ -1,7 +1,7 @@
 import torch
 
 class Config:
-    def __init__(self,args):
+    def __init__(self):
         self.seed = 42
         self.encoder_vocab_path = '/pscratch/sd/s/samyak09/encoder_vocab (1).txt'
         self.decoder_vocab_path = '/pscratch/sd/s/samyak09/decoder_vocab (2).txt'
@@ -18,5 +18,4 @@ class Config:
         self.df_target_path = '/pscratch/sd/s/samyak09/FeynmanEquationsModified.csv'
         self.dataset_arrays_path = '/pscratch/sd/s/samyak09/dataset_arrays'
         self.model_weights_path = '/pscratch/sd/s/samyak09/default/best_checkpoint.pth'
-        self.random_init = args.random_init
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
