@@ -95,7 +95,7 @@ def load_data(config):
     points = {}
     num_vars = {}
     for k in range(0,9):
-        test_path = config.input_path + config.finetune_file_paths[k]
+        test_path = config.input_path + '/' + config.finetune_file_paths[k]
         with open(test_path) as file:
             data = file.readlines()
         arr = np.array([i.split() for i in data], dtype=np.float32)
