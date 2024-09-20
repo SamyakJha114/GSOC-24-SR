@@ -561,34 +561,47 @@ def convert_to_functional_form(expr):
     # Ensure the input is a SymPy expression
     expr = sp.sympify(expr)
     
+    # Handle operators (e.g., Add, Mul, Pow)
     for key, value in operators.items():
         if isinstance(expr, key):
             args = expr.args
             
-            # If the operation is binary and there are more than 2 arguments, nest the operations
-            if key in [sp.Add,sp.Mul,sp.Pow] and len(args) > 2:
+            # Handle binary operations with more than two arguments (e.g., nested operations)
+            if key in [sp.Add, sp.Mul, sp.Pow] and len(args) > 2:
                 result = f"{value}({convert_to_functional_form(args[0])}, {convert_to_functional_form(args[1])})"
                 for arg in args[2:]:
                     result = f"{value}({result}, {convert_to_functional_form(arg)})"
                 return result
             
-            # For non-binary operations or binary operations with exactly 2 arguments
+            # For regular operations or binary with exactly 2 arguments
             return f"{value}({', '.join(convert_to_functional_form(arg) for arg in args)})"
-        
-    for item in numbers_types:
-        if isinstance(expr, (sp.core.numbers.Rational, sp.core.numbers.Float)):
-            # Skip the conversion if the number is effectively an integer (denominator is 1)
-            if expr.is_integer:
-                return str(int(expr))
-            return f"div({str(sp.Rational(expr).p)}, {str(sp.Rational(expr).q)})"
-        elif isinstance(expr, item):
-            return str(expr)
-        
+    
+    # Handle rational numbers
+    if isinstance(expr, sp.Rational):
+        # Skip the conversion if it's effectively an integer (denominator is 1)
+        if expr.q == 1:
+            return str(expr.p)
+        return f"div({expr.p}, {expr.q})"
+    
+    # Handle floating-point numbers by converting them to rational
+    elif isinstance(expr, sp.Float):
+        rational = sp.Rational(expr).limit_denominator()
+        if rational.q == 1:
+            return str(rational.p)
+        return f"div({rational.p}, {rational.q})"
+    
+    # Handle symbols (e.g., variables)
     if isinstance(expr, sp.Symbol):
         return str(expr)
-    else:
-        print(expr)
-        raise ValueError(f"Unsupported expression type: {type(expr)}")
+    
+    # Handle other types of numbers (e.g., integers, floats)
+    for item in numbers_types:
+        if isinstance(expr, item):
+            return str(expr)
+    
+    # If expression type is unsupported, raise an error
+    print(expr)
+    raise ValueError(f"Unsupported expression type: {type(expr)}")
     
 def convert_to_sympy_expression(func_form):
     """

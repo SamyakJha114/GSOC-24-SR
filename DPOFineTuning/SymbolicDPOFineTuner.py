@@ -219,6 +219,6 @@ class SymbolicDPOFineTuner:
                 targets[i] = self.dataset[i*1000][1].unsqueeze(0).to(self.device)
             self.train_transformer_dpo(preference_pairs,targets)
             state_dict = self.model.state_dict()
-            torch.save(state_dict, 'model_weights.pth')
+            torch.save(state_dict, '/pscratch/sd/s/samyak09/model_weights.pth')
 
         return self.model
