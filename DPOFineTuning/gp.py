@@ -153,20 +153,44 @@ def parallel_e_lexicase_selection(individuals, k, points, pset):
     return selected
 
     # Seed population with predefined solutions
-def seed_population(pop_size,seed_exprs,pset,toolbox):
+# def seed_population(pop_size,seed_exprs,pset,toolbox):
+#     population = []
+#     count = 0
+#     for expr in seed_exprs:
+#         try :
+#             ind = creator.Individual.from_string(expr, pset)
+#             count += 1
+#             population.append(ind)
+#         except :
+#             continue
+#     print(len(seed_exprs),count)       
+#     for _ in range(pop_size - count):
+#         ind = toolbox.individual()
+#         population.append(ind)
+#     return population
+
+def seed_population(pop_size, seed_exprs, pset, toolbox):
     population = []
     count = 0
+    
     for expr in seed_exprs:
-        try :
+        # Check if the string form of the expression is just an integer
+        try:
+            if expr.strip().isdigit():  # Remove individuals that are just integers
+                continue
             ind = creator.Individual.from_string(expr, pset)
             count += 1
             population.append(ind)
-        except :
+        except:
             continue
-    print(len(seed_exprs),count)       
+    
+    print(f"Total seed expressions: {len(seed_exprs)}, Valid expressions used: {count}")
+    
+    # Fill the remaining population with randomly generated individuals
     for _ in range(pop_size - count):
         ind = toolbox.individual()
         population.append(ind)
+    
     return population
 
 def setup_toolbox(pset, points):
