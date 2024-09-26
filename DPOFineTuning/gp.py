@@ -176,7 +176,7 @@ def seed_population(pop_size, seed_exprs, pset, toolbox):
     for expr in seed_exprs:
         # Check if the string form of the expression is just an integer
         try:
-            if expr.strip().isdigit():  # Remove individuals that are just integers
+            if expr.strip().lstrip('-').isdigit():  # Handles negative integers too
                 continue
             ind = creator.Individual.from_string(expr, pset)
             count += 1
