@@ -204,7 +204,7 @@ def setup_toolbox(pset, points):
     toolbox.register("map", parallel_evalSymbReg,num_cores = num_cores)
     toolbox.register("select", lambda individuals, k: parallel_e_lexicase_selection(individuals, k, points,pset)) 
     toolbox.register("mate", gp.cxOnePoint)
-    toolbox.register("mutate", mutate_with_fix, expr=toolbox.expr, pset=pset)
+    toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr, pset=pset)
 
     return toolbox
 
@@ -270,41 +270,3 @@ def generate_preference_pairs(population, points,pset,top_n=2,middle_n =3,compar
                     
     print(len(pairs))
     return pairs
-
-def fix_terminal_types(individual):
-    for node in individual:
-        if isinstance(node, gp.Terminal):
-            # Ensure that terminals with <class 'object'> are properly cast to integers
-            if isinstance(node.value, object) and isinstance(node.value, int):
-                node.value = int(node.value)  # Explicitly cast back to int
-    return individual
-
-def mutate_with_fix(individual, expr, pset):
-    # Apply terminal type fix first
-    individual = fix_terminal_types(individual)
-    # Standard mutation
-    return mutUniform(individual, expr=expr, pset=pset)
-
-def mutUniform(individual, expr, pset):
-    """Randomly select a point in the tree *individual*, then replace the
-    subtree at that point as a root by the expression generated using method
-    :func:`expr`.
-
-    :param individual: The tree to be mutated.
-    :param expr: A function object that can generate an expression when
-                 called.
-    :returns: A tuple of one tree.
-    """
-    index = random.randrange(len(individual))
-    slice_ = individual.searchSubtree(index)
-    type_ = individual[index].ret
-    print(str(individual))
-    print(individual)
-    print(type_)
-    try:
-        print("Value of the terminal:", individual[index].value)
-        print("Name of the terminal:", individual[index].name)
-    except:
-        print("Not terminal")
-    individual[slice_] = expr(pset=pset, type_=type_)
-    return individual,
