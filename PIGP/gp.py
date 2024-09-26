@@ -2,6 +2,8 @@ import math
 import operator
 import numpy as np
 from deap import base, creator, tools, gp, algorithms
+from tqdm import tqdm 
+from utils import check_bad
 import concurrent.futures
 import multiprocessing
 import os
@@ -73,12 +75,6 @@ def evalSymbReg(individual, points,pset):
     func = gp.compile(expr=individual, pset=pset)
     sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
     return math.fsum(sqerrors),
-
-# def parallel_evalSymbReg(eval_func, individuals,num_cores):
-#     with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-#         futures = [executor.submit(eval_func, ind) for ind in individuals]
-#         results = [future.result() for future in concurrent.futures.as_completed(futures)]
-#     return results
 
 def evaluate_chunk(eval_func, chunk):
     """Evaluate a chunk of individuals."""
@@ -156,21 +152,28 @@ def parallel_e_lexicase_selection(individuals, k, points, pset):
 
     return selected
 
-    # Seed population with predefined solutions
-def seed_population(pop_size,seed_exprs,pset,toolbox):
+def seed_population(pop_size, seed_exprs, pset, toolbox):
     population = []
     count = 0
+    
     for expr in seed_exprs:
-        try :
+        # Check if the string form of the expression is just an integer
+        try:
+            if expr.strip().lstrip('-').isdigit():  # Handles negative integers too
+                continue
             ind = creator.Individual.from_string(expr, pset)
             count += 1
             population.append(ind)
-        except :
+        except:
             continue
-    print(len(seed_exprs),count)       
+    
+    print(f"Total seed expressions: {len(seed_exprs)}, Valid expressions used: {count}")
+    
+    # Fill the remaining population with randomly generated individuals
     for _ in range(pop_size - count):
         ind = toolbox.individual()
         population.append(ind)
+    
     return population
 
 def setup_toolbox(pset, points):
@@ -188,7 +191,7 @@ def setup_toolbox(pset, points):
 
     return toolbox
 
-def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
+def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     if num_cores is None:
         num_cores = multiprocessing.cpu_count()
 
@@ -198,7 +201,7 @@ def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)
 
     # Parallel fitness evaluation of the entire population
-    fitness_results = parallel_evalSymbReg(toolbox.evaluate, pop, num_cores)
+    fitness_results = parallel_evalSymbReg(toolbox.evaluate,pop,num_cores)
     for ind, fit in zip(pop, fitness_results):
         ind.fitness.values = fit
 
@@ -218,21 +221,35 @@ def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     print("Best individual:", hof[0])
     print("Fitness:", hof[0].fitness.values)
 
-    # Calculate R2 score with noisy data
-    TSS_noisy = 0.0
-    mean_y_noisy = sum(y for _, y in points) / len(points)
+    # Calculate R2 score
+    TSS = 0.0
+    mean_y = sum(y for _, y in points) / len(points)
     for _, y in points:
-        TSS_noisy += (y - mean_y_noisy) ** 2
-    R2_score_noisy = 1 - (float(hof[0].fitness.values[0]) / TSS_noisy)
-    print("R2_score with noisy data:", R2_score_noisy)
-
-    # Calculate R2 score with original data
-    fitness_original = evalSymbReg(hof[0], original_points, pset)
-    TSS_original = 0.0
-    mean_y_original = sum(y for _, y in original_points) / len(original_points)
-    for _, y in original_points:
-        TSS_original += (y - mean_y_original) ** 2
-    R2_score_original = 1 - (float(fitness_original[0]) / TSS_original)
-    print("R2_score with original data:", R2_score_original)
+        TSS += (y - mean_y) ** 2
+    print("R2_score:", 1 - (float(hof[0].fitness.values[0]) / TSS))
 
     return pop, log, hof
+
+def generate_preference_pairs(population, points,pset,top_n=2,middle_n =3,compare_with_n=100):
+    print("GENERATING PREFERENCE PAIRS")
+    top_individuals = tools.selBest(population, top_n)
+    compare_individuals = tools.selBest(population[middle_n:], compare_with_n)
+    pairs = []
+    for i in tqdm(range(len(top_individuals))):
+        ind1 = top_individuals[i]
+        if check_bad(ind1):
+            continue
+        for ind2 in compare_individuals:
+#             for ind2 in top_individuals:
+            fitness1 = evalSymbReg(ind1, points,pset)
+            fitness2 = evalSymbReg(ind2, points,pset)
+            if check_bad(ind2):
+                continue
+            if math.isfinite(fitness1[0]) and math.isfinite(fitness2[0]):
+                if fitness1[0] < fitness2[0]:
+                    pairs.append((ind1, ind2))
+                elif fitness1[0] > fitness2[0]:
+                    pairs.append((ind2, ind1))
+                    
+    print(len(pairs))
+    return pairs

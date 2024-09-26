@@ -25,6 +25,7 @@ def protected_exp(x1):
         return math.exp(x1) if x1 < 100 else 0.0
     except OverflowError:
         return 0.0
+
 def protected_log(x1):
     try:
         return math.log(abs(x1)) if abs(x1) > 0.001 else 0.
@@ -55,7 +56,7 @@ def make_pset(num_vars):
     pset.addPrimitive(abs, 1)
     pset.addPrimitive(math.tanh, 1)
     for i in range(1, 5):
-        pset.addTerminal(i)
+        pset.addTerminal(int(i))
     pset.addPrimitive(protected_div, 2)
     pset.addPrimitive(protected_pow, 2)
     pset.addPrimitive(protected_exp, 1)
@@ -151,24 +152,28 @@ def parallel_e_lexicase_selection(individuals, k, points, pset):
 
     return selected
 
-    # Seed population with predefined solutions
-def seed_population(pop_size,seed_exprs,pset,toolbox):
-    num_vars = len(pset.arguments) 
+def seed_population(pop_size, seed_exprs, pset, toolbox):
     population = []
     count = 0
+    
     for expr in seed_exprs:
-        for i in range(num_vars + 1, 13):
-            seed_exprs = [expr.replace(f's_{i}', 's_1') for expr in seed_exprs]
-        try :
+        # Check if the string form of the expression is just an integer
+        try:
+            if expr.strip().lstrip('-').isdigit():  # Handles negative integers too
+                continue
             ind = creator.Individual.from_string(expr, pset)
             count += 1
             population.append(ind)
-        except :
+        except:
             continue
-    print(len(seed_exprs),count)       
+    
+    print(f"Total seed expressions: {len(seed_exprs)}, Valid expressions used: {count}")
+    
+    # Fill the remaining population with randomly generated individuals
     for _ in range(pop_size - count):
         ind = toolbox.individual()
         population.append(ind)
+    
     return population
 
 def setup_toolbox(pset, points):
@@ -186,7 +191,7 @@ def setup_toolbox(pset, points):
 
     return toolbox
 
-def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
+def run_gp(toolbox, points, seed_expr, pset, num_cores=None):
     if num_cores is None:
         num_cores = multiprocessing.cpu_count()
 
@@ -196,7 +201,7 @@ def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     pop = toolbox.population(pop_size=pop_size, seed_exprs=seed_expr, pset=pset)
 
     # Parallel fitness evaluation of the entire population
-    fitness_results = parallel_evalSymbReg(toolbox.evaluate, pop, num_cores)
+    fitness_results = parallel_evalSymbReg(toolbox.evaluate,pop,num_cores)
     for ind, fit in zip(pop, fitness_results):
         ind.fitness.values = fit
 
@@ -207,7 +212,7 @@ def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     stats.register("min", np.min)
     stats.register("max", np.max)
 
-    ngen = 7
+    ngen = 15
     cxpb, mutpb = 0.5, 0.2
 
     # Use the eaSimple algorithm
@@ -216,27 +221,16 @@ def run_gp(toolbox, points, original_points, seed_expr, pset, num_cores=None):
     print("Best individual:", hof[0])
     print("Fitness:", hof[0].fitness.values)
 
-    # Calculate R2 score with noisy data
-    TSS_noisy = 0.0
-    mean_y_noisy = sum(y for _, y in points) / len(points)
+    # Calculate R2 score
+    TSS = 0.0
+    mean_y = sum(y for _, y in points) / len(points)
     for _, y in points:
-        TSS_noisy += (y - mean_y_noisy) ** 2
-    R2_score_noisy = 1 - (float(hof[0].fitness.values[0]) / TSS_noisy)
-    print("R2_score with noisy data:", R2_score_noisy)
-
-    # Calculate R2 score with original data
-    fitness_original = evalSymbReg(hof[0], original_points, pset)
-    TSS_original = 0.0
-    mean_y_original = sum(y for _, y in original_points) / len(original_points)
-    for _, y in original_points:
-        TSS_original += (y - mean_y_original) ** 2
-    R2_score_original = 1 - (float(fitness_original[0]) / TSS_original)
-    print("R2_score with original data:", R2_score_original)
+        TSS += (y - mean_y) ** 2
+    print("R2_score:", 1 - (float(hof[0].fitness.values[0]) / TSS))
 
     return pop, log, hof
 
-
-def generate_preference_pairs(population, points,pset,top_n=40,middle_n = 0,compare_with_n=40):
+def generate_preference_pairs(population, points,pset,top_n=2,middle_n =3,compare_with_n=100):
     print("GENERATING PREFERENCE PAIRS")
     top_individuals = tools.selBest(population, top_n)
     compare_individuals = tools.selBest(population[middle_n:], compare_with_n)
