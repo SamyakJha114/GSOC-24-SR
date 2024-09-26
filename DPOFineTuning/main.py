@@ -58,7 +58,7 @@ def main(config):
         model = model, 
         reference_model = reference_model, 
         decoder_tokenizer = decoder_tokenizer, 
-        dataset = datasets['valid'],
+        dataset = datasets['test'],
         num_vars = num_vars, 
         points = points)
 
