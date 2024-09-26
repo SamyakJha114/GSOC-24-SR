@@ -283,4 +283,28 @@ def mutate_with_fix(individual, expr, pset):
     # Apply terminal type fix first
     individual = fix_terminal_types(individual)
     # Standard mutation
-    return gp.mutUniform(individual, expr=expr, pset=pset)
+    return mutUniform(individual, expr=expr, pset=pset)
+
+def mutUniform(individual, expr, pset):
+    """Randomly select a point in the tree *individual*, then replace the
+    subtree at that point as a root by the expression generated using method
+    :func:`expr`.
+
+    :param individual: The tree to be mutated.
+    :param expr: A function object that can generate an expression when
+                 called.
+    :returns: A tuple of one tree.
+    """
+    index = random.randrange(len(individual))
+    slice_ = individual.searchSubtree(index)
+    type_ = individual[index].ret
+    print(str(individual))
+    print(individual)
+    print(type_)
+    try:
+        print("Value of the terminal:", individual[index].value)
+        print("Name of the terminal:", individual[index].name)
+    except:
+        print("Not terminal")
+    individual[slice_] = expr(pset=pset, type_=type_)
+    return individual,
