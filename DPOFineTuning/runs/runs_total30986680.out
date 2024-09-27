@@ -1,0 +1,264 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (2.4.0)
+Requirement already satisfied: filelock in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.15.4)
+Requirement already satisfied: typing-extensions>=4.8.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (4.9.0)
+Requirement already satisfied: sympy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.2.1)
+Requirement already satisfied: jinja2 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.1.2)
+Requirement already satisfied: fsspec in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (2023.12.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: triton==3.0.0 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.0.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.6.68)
+Requirement already satisfied: MarkupSafe>=2.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from jinja2->torch) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from sympy->torch) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (1.4.1)
+Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
+Cycle 1/4
+zoo
+Length of seed expression array :- 68
+num_cores  128
+Total seed expressions: 68, Valid expressions used: 47
+gen	nevals	avg        	std       	min    	max        
+0  	0     	1.19362e+26	1.1876e+27	66.0974	1.19358e+28
+1  	65    	221746     	1.17448e+06	66.0974	6.87482e+06
+2  	65    	154757     	996517     	66.0974	8.7054e+06 
+3  	64    	169676     	1.03767e+06	66.0974	9.16101e+06
+4  	55    	2.97017e+36	2.95529e+37	66.0974	2.97017e+38
+5  	65    	1.43667e+21	1.42947e+22	66.0974	1.43667e+23
+6  	66    	3189.48    	16484.9    	65.6088	157310     
+7  	59    	9.90497e+10	9.85532e+11	25.6975	9.90497e+12
+8  	64    	4.53569e+21	4.51295e+22	65.6088	4.53569e+23
+9  	65    	40490.9    	366746     	65.6088	3.68088e+06
+10 	69    	2.79303e+15	2.77903e+16	65.6088	2.79303e+17
+11 	65    	4.80163e+12	4.77756e+13	65.6088	4.80163e+14
+12 	59    	75123.8    	547864     	65.6088	5.40628e+06
+13 	62    	4.81825e+12	4.79409e+13	65.6088	4.81824e+14
+14 	61    	6.36269e+43	6.33079e+44	65.6088	6.36269e+45
+15 	60    	1.71246e+06	1.66579e+07	66.0974	1.67433e+08
+Best individual: mul(mul(cos(abs(4)), mul(mul(-1, s_1), mul(-1, protected_div(s_3, s_4)))), s_2)
+Fitness: (25.697535490728757,)
+R2_score: 0.9999869627385147
+for 0th and 0th cycle best :-  mul(mul(cos(abs(4)), mul(mul(-1, s_1), mul(-1, protected_div(s_3, s_4)))), s_2)
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 71
+num_cores  128
+Total seed expressions: 71, Valid expressions used: 37
+gen	nevals	avg        	std       	min     	max        
+0  	0     	1.04091e+23	1.0357e+24	0.542372	1.04091e+25
+1  	56    	2.514e+15  	2.50069e+16	0.486523	2.5133e+17 
+2  	52    	inf        	nan        	0.450382	inf        
+3  	65    	1.59844e+18	1.40151e+19	0.412482	1.40384e+20
+4  	63    	inf        	nan        	0.412482	inf        
+5  	61    	inf        	nan        	0.412482	inf        
+6  	55    	inf        	nan        	0.412482	inf        
+7  	69    	inf        	nan        	0.412482	inf        
+8  	49    	inf        	nan        	0.412482	inf        
+9  	51    	inf        	nan        	0.337421	inf        
+10 	57    	inf        	nan        	0.337421	inf        
+11 	54    	inf        	nan        	0.392919	inf        
+12 	74    	inf        	nan        	0.392919	inf        
+13 	63    	inf        	nan        	0.392919	inf        
+14 	58    	inf        	nan        	0.363516	inf        
+15 	52    	inf        	nan        	0.363516	inf        
+Best individual: protected_sqrt(abs(protected_div(s_2, protected_pow(mul(-1, s_4), 4))))
+Fitness: (0.3374212884981293,)
+R2_score: 0.9999688818537106
+for 1th and 0th cycle best :-  protected_sqrt(abs(protected_div(s_2, protected_pow(mul(-1, s_4), 4))))
+GENERATING PREFERENCE PAIRS
+171
+Length of seed expression array :- 70
+num_cores  128
+Total seed expressions: 70, Valid expressions used: 48
+gen	nevals	avg	std	min     	max
+0  	0     	inf	nan	0.719497	inf
+1  	52    	3.84284e+18	3.82358e+19	0.719497	3.84284e+20
+2  	63    	3.84284e+18	3.82358e+19	0.719497	3.84284e+20
+3  	61    	1.24383e+202	inf        	0.719497	1.24383e+204
+4  	65    	inf         	nan        	0.604765	inf         
+5  	57    	1.3241e+12  	9.42882e+12	0.604765	7.844e+13   
+6  	63    	4964.21     	47938      	0.23419 	481906      
+7  	50    	1.77689e+29 	1.76798e+30	0.23419 	1.77689e+31 
+8  	55    	378116      	2.34814e+06	0.23419 	1.64974e+07 
+9  	68    	65737.7     	615217     	0.23419 	6.18378e+06 
+10 	54    	4831.46     	47947.8    	0.23419 	481906      
+11 	63    	6210.53     	48782      	0.347586	481906      
+12 	67    	3.09118e+17 	3.07568e+18	0.264244	3.09118e+19 
+13 	50    	inf         	nan        	0.264244	inf         
+14 	67    	1e+12       	9.94987e+12	0.233577	1e+14       
+15 	51    	2.45268     	5.61023    	0.233952	38.0119     
+Best individual: protected_sqrt(add(add(s_3, s_4), s_3))
+Fitness: (0.23357702748663797,)
+R2_score: 0.999983766339135
+for 2th and 0th cycle best :-  protected_sqrt(add(add(s_3, s_4), s_3))
+GENERATING PREFERENCE PAIRS
+188
+zoo
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 21
+gen	nevals	avg        	std        	min      	max       
+0  	0     	1.99363e+07	1.97818e+08	0.0456024	1.9882e+09
+1  	66    	35.8375    	335.229    	0.0450415	3370.14   
+2  	53    	3.84362e+80	3.82435e+81	0.0294333	3.84362e+82
+3  	65    	3.08265e+12	3.0124e+13 	0.0294333	3.02763e+14
+4  	60    	50.4163    	309.47     	0.0450415	2936.21    
+5  	50    	1.67457e+10	1.66618e+11	0.0341294	1.67457e+12
+6  	51    	7.96189    	53.726     	0.0341294	516.65     
+7  	58    	27.5973    	264.127    	0.0341294	2655.38    
+8  	51    	0.82517    	1.6859     	0.0341294	9.70137    
+9  	58    	38.7514    	373.968    	0.0304383	3759.54    
+10 	56    	2620.89    	26012.9    	0.0304383	261446     
+11 	53    	31.8431    	257.267    	0.0304383	2568.4     
+12 	58    	461.659    	3790.21    	0.0304383	37902.7    
+13 	65    	491.348    	3913.61    	0.0304383	37901.7    
+14 	54    	34.1753    	270.215    	0.0304383	2620.54    
+15 	61    	54.3551    	369.132    	0.0304383	2655.38    
+Best individual: cos(sub(2, protected_sqrt(protected_div(2, s_2))))
+Fitness: (0.029433273327316073,)
+R2_score: 0.9999677147327352
+for 3th and 0th cycle best :-  cos(sub(2, protected_sqrt(protected_div(2, s_2))))
+GENERATING PREFERENCE PAIRS
+162
+Length of seed expression array :- 70
+num_cores  128
+Total seed expressions: 70, Valid expressions used: 53
+gen	nevals	avg        	std        	min    	max        
+0  	0     	1.07588e+14	1.07049e+15	407.915	1.07588e+16
+1  	61    	88864.6    	749550     	391.928	7.52747e+06
+2  	61    	5.00162e+136	4.97655e+137	406.776	5.00162e+138
+3  	69    	1e+12       	9.94987e+12 	311.115	1e+14       
+4  	64    	743623      	3.93934e+06 	380.696	2.9455e+07  
+5  	65    	inf         	nan         	397.399	inf         
+6  	58    	2.321e+79   	2.30937e+80 	370.746	2.321e+81   
+7  	70    	2.321e+79   	2.30937e+80 	396.699	2.321e+81   
+8  	62    	1.10632e+08 	7.5663e+08  	348.746	6.09937e+09 
+9  	70    	3.30951e+06 	2.85369e+07 	348.746	2.85904e+08 
+10 	60    	6.34332e+79 	6.31152e+80 	392.472	6.34332e+81 
+11 	59    	3.68322e+80 	3.66476e+81 	396.995	3.68322e+82 
+12 	54    	3.93862e+80 	3.67099e+81 	383.462	3.68322e+82 
+13 	57    	inf         	nan         	383.462	inf         
+14 	52    	inf         	nan         	383.462	inf         
+15 	63    	inf         	nan         	415.338	inf         
+Best individual: mul(mul(s_1, sin(s_5)), add(1, mul(-1, s_2)))
+Fitness: (311.1150314351689,)
+R2_score: 0.9999633264324849
+for 4th and 0th cycle best :-  mul(mul(s_1, sin(s_5)), add(1, mul(-1, s_2)))
+GENERATING PREFERENCE PAIRS
+181
+Length of seed expression array :- 72
+num_cores  128
+Total seed expressions: 72, Valid expressions used: 51
+gen	nevals	avg         	std         	min    	max         
+0  	0     	1.01837e+125	1.01327e+126	653.671	1.01837e+127
+1  	67    	inf         	nan         	617.441	inf         
+2  	57    	6.7291e+73  	6.69537e+74 	652.414	6.7291e+75  
+3  	72    	inf         	nan         	652.351	inf         
+4  	51    	inf         	nan         	674.38 	inf         
+5  	65    	inf         	nan         	670.49 	inf         
+6  	49    	inf         	nan         	665.054	inf         
+7  	68    	inf         	nan         	667.664	inf         
+8  	69    	6.42868e+14 	6.37178e+15 	648.647	6.40408e+16 
+9  	64    	9.39592e+15 	9.34883e+16 	652.309	9.39592e+17 
+10 	55    	1.06499e+14 	1.05965e+15 	652.309	1.06499e+16 
+11 	69    	243633      	2.12773e+06 	667.112	2.12203e+07 
+12 	50    	124842      	1.21651e+06 	653.671	1.22285e+07 
+13 	49    	1.19445e+31 	1.18846e+32 	662.57 	1.19445e+33 
+14 	61    	3.87726e+11 	3.85783e+12 	653.671	3.87726e+13 
+15 	66    	4.6208e+13  	4.59763e+14 	650.142	4.6208e+15  
+Best individual: mul(s_1, add(s_2, mul(mul(protected_div(1, s_5), s_4), protected_pow(s_2, -1))))
+Fitness: (617.4405562438194,)
+R2_score: 0.9999548498990286
+for 5th and 0th cycle best :-  mul(s_1, add(s_2, mul(mul(protected_div(1, s_5), s_4), protected_pow(s_2, -1))))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 72
+num_cores  128
+Total seed expressions: 72, Valid expressions used: 35
+gen	nevals	avg        	std        	min     	max       
+0  	0     	8.58467e+09	8.49951e+10	0.323199	8.5427e+11
+1  	55    	2.41011e+79	1.68708e+80	0.323199	1.20505e+81
+2  	64    	inf        	nan        	0.323199	inf        
+3  	54    	5604.06    	37990.9    	0.323199	374456     
+4  	69    	4.669e+11  	4.64559e+12	0.311526	4.669e+13  
+5  	49    	2.26686e+82	1.63884e+83	0.311526	1.42313e+84
+6  	47    	160869     	1.35393e+06	0.311526	1.33714e+07
+7  	48    	2.16205e+81	2.15121e+82	0.311526	2.16205e+83
+8  	54    	89252.6    	805157     	0.311526	8.08885e+06
+9  	63    	2.10234e+81	1.56282e+82	0.323199	1.42348e+83
+10 	45    	7.83176e+80	7.7925e+81 	0.204355	7.83176e+82
+11 	63    	7.83176e+80	7.7925e+81 	0.204355	7.83176e+82
+12 	69    	1.17385e+80	1.16797e+81	0.204355	1.17385e+82
+13 	43    	4.93087e+71	4.90615e+72	0.204355	4.93087e+73
+14 	61    	97860.2    	972920     	0.199587	9.77829e+06
+15 	57    	5.7358e+80 	5.70705e+81	0.199587	5.7358e+82 
+Best individual: protected_exp(protected_div(s_2, add(s_3, protected_div(abs(3), protected_sqrt(1)))))
+Fitness: (0.19958663224825135,)
+R2_score: 0.9999779511890703
+for 6th and 0th cycle best :-  protected_exp(protected_div(s_2, add(s_3, protected_div(abs(3), protected_sqrt(1)))))
+GENERATING PREFERENCE PAIRS
+184
+Length of seed expression array :- 71
+num_cores  128
+Total seed expressions: 71, Valid expressions used: 33
+gen	nevals	avg        	std        	min      	max        
+0  	0     	2.50273e+16	2.49019e+17	0.0683674	2.50273e+18
+1  	67    	inf        	nan        	0.0433618	inf        
+2  	55    	1.02864e+13	1.02348e+14	0.0275639	1.02864e+15
+3  	62    	4.00003e+12	3.97995e+13	0.0275639	4e+14      
+4  	64    	58771.4    	492092     	0.0397712	4.90923e+06
+5  	63    	11716.4    	93934.4    	0.0369677	925126     
+6  	61    	3.65222e+69	3.63391e+70	0.0369677	3.65222e+71
+7  	62    	48945.4    	460240     	0.0353987	4.62053e+06
+8  	66    	2.66088e+28	2.64754e+29	0.0353987	2.66088e+30
+9  	68    	20.2326    	83.2629    	0.0353987	525.735    
+10 	63    	inf        	nan        	0.0353987	inf        
+11 	67    	44.8442    	286.504    	0.0275639	2817.98    
+12 	50    	2475.79    	24522.5    	0.0275639	246471     
+13 	63    	171.082    	1669.36    	0.0275639	16780.4    
+14 	56    	98.0272    	965.479    	0.0275639	9704.27    
+15 	68    	461.969    	4485.47    	0.0331256	45085.9    
+Best individual: protected_div(protected_log(s_1), s_2)
+Fitness: (0.027563932671449205,)
+R2_score: 0.99997783247972
+for 7th and 0th cycle best :-  protected_div(protected_log(s_1), s_2)
+GENERATING PREFERENCE PAIRS
+188
+zoo
+Length of seed expression array :- 67
+num_cores  128
+Total seed expressions: 67, Valid expressions used: 45
+gen	nevals	avg    	std    	min      	max   
+0  	0     	2152.44	19100.6	0.0559038	191355
+1  	63    	2.66786e+18	2.65449e+19	0.0268932	2.66786e+20
+2  	73    	38.4626    	245.021    	0.0268932	2277.31    
+3  	56    	2.65064e+45	2.63735e+46	0.0268932	2.65064e+47
+4  	55    	6998.66    	69584      	0.0283907	699350     
+5  	65    	2.57692e+11	2.564e+12  	0.0268932	2.57692e+13
+6  	56    	3.14159e+12	3.12584e+13	0.0268932	3.14159e+14
+7  	72    	2.65064e+45	2.63735e+46	0.0268932	2.65064e+47
+8  	60    	28.1202    	209.869    	0.0268932	2081.58    
+9  	65    	1.12773    	3.41742    	0.0268932	29.5384    
+10 	58    	4.68058e+77	4.65712e+78	0.0283907	4.68058e+79
+11 	65    	8691.48    	86469.3    	0.0268932	869050     
+12 	70    	4576.87    	45218.6    	0.0283907	454490     
+13 	58    	20109.1    	199739     	0.0283907	2.00748e+06
+14 	63    	519.93     	5161.04    	0.0180462	51871.6    
+15 	53    	5.42654e+35	5.39934e+36	0.0171666	5.42654e+37
+Best individual: mul(mul(s_1, s_2), add(s_1, protected_pow(s_3, s_4)))
+Fitness: (0.01716660119996219,)
+R2_score: 0.9999982369601244
+for 8th and 0th cycle best :-  mul(mul(s_1, s_2), add(s_1, protected_pow(s_3, s_4)))
+GENERATING PREFERENCE PAIRS
+190

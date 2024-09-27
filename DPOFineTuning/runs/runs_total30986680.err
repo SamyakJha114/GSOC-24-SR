@@ -1,0 +1,130 @@
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/main.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(path)["state_dict"])
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/main.py:55: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  reference_model.load_state_dict(torch.load(path)["state_dict"])
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:11<00:11, 11.36s/it]100%|██████████| 2/2 [00:22<00:00, 11.30s/it]100%|██████████| 2/2 [00:22<00:00, 11.30s/it]
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:173: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+  0%|          | 0/2 [00:00<?, ?it/s]/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/gp.py:76: RuntimeWarning: overflow encountered in scalar power
+  sqerrors = ((((func(*x) - y)**2)/len(points)) for x, y in points)
+ 50%|█████     | 1/2 [00:15<00:15, 15.48s/it]100%|██████████| 2/2 [00:27<00:00, 13.44s/it]100%|██████████| 2/2 [00:27<00:00, 13.75s/it]
+/global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages/numpy/core/_methods.py:176: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:16<00:16, 16.90s/it]100%|██████████| 2/2 [00:33<00:00, 16.73s/it]100%|██████████| 2/2 [00:33<00:00, 16.76s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:08<00:08,  8.89s/it]100%|██████████| 2/2 [00:23<00:00, 12.23s/it]100%|██████████| 2/2 [00:23<00:00, 11.73s/it]
+<string>:1: RuntimeWarning: overflow encountered in scalar multiply
+<string>:1: RuntimeWarning: overflow encountered in scalar multiply
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:08<00:08,  8.93s/it]100%|██████████| 2/2 [00:21<00:00, 10.83s/it]100%|██████████| 2/2 [00:21<00:00, 10.54s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:09<00:09,  9.29s/it]100%|██████████| 2/2 [00:18<00:00,  9.29s/it]100%|██████████| 2/2 [00:18<00:00,  9.29s/it]
+<string>:1: RuntimeWarning: overflow encountered in multiply
+<string>:1: RuntimeWarning: overflow encountered in multiply
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:15<00:15, 15.06s/it]100%|██████████| 2/2 [00:29<00:00, 14.96s/it]100%|██████████| 2/2 [00:29<00:00, 14.98s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:12<00:12, 12.33s/it]100%|██████████| 2/2 [00:21<00:00, 10.76s/it]100%|██████████| 2/2 [00:21<00:00, 10.99s/it]
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:09<00:09,  9.91s/it]100%|██████████| 2/2 [00:19<00:00,  9.67s/it]100%|██████████| 2/2 [00:19<00:00,  9.71s/it]
+Traceback (most recent call last):
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/main.py", line 74, in <module>
+    main(config)
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/main.py", line 65, in main
+    trainer.training_loop()
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/SymbolicDPOFineTuner.py", line 220, in training_loop
+    self.train_transformer_dpo(preference_pairs,targets)
+  File "/global/u2/s/samyak09/GSOC-SR/GSOC-24-SR/DPOFineTuning/SymbolicDPOFineTuner.py", line 44, in train_transformer_dpo
+    temp_train_dataset = PreferenceDataset(i,train,targets[i])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PreferenceDataset.__init__() missing 1 required positional argument: 'decoder_tokenizer'
+srun: error: nid008609: task 0: Exited with exit code 1
+srun: Terminating StepId=30986680.0

@@ -41,8 +41,8 @@ class SymbolicDPOFineTuner:
         test_dataset = []
         for i in range(0,9):
             train, test = train_test_split(preference_pairs[i],test_size = 0.1,random_state = 42)
-            temp_train_dataset = PreferenceDataset(i,train,targets[i])
-            temp_test_dataset = PreferenceDataset(i,test,targets[i])
+            temp_train_dataset = PreferenceDataset(i,train,targets[i],self.decoder_tokenizer)
+            temp_test_dataset = PreferenceDataset(i,test,targets[i],self.decoder_tokenizer)
             train_dataset.append(temp_train_dataset)
             test_dataset.append(temp_test_dataset)
         train_dataset = ConcatDataset(train_dataset)
