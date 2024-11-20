@@ -10,6 +10,7 @@ from SymbolicDPOFineTuner import SymbolicDPOFineTuner
 from model import Model_seq2seq
 from Config import Config
 
+
 def main(config):
     # Set random seeds for reproducibility
     random.seed(config.seed)
@@ -62,7 +63,7 @@ def main(config):
         num_vars = num_vars, 
         points = points)
 
-    trainer.training_loop()
+    model = trainer.training_loop()
 
 if __name__ == "__main__":
     # parser = ArgumentParser()

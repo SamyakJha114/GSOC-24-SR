@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from gp import make_pset, setup_toolbox,run_gp,generate_preference_pairs
 from utils import freeze_reference_model,generate_seed_expressions,PreferenceDataset,generate_square_subsequent_mask
 
+
 PAD_IDX = 0
 
 class SymbolicDPOFineTuner:
@@ -202,7 +203,7 @@ class SymbolicDPOFineTuner:
             scheduler.step()
             print(f"Epoch [{epoch+1}/{epochs}], TEST Loss: {total_test_loss/len(test_dataloader)}")                     
                 
-    def training_loop(self, num_cycles=4, pop_size=100, ngen=7, cxpb=0.5, mutpb=0.2):
+    def training_loop(self, num_cycles=4, pop_size=100, ngen=5, cxpb=0.5, mutpb=0.2):
         random_numbers = [random.randint(0, 999) for _ in range(25)]
         for cycle in range(num_cycles):
             print(f"Cycle {cycle+1}/{num_cycles}")

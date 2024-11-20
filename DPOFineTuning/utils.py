@@ -86,3 +86,4 @@ class PreferenceDataset(Dataset):
         else:
             padded_sequence = sequence[:self.max_length]
         return padded_sequence
+    

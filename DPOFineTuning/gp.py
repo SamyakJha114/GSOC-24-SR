@@ -6,7 +6,6 @@ from tqdm import tqdm
 from utils import check_bad
 import concurrent.futures
 import multiprocessing
-import os
 import random
 
 def logabs(x1):

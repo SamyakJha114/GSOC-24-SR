@@ -182,8 +182,6 @@ class Model_seq2seq(nn.Module):
             required_args = 1
         else :
             return seq
-            
-            # Not an operator
 
         current_args = 0
         i = rightmost_op_idx + 1
