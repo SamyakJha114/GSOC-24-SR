@@ -37,7 +37,7 @@ class SymbolicDPOFineTuner:
     def nll_loss(self,log_prob,target):
         return nn.NLLLoss()(log_prob,target)
     
-    def train_transformer_dpo(self, preference_pairs,targets,epochs=10, batch_size=32, lr=1e-4,alpha=1.0):
+    def train_transformer_dpo(self, preference_pairs,targets,epochs=10, batch_size=32, lr=1e-4,alpha=5.0):
         train_dataset = []
         test_dataset = []
         for i in range(0,9):

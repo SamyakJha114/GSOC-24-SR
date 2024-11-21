@@ -1,0 +1,2409 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (2.4.0)
+Requirement already satisfied: filelock in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.15.4)
+Requirement already satisfied: typing-extensions>=4.8.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (4.9.0)
+Requirement already satisfied: sympy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.2.1)
+Requirement already satisfied: jinja2 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (3.1.2)
+Requirement already satisfied: fsspec in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from torch) (2023.12.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (12.1.105)
+Requirement already satisfied: triton==3.0.0 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from torch) (3.0.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.6.68)
+Requirement already satisfied: MarkupSafe>=2.0 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from jinja2->torch) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from sympy->torch) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: deap in /global/homes/s/samyak09/.local/perlmutter/python-3.11/lib/python3.11/site-packages (1.4.1)
+Requirement already satisfied: numpy in /global/common/software/nersc/pe/conda-envs/24.1.0/python-3.11/nersc-python/lib/python3.11/site-packages (from deap) (1.26.3)
+Cycle 1/4
+zoo
+Length of seed expression array :- 68
+num_cores  128
+Total seed expressions: 68, Valid expressions used: 47
+gen	nevals	avg        	std       	min    	max        
+0  	0     	1.19362e+26	1.1876e+27	66.0974	1.19358e+28
+1  	65    	221746     	1.17448e+06	66.0974	6.87482e+06
+2  	65    	154757     	996517     	66.0974	8.7054e+06 
+3  	64    	169676     	1.03767e+06	66.0974	9.16101e+06
+4  	55    	2.97017e+36	2.95529e+37	66.0974	2.97017e+38
+5  	65    	1.43667e+21	1.42947e+22	66.0974	1.43667e+23
+6  	66    	3189.48    	16484.9    	65.6088	157310     
+7  	59    	9.90497e+10	9.85532e+11	25.6975	9.90497e+12
+8  	64    	4.53569e+21	4.51295e+22	65.6088	4.53569e+23
+9  	65    	40490.9    	366746     	65.6088	3.68088e+06
+10 	69    	2.79303e+15	2.77903e+16	65.6088	2.79303e+17
+11 	65    	4.80163e+12	4.77756e+13	65.6088	4.80163e+14
+12 	59    	75123.8    	547864     	65.6088	5.40628e+06
+13 	62    	4.81825e+12	4.79409e+13	65.6088	4.81824e+14
+14 	61    	6.36269e+43	6.33079e+44	65.6088	6.36269e+45
+15 	60    	1.71246e+06	1.66579e+07	66.0974	1.67433e+08
+Best individual: mul(mul(cos(abs(4)), mul(mul(-1, s_1), mul(-1, protected_div(s_3, s_4)))), s_2)
+Fitness: (25.697535490728757,)
+R2_score: 0.9999869627385147
+for 0th and 0th cycle best :-  mul(mul(cos(abs(4)), mul(mul(-1, s_1), mul(-1, protected_div(s_3, s_4)))), s_2)
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 71
+num_cores  128
+Total seed expressions: 71, Valid expressions used: 37
+gen	nevals	avg        	std       	min     	max        
+0  	0     	1.04091e+23	1.0357e+24	0.542372	1.04091e+25
+1  	56    	2.514e+15  	2.50069e+16	0.486523	2.5133e+17 
+2  	52    	inf        	nan        	0.450382	inf        
+3  	65    	1.59844e+18	1.40151e+19	0.412482	1.40384e+20
+4  	63    	inf        	nan        	0.412482	inf        
+5  	61    	inf        	nan        	0.412482	inf        
+6  	55    	inf        	nan        	0.412482	inf        
+7  	69    	inf        	nan        	0.412482	inf        
+8  	49    	inf        	nan        	0.412482	inf        
+9  	51    	inf        	nan        	0.337421	inf        
+10 	57    	inf        	nan        	0.337421	inf        
+11 	54    	inf        	nan        	0.392919	inf        
+12 	74    	inf        	nan        	0.392919	inf        
+13 	63    	inf        	nan        	0.392919	inf        
+14 	58    	inf        	nan        	0.363516	inf        
+15 	52    	inf        	nan        	0.363516	inf        
+Best individual: protected_sqrt(abs(protected_div(s_2, protected_pow(mul(-1, s_4), 4))))
+Fitness: (0.3374212884981293,)
+R2_score: 0.9999688818537106
+for 1th and 0th cycle best :-  protected_sqrt(abs(protected_div(s_2, protected_pow(mul(-1, s_4), 4))))
+GENERATING PREFERENCE PAIRS
+171
+Length of seed expression array :- 70
+num_cores  128
+Total seed expressions: 70, Valid expressions used: 48
+gen	nevals	avg	std	min     	max
+0  	0     	inf	nan	0.719497	inf
+1  	52    	3.84284e+18	3.82358e+19	0.719497	3.84284e+20
+2  	63    	3.84284e+18	3.82358e+19	0.719497	3.84284e+20
+3  	61    	1.24383e+202	inf        	0.719497	1.24383e+204
+4  	65    	inf         	nan        	0.604765	inf         
+5  	57    	1.3241e+12  	9.42882e+12	0.604765	7.844e+13   
+6  	63    	4964.21     	47938      	0.23419 	481906      
+7  	50    	1.77689e+29 	1.76798e+30	0.23419 	1.77689e+31 
+8  	55    	378116      	2.34814e+06	0.23419 	1.64974e+07 
+9  	68    	65737.7     	615217     	0.23419 	6.18378e+06 
+10 	54    	4831.46     	47947.8    	0.23419 	481906      
+11 	63    	6210.53     	48782      	0.347586	481906      
+12 	67    	3.09118e+17 	3.07568e+18	0.264244	3.09118e+19 
+13 	50    	inf         	nan        	0.264244	inf         
+14 	67    	1e+12       	9.94987e+12	0.233577	1e+14       
+15 	51    	2.45268     	5.61023    	0.233952	38.0119     
+Best individual: protected_sqrt(add(add(s_3, s_4), s_3))
+Fitness: (0.23357702748663797,)
+R2_score: 0.999983766339135
+for 2th and 0th cycle best :-  protected_sqrt(add(add(s_3, s_4), s_3))
+GENERATING PREFERENCE PAIRS
+188
+zoo
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 21
+gen	nevals	avg        	std        	min      	max       
+0  	0     	1.99363e+07	1.97818e+08	0.0456024	1.9882e+09
+1  	66    	35.8375    	335.229    	0.0450415	3370.14   
+2  	53    	3.84362e+80	3.82435e+81	0.0294333	3.84362e+82
+3  	65    	3.08265e+12	3.0124e+13 	0.0294333	3.02763e+14
+4  	60    	50.4163    	309.47     	0.0450415	2936.21    
+5  	50    	1.67457e+10	1.66618e+11	0.0341294	1.67457e+12
+6  	51    	7.96189    	53.726     	0.0341294	516.65     
+7  	58    	27.5973    	264.127    	0.0341294	2655.38    
+8  	51    	0.82517    	1.6859     	0.0341294	9.70137    
+9  	58    	38.7514    	373.968    	0.0304383	3759.54    
+10 	56    	2620.89    	26012.9    	0.0304383	261446     
+11 	53    	31.8431    	257.267    	0.0304383	2568.4     
+12 	58    	461.659    	3790.21    	0.0304383	37902.7    
+13 	65    	491.348    	3913.61    	0.0304383	37901.7    
+14 	54    	34.1753    	270.215    	0.0304383	2620.54    
+15 	61    	54.3551    	369.132    	0.0304383	2655.38    
+Best individual: cos(sub(2, protected_sqrt(protected_div(2, s_2))))
+Fitness: (0.029433273327316073,)
+R2_score: 0.9999677147327352
+for 3th and 0th cycle best :-  cos(sub(2, protected_sqrt(protected_div(2, s_2))))
+GENERATING PREFERENCE PAIRS
+162
+Length of seed expression array :- 70
+num_cores  128
+Total seed expressions: 70, Valid expressions used: 53
+gen	nevals	avg        	std        	min    	max        
+0  	0     	1.07588e+14	1.07049e+15	407.915	1.07588e+16
+1  	61    	88864.6    	749550     	391.928	7.52747e+06
+2  	61    	5.00162e+136	4.97655e+137	406.776	5.00162e+138
+3  	69    	1e+12       	9.94987e+12 	311.115	1e+14       
+4  	64    	743623      	3.93934e+06 	380.696	2.9455e+07  
+5  	65    	inf         	nan         	397.399	inf         
+6  	58    	2.321e+79   	2.30937e+80 	370.746	2.321e+81   
+7  	70    	2.321e+79   	2.30937e+80 	396.699	2.321e+81   
+8  	62    	1.10632e+08 	7.5663e+08  	348.746	6.09937e+09 
+9  	70    	3.30951e+06 	2.85369e+07 	348.746	2.85904e+08 
+10 	60    	6.34332e+79 	6.31152e+80 	392.472	6.34332e+81 
+11 	59    	3.68322e+80 	3.66476e+81 	396.995	3.68322e+82 
+12 	54    	3.93862e+80 	3.67099e+81 	383.462	3.68322e+82 
+13 	57    	inf         	nan         	383.462	inf         
+14 	52    	inf         	nan         	383.462	inf         
+15 	63    	inf         	nan         	415.338	inf         
+Best individual: mul(mul(s_1, sin(s_5)), add(1, mul(-1, s_2)))
+Fitness: (311.1150314351689,)
+R2_score: 0.9999633264324849
+for 4th and 0th cycle best :-  mul(mul(s_1, sin(s_5)), add(1, mul(-1, s_2)))
+GENERATING PREFERENCE PAIRS
+181
+Length of seed expression array :- 72
+num_cores  128
+Total seed expressions: 72, Valid expressions used: 51
+gen	nevals	avg         	std         	min    	max         
+0  	0     	1.01837e+125	1.01327e+126	653.671	1.01837e+127
+1  	67    	inf         	nan         	617.441	inf         
+2  	57    	6.7291e+73  	6.69537e+74 	652.414	6.7291e+75  
+3  	72    	inf         	nan         	652.351	inf         
+4  	51    	inf         	nan         	674.38 	inf         
+5  	65    	inf         	nan         	670.49 	inf         
+6  	49    	inf         	nan         	665.054	inf         
+7  	68    	inf         	nan         	667.664	inf         
+8  	69    	6.42868e+14 	6.37178e+15 	648.647	6.40408e+16 
+9  	64    	9.39592e+15 	9.34883e+16 	652.309	9.39592e+17 
+10 	55    	1.06499e+14 	1.05965e+15 	652.309	1.06499e+16 
+11 	69    	243633      	2.12773e+06 	667.112	2.12203e+07 
+12 	50    	124842      	1.21651e+06 	653.671	1.22285e+07 
+13 	49    	1.19445e+31 	1.18846e+32 	662.57 	1.19445e+33 
+14 	61    	3.87726e+11 	3.85783e+12 	653.671	3.87726e+13 
+15 	66    	4.6208e+13  	4.59763e+14 	650.142	4.6208e+15  
+Best individual: mul(s_1, add(s_2, mul(mul(protected_div(1, s_5), s_4), protected_pow(s_2, -1))))
+Fitness: (617.4405562438194,)
+R2_score: 0.9999548498990286
+for 5th and 0th cycle best :-  mul(s_1, add(s_2, mul(mul(protected_div(1, s_5), s_4), protected_pow(s_2, -1))))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 72
+num_cores  128
+Total seed expressions: 72, Valid expressions used: 35
+gen	nevals	avg        	std        	min     	max       
+0  	0     	8.58467e+09	8.49951e+10	0.323199	8.5427e+11
+1  	55    	2.41011e+79	1.68708e+80	0.323199	1.20505e+81
+2  	64    	inf        	nan        	0.323199	inf        
+3  	54    	5604.06    	37990.9    	0.323199	374456     
+4  	69    	4.669e+11  	4.64559e+12	0.311526	4.669e+13  
+5  	49    	2.26686e+82	1.63884e+83	0.311526	1.42313e+84
+6  	47    	160869     	1.35393e+06	0.311526	1.33714e+07
+7  	48    	2.16205e+81	2.15121e+82	0.311526	2.16205e+83
+8  	54    	89252.6    	805157     	0.311526	8.08885e+06
+9  	63    	2.10234e+81	1.56282e+82	0.323199	1.42348e+83
+10 	45    	7.83176e+80	7.7925e+81 	0.204355	7.83176e+82
+11 	63    	7.83176e+80	7.7925e+81 	0.204355	7.83176e+82
+12 	69    	1.17385e+80	1.16797e+81	0.204355	1.17385e+82
+13 	43    	4.93087e+71	4.90615e+72	0.204355	4.93087e+73
+14 	61    	97860.2    	972920     	0.199587	9.77829e+06
+15 	57    	5.7358e+80 	5.70705e+81	0.199587	5.7358e+82 
+Best individual: protected_exp(protected_div(s_2, add(s_3, protected_div(abs(3), protected_sqrt(1)))))
+Fitness: (0.19958663224825135,)
+R2_score: 0.9999779511890703
+for 6th and 0th cycle best :-  protected_exp(protected_div(s_2, add(s_3, protected_div(abs(3), protected_sqrt(1)))))
+GENERATING PREFERENCE PAIRS
+184
+Length of seed expression array :- 71
+num_cores  128
+Total seed expressions: 71, Valid expressions used: 33
+gen	nevals	avg        	std        	min      	max        
+0  	0     	2.50273e+16	2.49019e+17	0.0683674	2.50273e+18
+1  	67    	inf        	nan        	0.0433618	inf        
+2  	55    	1.02864e+13	1.02348e+14	0.0275639	1.02864e+15
+3  	62    	4.00003e+12	3.97995e+13	0.0275639	4e+14      
+4  	64    	58771.4    	492092     	0.0397712	4.90923e+06
+5  	63    	11716.4    	93934.4    	0.0369677	925126     
+6  	61    	3.65222e+69	3.63391e+70	0.0369677	3.65222e+71
+7  	62    	48945.4    	460240     	0.0353987	4.62053e+06
+8  	66    	2.66088e+28	2.64754e+29	0.0353987	2.66088e+30
+9  	68    	20.2326    	83.2629    	0.0353987	525.735    
+10 	63    	inf        	nan        	0.0353987	inf        
+11 	67    	44.8442    	286.504    	0.0275639	2817.98    
+12 	50    	2475.79    	24522.5    	0.0275639	246471     
+13 	63    	171.082    	1669.36    	0.0275639	16780.4    
+14 	56    	98.0272    	965.479    	0.0275639	9704.27    
+15 	68    	461.969    	4485.47    	0.0331256	45085.9    
+Best individual: protected_div(protected_log(s_1), s_2)
+Fitness: (0.027563932671449205,)
+R2_score: 0.99997783247972
+for 7th and 0th cycle best :-  protected_div(protected_log(s_1), s_2)
+GENERATING PREFERENCE PAIRS
+188
+zoo
+Length of seed expression array :- 67
+num_cores  128
+Total seed expressions: 67, Valid expressions used: 45
+gen	nevals	avg    	std    	min      	max   
+0  	0     	2152.44	19100.6	0.0559038	191355
+1  	63    	2.66786e+18	2.65449e+19	0.0268932	2.66786e+20
+2  	73    	38.4626    	245.021    	0.0268932	2277.31    
+3  	56    	2.65064e+45	2.63735e+46	0.0268932	2.65064e+47
+4  	55    	6998.66    	69584      	0.0283907	699350     
+5  	65    	2.57692e+11	2.564e+12  	0.0268932	2.57692e+13
+6  	56    	3.14159e+12	3.12584e+13	0.0268932	3.14159e+14
+7  	72    	2.65064e+45	2.63735e+46	0.0268932	2.65064e+47
+8  	60    	28.1202    	209.869    	0.0268932	2081.58    
+9  	65    	1.12773    	3.41742    	0.0268932	29.5384    
+10 	58    	4.68058e+77	4.65712e+78	0.0283907	4.68058e+79
+11 	65    	8691.48    	86469.3    	0.0268932	869050     
+12 	70    	4576.87    	45218.6    	0.0283907	454490     
+13 	58    	20109.1    	199739     	0.0283907	2.00748e+06
+14 	63    	519.93     	5161.04    	0.0180462	51871.6    
+15 	53    	5.42654e+35	5.39934e+36	0.0171666	5.42654e+37
+Best individual: mul(mul(s_1, s_2), add(s_1, protected_pow(s_3, s_4)))
+Fitness: (0.01716660119996219,)
+R2_score: 0.9999982369601244
+for 8th and 0th cycle best :-  mul(mul(s_1, s_2), add(s_1, protected_pow(s_3, s_4)))
+GENERATING PREFERENCE PAIRS
+190
+TRAINING THE TRANSFORMER
+dpo loss :-  9.382061004638672 nll loss :-  0.7744023203849792
+dpo loss :-  3.8408355712890625 nll loss :-  0.824942946434021
+dpo loss :-  6.403740406036377 nll loss :-  0.6809303760528564
+dpo loss :-  4.1570515632629395 nll loss :-  0.6562387943267822
+dpo loss :-  13.82388687133789 nll loss :-  0.7339524030685425
+dpo loss :-  3.4515554904937744 nll loss :-  0.7654176950454712
+dpo loss :-  6.9379987716674805 nll loss :-  0.6169640421867371
+dpo loss :-  7.2942795753479 nll loss :-  0.7709315419197083
+dpo loss :-  8.205120086669922 nll loss :-  0.6599690318107605
+dpo loss :-  4.397059440612793 nll loss :-  0.7510281801223755
+dpo loss :-  7.494852542877197 nll loss :-  0.7467272281646729
+dpo loss :-  5.239733695983887 nll loss :-  0.6005452871322632
+dpo loss :-  3.5563809871673584 nll loss :-  0.7163459658622742
+dpo loss :-  3.718846321105957 nll loss :-  0.6663461327552795
+dpo loss :-  14.789210319519043 nll loss :-  0.7710429430007935
+dpo loss :-  6.383065223693848 nll loss :-  0.673612117767334
+dpo loss :-  3.516974687576294 nll loss :-  0.7231113314628601
+dpo loss :-  1.8790172338485718 nll loss :-  0.6294992566108704
+dpo loss :-  4.183933258056641 nll loss :-  0.6774728894233704
+dpo loss :-  0.8606256246566772 nll loss :-  0.9116416573524475
+dpo loss :-  3.1804380416870117 nll loss :-  0.8379340767860413
+dpo loss :-  3.3032400608062744 nll loss :-  0.7129185795783997
+dpo loss :-  1.9826960563659668 nll loss :-  0.6883276700973511
+dpo loss :-  5.646248817443848 nll loss :-  0.6946240067481995
+dpo loss :-  3.2061965465545654 nll loss :-  0.7781680822372437
+dpo loss :-  4.54519510269165 nll loss :-  0.7131085395812988
+dpo loss :-  3.7651164531707764 nll loss :-  0.8268004059791565
+dpo loss :-  8.682995796203613 nll loss :-  0.7564563751220703
+dpo loss :-  1.005353331565857 nll loss :-  0.8307336568832397
+dpo loss :-  1.4223988056182861 nll loss :-  0.8409613966941833
+dpo loss :-  2.72355318069458 nll loss :-  0.48586100339889526
+dpo loss :-  2.3149468898773193 nll loss :-  0.7331779599189758
+dpo loss :-  1.7238786220550537 nll loss :-  0.6417458057403564
+dpo loss :-  1.71694016456604 nll loss :-  0.6825071573257446
+dpo loss :-  1.8976995944976807 nll loss :-  0.7421437501907349
+dpo loss :-  5.019367218017578 nll loss :-  0.7500361800193787
+dpo loss :-  3.1623024940490723 nll loss :-  0.6563658118247986
+dpo loss :-  4.136684894561768 nll loss :-  0.71802818775177
+dpo loss :-  2.4559459686279297 nll loss :-  0.71544349193573
+dpo loss :-  2.0400121212005615 nll loss :-  0.6386824250221252
+dpo loss :-  0.6146919131278992 nll loss :-  0.618463933467865
+dpo loss :-  1.67342209815979 nll loss :-  0.7093336582183838
+dpo loss :-  2.797670841217041 nll loss :-  0.6166059374809265
+dpo loss :-  1.6572070121765137 nll loss :-  0.8096853494644165
+dpo loss :-  2.028719902038574 nll loss :-  0.7057327628135681
+dpo loss :-  2.9241931438446045 nll loss :-  0.6126148104667664
+Epoch [1/10], Train Loss: 4.24290877321492
+TESTING
+Epoch [1/10], TEST Loss: 1.7030755281448364
+TRAINING THE TRANSFORMER
+dpo loss :-  1.9754951000213623 nll loss :-  0.6338448524475098
+dpo loss :-  1.4816324710845947 nll loss :-  0.7722671627998352
+dpo loss :-  2.5177884101867676 nll loss :-  0.7009169459342957
+dpo loss :-  1.673833966255188 nll loss :-  0.683854877948761
+dpo loss :-  2.3365869522094727 nll loss :-  0.5358982086181641
+dpo loss :-  0.32263174653053284 nll loss :-  0.6559541821479797
+dpo loss :-  2.0856175422668457 nll loss :-  0.7276239395141602
+dpo loss :-  1.984460473060608 nll loss :-  0.6713303327560425
+dpo loss :-  2.2975006103515625 nll loss :-  0.6958895921707153
+dpo loss :-  1.5442231893539429 nll loss :-  0.7167782783508301
+dpo loss :-  0.5759663581848145 nll loss :-  0.6914221048355103
+dpo loss :-  1.6930769681930542 nll loss :-  0.7760382294654846
+dpo loss :-  1.6147822141647339 nll loss :-  0.729383647441864
+dpo loss :-  3.8878626823425293 nll loss :-  0.743991494178772
+dpo loss :-  2.7508556842803955 nll loss :-  0.6750519871711731
+dpo loss :-  1.435895562171936 nll loss :-  0.65185546875
+dpo loss :-  1.3532689809799194 nll loss :-  0.7405779957771301
+dpo loss :-  2.8158507347106934 nll loss :-  0.8872132301330566
+dpo loss :-  1.2139532566070557 nll loss :-  0.8250117301940918
+dpo loss :-  3.477181911468506 nll loss :-  0.7972304224967957
+dpo loss :-  1.1667070388793945 nll loss :-  0.7939835786819458
+dpo loss :-  1.2528045177459717 nll loss :-  0.707451581954956
+dpo loss :-  1.6117157936096191 nll loss :-  0.6665458083152771
+dpo loss :-  1.8704415559768677 nll loss :-  0.7658226490020752
+dpo loss :-  2.409822702407837 nll loss :-  0.7923038005828857
+dpo loss :-  1.9487249851226807 nll loss :-  0.6446985602378845
+dpo loss :-  1.0094215869903564 nll loss :-  0.7901021838188171
+dpo loss :-  0.4052131772041321 nll loss :-  0.685700535774231
+dpo loss :-  1.012596607208252 nll loss :-  0.6351234912872314
+dpo loss :-  2.1720540523529053 nll loss :-  0.8291645050048828
+dpo loss :-  0.4151506721973419 nll loss :-  0.7977756261825562
+dpo loss :-  0.3521329462528229 nll loss :-  0.6576308012008667
+dpo loss :-  1.7184275388717651 nll loss :-  0.6765226125717163
+dpo loss :-  1.2248730659484863 nll loss :-  0.6300044655799866
+dpo loss :-  1.3697073459625244 nll loss :-  0.6588971018791199
+dpo loss :-  0.4998354911804199 nll loss :-  0.7555745840072632
+dpo loss :-  0.560965359210968 nll loss :-  0.7167089581489563
+dpo loss :-  0.40187156200408936 nll loss :-  0.6419065594673157
+dpo loss :-  2.173595905303955 nll loss :-  0.6950013637542725
+dpo loss :-  0.9821355938911438 nll loss :-  0.7297149300575256
+dpo loss :-  1.69525945186615 nll loss :-  0.8166390061378479
+dpo loss :-  0.8057682514190674 nll loss :-  0.7346503138542175
+dpo loss :-  0.28313350677490234 nll loss :-  0.7830450534820557
+dpo loss :-  2.5214500427246094 nll loss :-  0.7039826512336731
+dpo loss :-  2.0377163887023926 nll loss :-  0.6677150726318359
+dpo loss :-  0.3222896158695221 nll loss :-  0.81782066822052
+Epoch [2/10], Train Loss: 1.549847021051075
+TESTING
+Epoch [2/10], TEST Loss: 0.7076783418655396
+TRAINING THE TRANSFORMER
+dpo loss :-  0.8200482726097107 nll loss :-  0.7955214381217957
+dpo loss :-  1.3098067045211792 nll loss :-  0.8923417329788208
+dpo loss :-  0.5397366881370544 nll loss :-  0.859409749507904
+dpo loss :-  1.0712968111038208 nll loss :-  0.8356344699859619
+dpo loss :-  0.8609347343444824 nll loss :-  0.8436402678489685
+dpo loss :-  3.726456880569458 nll loss :-  0.7353265881538391
+dpo loss :-  0.26749664545059204 nll loss :-  0.8457180261611938
+dpo loss :-  0.5454753041267395 nll loss :-  0.7921718955039978
+dpo loss :-  1.0260796546936035 nll loss :-  0.7666612863540649
+dpo loss :-  0.2228819727897644 nll loss :-  0.7433160543441772
+dpo loss :-  1.38466215133667 nll loss :-  0.7225093841552734
+dpo loss :-  0.8933302760124207 nll loss :-  0.6976065635681152
+dpo loss :-  0.5410372018814087 nll loss :-  0.7079201936721802
+dpo loss :-  0.8694144487380981 nll loss :-  0.7210903167724609
+dpo loss :-  1.6806261539459229 nll loss :-  0.8177038431167603
+dpo loss :-  1.9002987146377563 nll loss :-  0.7408267855644226
+dpo loss :-  0.4442240595817566 nll loss :-  0.7865949869155884
+dpo loss :-  0.9004142880439758 nll loss :-  0.695036768913269
+dpo loss :-  2.0471043586730957 nll loss :-  0.7869691252708435
+dpo loss :-  0.5261682271957397 nll loss :-  0.8227109313011169
+dpo loss :-  2.9296107292175293 nll loss :-  0.752471387386322
+dpo loss :-  0.7658979892730713 nll loss :-  0.6332005858421326
+dpo loss :-  0.32597634196281433 nll loss :-  0.8165012001991272
+dpo loss :-  0.1884632706642151 nll loss :-  0.5819278955459595
+dpo loss :-  0.6549256443977356 nll loss :-  0.691635251045227
+dpo loss :-  0.03196113929152489 nll loss :-  0.7329258322715759
+dpo loss :-  0.39383673667907715 nll loss :-  0.700377345085144
+dpo loss :-  0.7979509830474854 nll loss :-  0.7362970113754272
+dpo loss :-  0.6205123066902161 nll loss :-  0.7792142629623413
+dpo loss :-  1.024359107017517 nll loss :-  0.7196671962738037
+dpo loss :-  0.953130304813385 nll loss :-  0.6755906939506531
+dpo loss :-  1.8314354419708252 nll loss :-  0.727077841758728
+dpo loss :-  0.6357302665710449 nll loss :-  0.7477367520332336
+dpo loss :-  0.5718557834625244 nll loss :-  0.7530650496482849
+dpo loss :-  0.7485500574111938 nll loss :-  0.6456075310707092
+dpo loss :-  2.9166531562805176 nll loss :-  0.6514878869056702
+dpo loss :-  0.6792367100715637 nll loss :-  0.7129930853843689
+dpo loss :-  2.2199904918670654 nll loss :-  0.7163039445877075
+dpo loss :-  0.24289566278457642 nll loss :-  0.8155433535575867
+dpo loss :-  1.074411153793335 nll loss :-  0.6950348019599915
+dpo loss :-  0.314118891954422 nll loss :-  0.7022632360458374
+dpo loss :-  2.1528005599975586 nll loss :-  0.763836681842804
+dpo loss :-  0.870050311088562 nll loss :-  0.7076563835144043
+dpo loss :-  0.3586641550064087 nll loss :-  0.6647256016731262
+dpo loss :-  0.23328731954097748 nll loss :-  0.6677893996238708
+dpo loss :-  0.4482172131538391 nll loss :-  0.8062129616737366
+Epoch [3/10], Train Loss: 0.9911677427589893
+TESTING
+Epoch [3/10], TEST Loss: 2.4353495463728905
+TRAINING THE TRANSFORMER
+dpo loss :-  1.6905932426452637 nll loss :-  0.6036821007728577
+dpo loss :-  0.3943241238594055 nll loss :-  0.6529214382171631
+dpo loss :-  0.4723408818244934 nll loss :-  0.742071270942688
+dpo loss :-  1.7393513917922974 nll loss :-  0.7324072122573853
+dpo loss :-  0.5458093285560608 nll loss :-  0.647413432598114
+dpo loss :-  0.557223379611969 nll loss :-  0.8612658381462097
+dpo loss :-  0.6698916554450989 nll loss :-  0.776779294013977
+dpo loss :-  0.9492892622947693 nll loss :-  0.6750427484512329
+dpo loss :-  1.3363896608352661 nll loss :-  0.8356963396072388
+dpo loss :-  1.5472291707992554 nll loss :-  0.8105573058128357
+dpo loss :-  0.9803942441940308 nll loss :-  0.7632246017456055
+dpo loss :-  0.6399571299552917 nll loss :-  0.7521538734436035
+dpo loss :-  0.21562811732292175 nll loss :-  0.7256458401679993
+dpo loss :-  0.4215829074382782 nll loss :-  0.7267851829528809
+dpo loss :-  1.2257696390151978 nll loss :-  0.738411009311676
+dpo loss :-  0.9812654852867126 nll loss :-  0.72917240858078
+dpo loss :-  1.3197017908096313 nll loss :-  0.8327293992042542
+dpo loss :-  0.8996371626853943 nll loss :-  0.6581668853759766
+dpo loss :-  0.372158408164978 nll loss :-  0.8179148435592651
+dpo loss :-  0.8308395743370056 nll loss :-  0.8145754933357239
+dpo loss :-  0.7045716047286987 nll loss :-  0.7979781031608582
+dpo loss :-  2.1739449501037598 nll loss :-  0.7706445455551147
+dpo loss :-  3.5352253913879395 nll loss :-  0.832338273525238
+dpo loss :-  0.5834333300590515 nll loss :-  0.9094750881195068
+dpo loss :-  0.4918702244758606 nll loss :-  0.7663084864616394
+dpo loss :-  3.160587787628174 nll loss :-  0.808641791343689
+dpo loss :-  0.6492268443107605 nll loss :-  0.8878981471061707
+dpo loss :-  1.2121695280075073 nll loss :-  0.6761777997016907
+dpo loss :-  1.8208259344100952 nll loss :-  0.8025573492050171
+dpo loss :-  0.3609512448310852 nll loss :-  0.7805162072181702
+dpo loss :-  0.1049618050456047 nll loss :-  0.7424851059913635
+dpo loss :-  1.407842993736267 nll loss :-  0.6486805081367493
+dpo loss :-  0.005479134153574705 nll loss :-  0.9550750255584717
+dpo loss :-  0.027226222679018974 nll loss :-  0.7927403450012207
+dpo loss :-  1.1010379791259766 nll loss :-  0.7474898099899292
+dpo loss :-  1.2591302394866943 nll loss :-  0.7580254673957825
+dpo loss :-  0.7365500330924988 nll loss :-  0.6593443751335144
+dpo loss :-  1.0769648551940918 nll loss :-  0.7557922601699829
+dpo loss :-  1.4182491302490234 nll loss :-  0.7554249167442322
+dpo loss :-  1.3082553148269653 nll loss :-  0.8396198749542236
+dpo loss :-  1.4277647733688354 nll loss :-  0.8895223140716553
+dpo loss :-  0.9165441393852234 nll loss :-  0.8071078062057495
+dpo loss :-  0.5326180458068848 nll loss :-  0.8363144397735596
+dpo loss :-  1.1103922128677368 nll loss :-  0.7625787258148193
+dpo loss :-  0.45309391617774963 nll loss :-  0.7604644894599915
+dpo loss :-  0.8121504783630371 nll loss :-  0.6812293529510498
+Epoch [4/10], Train Loss: 1.0046343408201053
+TESTING
+Epoch [4/10], TEST Loss: 1.2489992141723634
+TRAINING THE TRANSFORMER
+dpo loss :-  0.23932842910289764 nll loss :-  0.9093977808952332
+dpo loss :-  0.05723194777965546 nll loss :-  0.7720025181770325
+dpo loss :-  0.31278833746910095 nll loss :-  0.7697443962097168
+dpo loss :-  0.29035335779190063 nll loss :-  0.7974845767021179
+dpo loss :-  0.6588394045829773 nll loss :-  0.7848979830741882
+dpo loss :-  0.3375202715396881 nll loss :-  0.7948542833328247
+dpo loss :-  0.7280399203300476 nll loss :-  0.663109540939331
+dpo loss :-  0.20215609669685364 nll loss :-  0.7912418246269226
+dpo loss :-  1.807527780532837 nll loss :-  0.6795005202293396
+dpo loss :-  0.7206723690032959 nll loss :-  0.8542570471763611
+dpo loss :-  0.06397636234760284 nll loss :-  0.7482878565788269
+dpo loss :-  0.42567238211631775 nll loss :-  0.8152867555618286
+dpo loss :-  1.2429777383804321 nll loss :-  0.7928574085235596
+dpo loss :-  0.43488097190856934 nll loss :-  0.7336169481277466
+dpo loss :-  0.2665470242500305 nll loss :-  0.8505474328994751
+dpo loss :-  0.17780829966068268 nll loss :-  0.8810611963272095
+dpo loss :-  0.012396499514579773 nll loss :-  0.6883744597434998
+dpo loss :-  0.4855949282646179 nll loss :-  0.7621908783912659
+dpo loss :-  2.230642795562744 nll loss :-  0.7195316553115845
+dpo loss :-  0.9367344379425049 nll loss :-  0.6970381736755371
+dpo loss :-  0.004169168882071972 nll loss :-  0.7612705826759338
+dpo loss :-  0.6766446232795715 nll loss :-  0.7656089067459106
+dpo loss :-  0.38934653997421265 nll loss :-  0.7455968856811523
+dpo loss :-  0.6737191677093506 nll loss :-  0.7767230272293091
+dpo loss :-  0.4389989376068115 nll loss :-  0.8027088046073914
+dpo loss :-  0.37025758624076843 nll loss :-  0.7866027355194092
+dpo loss :-  0.08707842230796814 nll loss :-  0.7431098818778992
+dpo loss :-  6.90696106175892e-05 nll loss :-  0.8222013115882874
+dpo loss :-  2.612994909286499 nll loss :-  0.6714852452278137
+dpo loss :-  2.1232616901397705 nll loss :-  0.7520985007286072
+dpo loss :-  1.2929872274398804 nll loss :-  0.693010151386261
+dpo loss :-  0.24026402831077576 nll loss :-  0.7474972605705261
+dpo loss :-  0.07866674661636353 nll loss :-  0.710868239402771
+dpo loss :-  0.6086947917938232 nll loss :-  0.7010603547096252
+dpo loss :-  0.35591816902160645 nll loss :-  0.831538736820221
+dpo loss :-  0.3014538884162903 nll loss :-  0.6952818036079407
+dpo loss :-  4.30981969833374 nll loss :-  0.6663787961006165
+dpo loss :-  0.4544987976551056 nll loss :-  0.7900708317756653
+dpo loss :-  0.2868783175945282 nll loss :-  0.7869351506233215
+dpo loss :-  1.0807933807373047 nll loss :-  0.862472414970398
+dpo loss :-  0.005804700311273336 nll loss :-  0.8588616251945496
+dpo loss :-  0.28221210837364197 nll loss :-  0.6818550825119019
+dpo loss :-  1.577204704284668 nll loss :-  0.7836304306983948
+dpo loss :-  0.4943459630012512 nll loss :-  0.8553052544593811
+dpo loss :-  0.2102232128381729 nll loss :-  0.6901195645332336
+dpo loss :-  0.3161048889160156 nll loss :-  0.6807063817977905
+Epoch [5/10], Train Loss: 0.672536814008313
+TESTING
+Epoch [5/10], TEST Loss: 0.8206839342834428
+TRAINING THE TRANSFORMER
+dpo loss :-  1.5648841857910156 nll loss :-  0.5980523228645325
+dpo loss :-  0.3599286675453186 nll loss :-  0.9114559292793274
+dpo loss :-  0.001053845277056098 nll loss :-  0.7725397944450378
+dpo loss :-  0.011289294809103012 nll loss :-  0.7638062834739685
+dpo loss :-  2.326882839202881 nll loss :-  0.7142433524131775
+dpo loss :-  0.14465606212615967 nll loss :-  0.7490274310112
+dpo loss :-  0.25621655583381653 nll loss :-  0.5907029509544373
+dpo loss :-  1.0698728561401367 nll loss :-  0.7330411672592163
+dpo loss :-  0.0317961648106575 nll loss :-  0.6465213894844055
+dpo loss :-  0.3810589611530304 nll loss :-  0.8012044429779053
+dpo loss :-  0.3904529809951782 nll loss :-  0.7157358527183533
+dpo loss :-  0.2230737805366516 nll loss :-  0.7125242352485657
+dpo loss :-  0.7308005094528198 nll loss :-  0.744763970375061
+dpo loss :-  1.0142391920089722 nll loss :-  0.7859801650047302
+dpo loss :-  0.25912073254585266 nll loss :-  0.7470707297325134
+dpo loss :-  9.361570846522227e-05 nll loss :-  0.7954695224761963
+dpo loss :-  0.10060185194015503 nll loss :-  0.8585735559463501
+dpo loss :-  1.3653022050857544 nll loss :-  0.823114812374115
+dpo loss :-  0.4698794484138489 nll loss :-  0.7738048434257507
+dpo loss :-  0.20738159120082855 nll loss :-  0.7143206596374512
+dpo loss :-  0.2909344732761383 nll loss :-  0.8031649589538574
+dpo loss :-  0.9389536380767822 nll loss :-  0.7264308929443359
+dpo loss :-  0.0011006025597453117 nll loss :-  0.7412703037261963
+dpo loss :-  1.2093994617462158 nll loss :-  0.6979929804801941
+dpo loss :-  0.3363081216812134 nll loss :-  0.6818241477012634
+dpo loss :-  0.8474898338317871 nll loss :-  0.6553836464881897
+dpo loss :-  0.3880048394203186 nll loss :-  0.889524519443512
+dpo loss :-  0.010412738658487797 nll loss :-  0.8741286993026733
+dpo loss :-  0.6932192444801331 nll loss :-  0.728695273399353
+dpo loss :-  1.1298911571502686 nll loss :-  0.6867817044258118
+dpo loss :-  1.2768075466156006 nll loss :-  0.6779190897941589
+dpo loss :-  1.8244551420211792 nll loss :-  0.862680196762085
+dpo loss :-  0.798847496509552 nll loss :-  0.7700727581977844
+dpo loss :-  0.21369607746601105 nll loss :-  0.8773865699768066
+dpo loss :-  0.2836496829986572 nll loss :-  0.8700600266456604
+dpo loss :-  0.2865178883075714 nll loss :-  0.7757160663604736
+dpo loss :-  0.5572508573532104 nll loss :-  0.8216992020606995
+dpo loss :-  0.12301827222108841 nll loss :-  0.6723430752754211
+dpo loss :-  0.23406356573104858 nll loss :-  0.7137622833251953
+dpo loss :-  0.4873976707458496 nll loss :-  0.6967216730117798
+dpo loss :-  0.2245115488767624 nll loss :-  0.7406795024871826
+dpo loss :-  0.39064058661460876 nll loss :-  0.82194584608078
+dpo loss :-  1.9701961278915405 nll loss :-  0.8447157740592957
+dpo loss :-  0.025063365697860718 nll loss :-  0.6494376063346863
+dpo loss :-  0.016598474234342575 nll loss :-  0.8375205397605896
+dpo loss :-  0.009148194454610348 nll loss :-  0.7192277312278748
+Epoch [6/10], Train Loss: 0.5545305142004509
+TESTING
+Epoch [6/10], TEST Loss: 0.4900725144892931
+TRAINING THE TRANSFORMER
+dpo loss :-  3.7487049102783203 nll loss :-  0.7209652662277222
+dpo loss :-  0.6048631072044373 nll loss :-  0.7282127141952515
+dpo loss :-  0.657773494720459 nll loss :-  0.834286093711853
+dpo loss :-  0.7762969136238098 nll loss :-  0.7034199237823486
+dpo loss :-  1.2323745489120483 nll loss :-  0.8979349136352539
+dpo loss :-  0.9575728178024292 nll loss :-  0.7645898461341858
+dpo loss :-  0.5463895201683044 nll loss :-  0.7931950092315674
+dpo loss :-  0.002558960812166333 nll loss :-  0.7751222848892212
+dpo loss :-  1.5072906017303467 nll loss :-  0.7848809957504272
+dpo loss :-  0.25370731949806213 nll loss :-  0.7749700546264648
+dpo loss :-  0.0003068347868975252 nll loss :-  0.7759549617767334
+dpo loss :-  0.002794352825731039 nll loss :-  0.6759796142578125
+dpo loss :-  0.010939307510852814 nll loss :-  0.816521942615509
+dpo loss :-  6.897320747375488 nll loss :-  0.9218949675559998
+dpo loss :-  0.0061676716431975365 nll loss :-  0.8103513121604919
+dpo loss :-  0.018131371587514877 nll loss :-  0.8721261620521545
+dpo loss :-  1.7244362831115723 nll loss :-  0.8358514308929443
+dpo loss :-  0.13217642903327942 nll loss :-  0.823215901851654
+dpo loss :-  0.6685992479324341 nll loss :-  0.7094614505767822
+dpo loss :-  0.055811382830142975 nll loss :-  0.5846326947212219
+dpo loss :-  0.7323632836341858 nll loss :-  0.7325015664100647
+dpo loss :-  1.4309139251708984 nll loss :-  0.8350221514701843
+dpo loss :-  0.09220422804355621 nll loss :-  0.7495718598365784
+dpo loss :-  0.9038478136062622 nll loss :-  0.8048512935638428
+dpo loss :-  1.0776898860931396 nll loss :-  0.695551335811615
+dpo loss :-  1.3295177221298218 nll loss :-  0.7905598878860474
+dpo loss :-  0.38388219475746155 nll loss :-  0.8988425135612488
+dpo loss :-  1.2956879138946533 nll loss :-  0.831531286239624
+dpo loss :-  0.15420854091644287 nll loss :-  0.6722069978713989
+dpo loss :-  0.3760221004486084 nll loss :-  0.6918328404426575
+dpo loss :-  0.13559043407440186 nll loss :-  0.6790175437927246
+dpo loss :-  0.08604834973812103 nll loss :-  0.704190731048584
+dpo loss :-  0.820601224899292 nll loss :-  0.5794143676757812
+dpo loss :-  1.0271341800689697 nll loss :-  0.8284560441970825
+dpo loss :-  0.23721066117286682 nll loss :-  0.7845971584320068
+dpo loss :-  0.10637897253036499 nll loss :-  0.7221170663833618
+dpo loss :-  0.594689667224884 nll loss :-  0.6635110378265381
+dpo loss :-  0.07561919093132019 nll loss :-  0.6644868850708008
+dpo loss :-  0.2271379679441452 nll loss :-  0.7442337274551392
+dpo loss :-  0.00047290168004110456 nll loss :-  0.7171350121498108
+dpo loss :-  0.5738269090652466 nll loss :-  0.6835984587669373
+dpo loss :-  1.1862802505493164 nll loss :-  0.680030882358551
+dpo loss :-  0.22419217228889465 nll loss :-  0.7492538094520569
+dpo loss :-  0.01461004838347435 nll loss :-  0.5645492076873779
+dpo loss :-  0.7329386472702026 nll loss :-  0.8560865521430969
+dpo loss :-  0.4665723443031311 nll loss :-  0.6442620754241943
+Epoch [7/10], Train Loss: 0.741780379040511
+TESTING
+Epoch [7/10], TEST Loss: 0.6953558987239375
+TRAINING THE TRANSFORMER
+dpo loss :-  0.010987568646669388 nll loss :-  0.8235486149787903
+dpo loss :-  0.5927135944366455 nll loss :-  0.8404474258422852
+dpo loss :-  0.0002779410278890282 nll loss :-  0.7761476635932922
+dpo loss :-  0.6902998089790344 nll loss :-  0.7937976121902466
+dpo loss :-  0.5494500994682312 nll loss :-  0.7827409505844116
+dpo loss :-  0.03290707617998123 nll loss :-  0.7464932203292847
+dpo loss :-  0.5040925741195679 nll loss :-  0.6479786038398743
+dpo loss :-  0.2946893572807312 nll loss :-  0.8219984769821167
+dpo loss :-  0.6561117172241211 nll loss :-  0.651528537273407
+dpo loss :-  0.45916467905044556 nll loss :-  0.6353557109832764
+dpo loss :-  0.4249178469181061 nll loss :-  0.7719869613647461
+dpo loss :-  0.455241858959198 nll loss :-  0.811367392539978
+dpo loss :-  0.9863196015357971 nll loss :-  0.7502247095108032
+dpo loss :-  0.6659629344940186 nll loss :-  0.7115849852561951
+dpo loss :-  0.002155988710001111 nll loss :-  0.8391715884208679
+dpo loss :-  0.27154165506362915 nll loss :-  0.7898194789886475
+dpo loss :-  0.3260798454284668 nll loss :-  0.8208977580070496
+dpo loss :-  1.0387393236160278 nll loss :-  0.8085078597068787
+dpo loss :-  0.9651318192481995 nll loss :-  0.7516592741012573
+dpo loss :-  0.9067748785018921 nll loss :-  0.7107954621315002
+dpo loss :-  0.0001491599396103993 nll loss :-  0.7020827531814575
+dpo loss :-  0.13118793070316315 nll loss :-  0.7669445276260376
+dpo loss :-  1.0824171304702759 nll loss :-  0.6930067539215088
+dpo loss :-  0.6055737137794495 nll loss :-  0.6588391661643982
+dpo loss :-  0.9588744640350342 nll loss :-  0.7674357295036316
+dpo loss :-  0.20794837176799774 nll loss :-  0.7923176884651184
+dpo loss :-  0.664616048336029 nll loss :-  0.7632076144218445
+dpo loss :-  0.1000090017914772 nll loss :-  0.7365421056747437
+dpo loss :-  1.584777593612671 nll loss :-  0.6932732462882996
+dpo loss :-  0.5680222511291504 nll loss :-  0.6250768899917603
+dpo loss :-  0.2764683663845062 nll loss :-  0.7690884470939636
+dpo loss :-  0.8383443355560303 nll loss :-  0.6605958342552185
+dpo loss :-  0.08980097621679306 nll loss :-  0.6753820776939392
+dpo loss :-  0.010888062417507172 nll loss :-  0.7557011842727661
+dpo loss :-  0.7753654718399048 nll loss :-  0.746390163898468
+dpo loss :-  0.10787347704172134 nll loss :-  0.7816908955574036
+dpo loss :-  1.3564883470535278 nll loss :-  0.7653229832649231
+dpo loss :-  0.2894652783870697 nll loss :-  0.7008886337280273
+dpo loss :-  0.4913554787635803 nll loss :-  0.6555749177932739
+dpo loss :-  1.251697301864624 nll loss :-  0.7922903299331665
+dpo loss :-  0.07377403974533081 nll loss :-  0.7299795150756836
+dpo loss :-  0.3647764027118683 nll loss :-  0.8327722549438477
+dpo loss :-  1.4313747882843018 nll loss :-  0.8850629925727844
+dpo loss :-  2.637200117111206 nll loss :-  0.8408803939819336
+dpo loss :-  0.5123153328895569 nll loss :-  0.6908168196678162
+dpo loss :-  0.09628886729478836 nll loss :-  0.6566081047058105
+Epoch [8/10], Train Loss: 0.5733155691869678
+TESTING
+Epoch [8/10], TEST Loss: 0.2925565138459206
+TRAINING THE TRANSFORMER
+dpo loss :-  0.1601817011833191 nll loss :-  0.7539133429527283
+dpo loss :-  0.8597186803817749 nll loss :-  0.6591988801956177
+dpo loss :-  0.10535074770450592 nll loss :-  0.7445876598358154
+dpo loss :-  0.46963346004486084 nll loss :-  0.76585453748703
+dpo loss :-  0.0010932489531114697 nll loss :-  0.8317447900772095
+dpo loss :-  0.5521562099456787 nll loss :-  0.6850136518478394
+dpo loss :-  0.9763725996017456 nll loss :-  0.7798677086830139
+dpo loss :-  1.4207448959350586 nll loss :-  0.711326003074646
+dpo loss :-  0.49581146240234375 nll loss :-  0.7772796750068665
+dpo loss :-  0.5018399953842163 nll loss :-  0.7693912386894226
+dpo loss :-  0.10551720857620239 nll loss :-  0.8630489706993103
+dpo loss :-  0.1469348669052124 nll loss :-  0.8556263446807861
+dpo loss :-  1.8606696128845215 nll loss :-  0.6531867384910583
+dpo loss :-  0.14051799476146698 nll loss :-  0.7133784890174866
+dpo loss :-  0.3131007254123688 nll loss :-  0.8020705580711365
+dpo loss :-  0.010473271831870079 nll loss :-  0.7598612308502197
+dpo loss :-  0.2747575342655182 nll loss :-  0.6610564589500427
+dpo loss :-  2.500002119631972e-05 nll loss :-  0.6090984344482422
+dpo loss :-  1.9370747804641724 nll loss :-  0.8560652136802673
+dpo loss :-  0.1972743272781372 nll loss :-  0.8082078099250793
+dpo loss :-  0.5065370798110962 nll loss :-  0.7328710556030273
+dpo loss :-  0.15977144241333008 nll loss :-  0.751990020275116
+dpo loss :-  0.26638364791870117 nll loss :-  0.6628846526145935
+dpo loss :-  1.3347105979919434 nll loss :-  0.6826525330543518
+dpo loss :-  0.4662531316280365 nll loss :-  0.681837260723114
+dpo loss :-  0.5319643616676331 nll loss :-  0.7858370542526245
+dpo loss :-  1.149726390838623 nll loss :-  0.7898175120353699
+dpo loss :-  0.9600379467010498 nll loss :-  0.7742477655410767
+dpo loss :-  0.40916699171066284 nll loss :-  0.7287695407867432
+dpo loss :-  0.1162429079413414 nll loss :-  0.8701022267341614
+dpo loss :-  0.1273077428340912 nll loss :-  0.7789224982261658
+dpo loss :-  0.5824387669563293 nll loss :-  0.665596067905426
+dpo loss :-  0.46908026933670044 nll loss :-  0.7930899858474731
+dpo loss :-  0.4618914723396301 nll loss :-  0.8480397462844849
+dpo loss :-  1.480600357055664 nll loss :-  0.6983097195625305
+dpo loss :-  0.013537686318159103 nll loss :-  0.7542536854743958
+dpo loss :-  0.16649527847766876 nll loss :-  0.7464717626571655
+dpo loss :-  0.0002686540537979454 nll loss :-  0.6615361571311951
+dpo loss :-  0.2500332295894623 nll loss :-  0.7553419470787048
+dpo loss :-  0.5000279545783997 nll loss :-  0.8192658424377441
+dpo loss :-  1.012256383895874 nll loss :-  0.6736403107643127
+dpo loss :-  0.16906332969665527 nll loss :-  0.7952893376350403
+dpo loss :-  0.20389024913311005 nll loss :-  0.7688513994216919
+dpo loss :-  0.6932017207145691 nll loss :-  0.863341212272644
+dpo loss :-  0.6706321239471436 nll loss :-  0.736273467540741
+dpo loss :-  1.0142102241516113 nll loss :-  0.9714465737342834
+Epoch [9/10], Train Loss: 0.5277668880703656
+TESTING
+Epoch [9/10], TEST Loss: 0.6244446128606796
+TRAINING THE TRANSFORMER
+dpo loss :-  1.0569682121276855 nll loss :-  0.7642063498497009
+dpo loss :-  0.01776241883635521 nll loss :-  0.7735365629196167
+dpo loss :-  0.48803195357322693 nll loss :-  0.7236301302909851
+dpo loss :-  0.3014525771141052 nll loss :-  0.804734468460083
+dpo loss :-  0.5504986643791199 nll loss :-  0.7078002691268921
+dpo loss :-  0.28443020582199097 nll loss :-  0.654124915599823
+dpo loss :-  0.4657071530818939 nll loss :-  0.7651331424713135
+dpo loss :-  0.002502156188711524 nll loss :-  0.6703033447265625
+dpo loss :-  0.24561807513237 nll loss :-  0.8221461772918701
+dpo loss :-  0.3388088345527649 nll loss :-  0.7758551239967346
+dpo loss :-  0.4193677306175232 nll loss :-  0.8327149748802185
+dpo loss :-  0.210036963224411 nll loss :-  0.757396936416626
+dpo loss :-  0.5470863580703735 nll loss :-  0.7310511469841003
+dpo loss :-  0.7542650103569031 nll loss :-  0.910158097743988
+dpo loss :-  0.7668083906173706 nll loss :-  0.6873417496681213
+dpo loss :-  6.49017692921916e-08 nll loss :-  0.722234845161438
+dpo loss :-  0.14531227946281433 nll loss :-  0.780608057975769
+dpo loss :-  2.180936813354492 nll loss :-  0.7967759966850281
+dpo loss :-  1.5081286430358887 nll loss :-  0.8854091763496399
+dpo loss :-  0.402493953704834 nll loss :-  0.8317853808403015
+dpo loss :-  0.3283783495426178 nll loss :-  0.7504764795303345
+dpo loss :-  0.3222145140171051 nll loss :-  0.7665607333183289
+dpo loss :-  0.1203865185379982 nll loss :-  0.7584680318832397
+dpo loss :-  0.017436610534787178 nll loss :-  0.7034249901771545
+dpo loss :-  0.2066231667995453 nll loss :-  0.8122091889381409
+dpo loss :-  1.0988993644714355 nll loss :-  0.7671031355857849
+dpo loss :-  0.2614460289478302 nll loss :-  0.6450614333152771
+dpo loss :-  1.587341547012329 nll loss :-  0.7240026593208313
+dpo loss :-  0.4886220395565033 nll loss :-  0.679421067237854
+dpo loss :-  0.00012794180656783283 nll loss :-  0.7535563707351685
+dpo loss :-  0.6397823691368103 nll loss :-  0.7013417482376099
+dpo loss :-  0.19589334726333618 nll loss :-  0.661801278591156
+dpo loss :-  0.9786086082458496 nll loss :-  0.6887980103492737
+dpo loss :-  0.02411414124071598 nll loss :-  0.6908634901046753
+dpo loss :-  0.008698105812072754 nll loss :-  0.7543187141418457
+dpo loss :-  0.44521570205688477 nll loss :-  0.7810277938842773
+dpo loss :-  0.13823550939559937 nll loss :-  0.7693994641304016
+dpo loss :-  0.5315213799476624 nll loss :-  0.7073879241943359
+dpo loss :-  1.281110167503357 nll loss :-  0.6658861041069031
+dpo loss :-  0.6160563230514526 nll loss :-  0.7379686832427979
+dpo loss :-  0.40825527906417847 nll loss :-  0.7535629868507385
+dpo loss :-  0.12935958802700043 nll loss :-  0.7428115010261536
+dpo loss :-  0.23949919641017914 nll loss :-  0.8361906409263611
+dpo loss :-  0.6794033646583557 nll loss :-  0.7335277795791626
+dpo loss :-  0.008646628819406033 nll loss :-  0.7098738551139832
+dpo loss :-  0.2944681644439697 nll loss :-  0.779171884059906
+Epoch [10/10], Train Loss: 0.4732284289797383
+TESTING
+Epoch [10/10], TEST Loss: 0.13077305685728788
+Cycle 2/4
+Length of seed expression array :- 73
+num_cores  128
+Total seed expressions: 73, Valid expressions used: 56
+gen	nevals	avg        	std        	min        	max        
+0  	0     	1.52446e+33	1.06699e+34	6.98098e-13	7.62141e+34
+1  	70    	1.31714e+07	5.13096e+07	6.98098e-13	2.42625e+08
+2  	55    	inf        	nan        	6.98098e-13	inf        
+3  	52    	1.28318e+07	1.23654e+08	6.98098e-13	1.24264e+09
+4  	66    	5.36522e+06	5.26841e+07	6.98098e-13	5.29547e+08
+5  	60    	1.33068e+32	1.32401e+33	6.98098e-13	1.33068e+34
+6  	52    	1.01146e+79	1.00639e+80	6.98098e-13	1.01146e+81
+7  	66    	inf        	nan        	6.98098e-13	inf        
+8  	47    	inf        	nan        	6.98098e-13	inf        
+9  	65    	9.82532e+195	inf        	6.98098e-13	9.82532e+197
+10 	59    	8.63777e+06 	4.22686e+07	6.98098e-13	2.31915e+08 
+11 	54    	3.81236e+81 	3.79325e+82	6.98098e-13	3.81236e+83 
+12 	63    	inf         	nan        	6.98098e-13	inf         
+13 	68    	5.1405e+07  	4.14319e+08	6.98098e-13	4.10716e+09 
+14 	72    	7.42295e+06 	5.64191e+07	6.98098e-13	5.29547e+08 
+15 	65    	2.5257e+08  	2.49195e+09	6.98098e-13	2.50463e+10 
+Best individual: mul(mul(mul(mul(-1, s_1), s_2), s_3), protected_pow(s_4, -1))
+Fitness: (6.98097921544942e-13,)
+R2_score: 1.0
+for 0th and 1th cycle best :-  mul(mul(mul(mul(-1, s_1), s_2), s_3), protected_pow(s_4, -1))
+GENERATING PREFERENCE PAIRS
+108
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 56
+gen	nevals	avg	std	min     	max
+0  	0     	inf	nan	0.553951	inf
+1  	59    	inf	nan	0.389516	inf
+2  	63    	inf	nan	0.329587	inf
+3  	66    	inf	nan	0.329587	inf
+4  	64    	inf	nan	0.317678	inf
+5  	64    	inf	nan	0.317678	inf
+6  	65    	inf	nan	0.317678	inf
+7  	56    	inf	nan	0.317678	inf
+8  	57    	236.793	2095.65	0.329587	20959.2
+9  	68    	inf    	nan    	0.330605	inf    
+10 	57    	1.11443e+21	1.10884e+22	0.29851 	1.11443e+23
+11 	60    	1.38969e+70	1.38272e+71	0.356878	1.38969e+72
+12 	55    	1.27587e+43	1.26947e+44	0.356878	1.27587e+45
+13 	57    	7.77115e+52	7.7322e+53 	0.356878	7.77115e+54
+14 	64    	1.17477e+48	1.16888e+49	0.356878	1.17477e+50
+15 	65    	302162     	3.00368e+06	0.38864 	3.01884e+07
+Best individual: protected_div(s_2, protected_pow(protected_sqrt(protected_pow(pi, s_4)), s_4))
+Fitness: (0.29851039938372104,)
+R2_score: 0.9999724703491049
+for 1th and 1th cycle best :-  protected_div(s_2, protected_pow(protected_sqrt(protected_pow(pi, s_4)), s_4))
+GENERATING PREFERENCE PAIRS
+188
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 58
+gen	nevals	avg         	std	min     	max         
+0  	0     	1.46248e+273	inf	0.721532	1.46248e+275
+1  	65    	inf         	nan	0.721532	inf         
+2  	64    	9.938e+11   	6.95673e+12	0.448415	4.9995e+13  
+3  	62    	5.57751e+27 	5.54955e+28	0.448415	5.57751e+29 
+4  	75    	5.14844e+21 	5.12263e+22	0.390539	5.14844e+23 
+5  	63    	2.12789e+12 	2.11722e+13	0.37423 	2.12789e+14 
+6  	51    	1.06435e+13 	1.03314e+14	0.37423 	1.03828e+15 
+7  	55    	5.05885e+07 	5.03317e+08	0.362639	5.05853e+09 
+8  	47    	inf         	nan        	0.325545	inf         
+9  	56    	inf         	nan        	0.325545	inf         
+10 	57    	inf         	nan        	0.325545	inf         
+11 	58    	inf         	nan        	0.325545	inf         
+12 	51    	6.55138e+36 	6.51855e+37	0.255689	6.55138e+38 
+13 	61    	6.93106e+184	inf        	0.255689	6.93106e+186
+14 	60    	107809      	993771     	0.255689	9.98109e+06 
+15 	70    	1.03109e+13 	1.02592e+14	0.255689	1.03109e+15 
+Best individual: protected_sqrt(add(add(s_3, 1), protected_pow(add(s_4, protected_pow(s_4, 1)), tanh(abs(protected_log(protected_exp(s_4)))))))
+Fitness: (0.2556890030148819,)
+R2_score: 0.9999822295513967
+for 2th and 1th cycle best :-  protected_sqrt(add(add(s_3, 1), protected_pow(add(s_4, protected_pow(s_4, 1)), tanh(abs(protected_log(protected_exp(s_4)))))))
+GENERATING PREFERENCE PAIRS
+84
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 20
+gen	nevals	avg       	std        	min      	max        
+0  	0     	2.9926e+23	2.97758e+24	0.0322684	2.99259e+25
+1  	63    	1.12908e+13	1.02774e+14	0.0322684	1.02908e+15
+2  	59    	3.2485e+136	3.23221e+137	0.0322684	3.2485e+138
+3  	57    	inf        	nan         	0.0322684	inf        
+4  	60    	inf        	nan         	0.00508172	inf        
+5  	55    	123.159    	725.592     	0.00508172	6504.25    
+6  	65    	inf        	nan         	0.00508172	inf        
+7  	52    	2.44032e+09	2.42805e+10 	0.00508172	2.44028e+11
+8  	59    	inf        	nan         	0.00508172	inf        
+9  	67    	7.7742e+10 	7.73524e+11 	0.00508172	7.7742e+12 
+10 	66    	3.47174e+96	3.45434e+97 	0.00508172	3.47174e+98
+11 	74    	4.27182e+11	1.89357e+12 	0.00747326	1.16214e+13
+12 	59    	inf        	nan         	0.00747326	inf        
+13 	51    	37.3068    	262.176     	0.00747326	2307.92    
+14 	71    	32.347     	269.967     	0.00747326	2697.5     
+15 	49    	28.895     	213.722     	0.00747326	2079.96    
+Best individual: protected_div(s_1, mul(3, s_2))
+Fitness: (0.0050817198311896815,)
+R2_score: 0.9999944258770986
+for 3th and 1th cycle best :-  protected_div(s_1, mul(3, s_2))
+GENERATING PREFERENCE PAIRS
+180
+Length of seed expression array :- 72
+num_cores  128
+Total seed expressions: 72, Valid expressions used: 63
+gen	nevals	avg       	std        	min    	max       
+0  	0     	1.3413e+26	1.33458e+27	393.382	1.3413e+28
+1  	72    	3.14901e+16	3.13312e+17	357.188	3.14891e+18
+2  	64    	inf        	nan        	357.188	inf        
+3  	62    	inf        	nan        	339.342	inf        
+4  	64    	1.67735e+17	1.34949e+18	403.168	1.30905e+19
+5  	59    	25775.1    	102826     	389.593	656961     
+6  	47    	inf        	nan        	407.377	inf        
+7  	61    	inf        	nan        	402.448	inf        
+8  	61    	1.2582e+18 	1.25189e+19	326.437	1.2582e+20 
+9  	71    	3.87866e+81	3.85921e+82	397.132	3.87866e+83
+10 	59    	3.42118e+26	3.40403e+27	362.673	3.42118e+28
+11 	58    	inf        	nan        	385.368	inf        
+12 	55    	inf        	nan        	346.237	inf        
+13 	53    	5.94074e+13	5.81131e+14	391.146	5.84074e+15
+14 	63    	2.81824e+06	1.85478e+07	400.311	1.7922e+08 
+15 	58    	2.77299e+80	2.75909e+81	400.311	2.77299e+82
+Best individual: mul(pi, mul(mul(sub(sin(s_4), cos(s_5)), tan(tanh(4))), s_1))
+Fitness: (326.43654558911646,)
+R2_score: 0.9999615203655097
+for 4th and 1th cycle best :-  mul(pi, mul(mul(sub(sin(s_4), cos(s_5)), tan(tanh(4))), s_1))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 67
+gen	nevals	avg        	std        	min    	max        
+0  	0     	2.12619e+20	2.11551e+21	653.671	2.12617e+22
+1  	74    	inf        	nan        	653.671	inf        
+2  	45    	3.37472e+08	3.35185e+09	653.671	3.36879e+10
+3  	64    	1.19642e+206	inf        	653.671	1.19642e+208
+4  	66    	inf         	nan        	418.611	inf         
+5  	63    	inf         	nan        	418.611	inf         
+6  	56    	inf         	nan        	593.25 	inf         
+7  	70    	inf         	nan        	646.098	inf         
+8  	57    	5.1014e+31  	5.07582e+32	676.594	5.1014e+33  
+9  	60    	703081      	3.76947e+06	674.553	3.57549e+07 
+10 	68    	610815      	3.68293e+06	672.515	3.57549e+07 
+11 	62    	inf         	nan        	642.216	inf         
+12 	56    	inf         	nan        	642.216	inf         
+13 	60    	inf         	nan        	672.708	inf         
+14 	71    	inf         	nan        	676.343	inf         
+15 	63    	inf         	nan        	674.653	inf         
+Best individual: mul(3, add(s_3, mul(s_4, sin(s_5))))
+Fitness: (418.6114308298092,)
+R2_score: 0.9999693892016347
+for 5th and 1th cycle best :-  mul(3, add(s_3, mul(s_4, sin(s_5))))
+GENERATING PREFERENCE PAIRS
+190
+Length of seed expression array :- 71
+num_cores  128
+Total seed expressions: 71, Valid expressions used: 31
+gen	nevals	avg	std	min     	max
+0  	0     	inf	nan	0.247111	inf
+1  	70    	inf	nan	0.247111	inf
+2  	60    	inf	nan	0.247111	inf
+3  	53    	inf	nan	0.247111	inf
+4  	54    	9.07682e+81	9.03132e+82	0.247111	9.07682e+83
+5  	58    	2932.14    	15260.4    	0.247111	89541.1    
+6  	60    	541808     	5.37969e+06	0.247111	5.4069e+07 
+7  	58    	541815     	5.37969e+06	0.317863	5.4069e+07 
+8  	58    	217.485    	1798.76    	0.317863	17894.3    
+9  	58    	76.9166    	554.227    	0.250822	4941.64    
+10 	54    	5753.78    	56649.8    	0.323199	569399     
+11 	62    	8.43725e+81	8.39496e+82	0.323199	8.43725e+83
+12 	65    	4.85093e+06	4.82655e+07	0.323199	4.85087e+08
+13 	63    	5.6479e+148	5.61959e+149	0.323199	5.6479e+150
+14 	60    	5.52998e+63	5.50226e+64 	0.323199	5.52998e+65
+15 	59    	8346.19    	81710       	0.32115 	821330     
+Best individual: protected_div(protected_sqrt(s_1), tanh(s_3))
+Fitness: (0.24711108243987184,)
+R2_score: 0.9999727010497949
+for 6th and 1th cycle best :-  protected_div(protected_sqrt(s_1), tanh(s_3))
+GENERATING PREFERENCE PAIRS
+188
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 25
+gen	nevals	avg        	std        	min      	max        
+0  	0     	1.50118e+06	1.48922e+07	0.0433618	1.49677e+08
+1  	59    	inf        	nan        	0.0433618	inf        
+2  	60    	inf        	nan        	0.0433618	inf        
+3  	57    	inf        	nan        	0.0433618	inf        
+4  	63    	inf        	nan        	0.0433618	inf        
+5  	51    	inf        	nan        	0.0433618	inf        
+6  	70    	inf        	nan        	0.0433618	inf        
+7  	59    	inf        	nan        	0.0433618	inf        
+8  	65    	1236.64    	8420.22    	0.0433618	65367.9    
+9  	63    	inf        	nan        	0.0487223	inf        
+10 	62    	4.404e+44  	4.38192e+45	0.0487223	4.404e+46  
+11 	56    	1.1244e+12 	1.00142e+13	0.0487223	1e+14      
+12 	60    	2.4366e+18 	2.39778e+19	0.0487223	2.40998e+20
+13 	63    	2.4366e+18 	2.39778e+19	0.0487223	2.40998e+20
+14 	68    	1.02734e+12	9.95085e+12	0.0440529	1e+14      
+15 	47    	5.58771e+107	5.5597e+108	0.0425772	5.58771e+109
+Best individual: protected_pow(add(protected_pow(add(protected_exp(2), 2), protected_sqrt(protected_exp(sub(s_2, 4)))), add(sin(1), -1)), -1)
+Fitness: (0.04257715418836396,)
+R2_score: 0.9999657585171107
+for 7th and 1th cycle best :-  protected_pow(add(protected_pow(add(protected_exp(2), 2), protected_sqrt(protected_exp(sub(s_2, 4)))), add(sin(1), -1)), -1)
+GENERATING PREFERENCE PAIRS
+86
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 56
+gen	nevals	avg       	std        	min      	max       
+0  	0     	9.8536e+80	9.80421e+81	0.0460127	9.8536e+82
+1  	54    	8.80783e+44	8.76368e+45	0.0460127	8.80783e+46
+2  	58    	4.01946e+85	3.99931e+86	0.0460127	4.01946e+87
+3  	52    	12.5198    	116.018    	0.0460127	1166.7     
+4  	65    	2.91335e+108	2.89875e+109	0.0423105	2.91335e+110
+5  	71    	1901.21     	18738.8     	0.0408348	188348      
+6  	59    	422.89      	2710.74     	0.0203177	21631.3     
+7  	70    	4608.33     	45217.4     	0.0203177	454490      
+8  	55    	11.2798     	82.8517     	0.0203177	803.984     
+9  	56    	192.872     	1457        	0.0203177	14570.9     
+10 	72    	4554.04     	45220.2     	0.0203177	454490      
+11 	54    	1.24194e+06 	1.23568e+07 	0.0203177	1.2419e+08  
+12 	59    	16.0036     	104.683     	0.0202546	1003.92     
+13 	52    	397.559     	3233.34     	0.0202546	32089.3     
+14 	57    	34.4856     	246.574     	0.0202546	2277.31     
+15 	63    	23.7987     	226.509     	0.0317079	2277.31     
+Best individual: mul(mul(mul(protected_div(add(1, mul(s_4, sin(mul(mul(s_1, cos(1)), s_3)))), 1), s_1), s_2), s_3)
+Fitness: (0.02025459555631704,)
+R2_score: 0.9999979198177196
+for 8th and 1th cycle best :-  mul(mul(mul(protected_div(add(1, mul(s_4, sin(mul(mul(s_1, cos(1)), s_3)))), 1), s_1), s_2), s_3)
+GENERATING PREFERENCE PAIRS
+184
+TRAINING THE TRANSFORMER
+dpo loss :-  9.301298141479492 nll loss :-  0.799825131893158
+dpo loss :-  5.4927167892456055 nll loss :-  0.8471682667732239
+dpo loss :-  3.941606283187866 nll loss :-  0.8665204644203186
+dpo loss :-  11.278676986694336 nll loss :-  0.7139492034912109
+dpo loss :-  10.286060333251953 nll loss :-  0.8378129005432129
+dpo loss :-  7.158014297485352 nll loss :-  0.7980124354362488
+dpo loss :-  3.458606481552124 nll loss :-  0.7622227668762207
+dpo loss :-  5.440484046936035 nll loss :-  0.8604879379272461
+dpo loss :-  6.369198799133301 nll loss :-  0.8932483792304993
+dpo loss :-  9.293548583984375 nll loss :-  0.690007209777832
+dpo loss :-  5.586920261383057 nll loss :-  0.7588071823120117
+dpo loss :-  4.645614147186279 nll loss :-  0.9312059283256531
+dpo loss :-  7.783442497253418 nll loss :-  0.7753098607063293
+dpo loss :-  1.2961323261260986 nll loss :-  0.9320801496505737
+dpo loss :-  8.654622077941895 nll loss :-  0.7656226754188538
+dpo loss :-  6.178567886352539 nll loss :-  0.8099523782730103
+dpo loss :-  7.4816999435424805 nll loss :-  0.7197803258895874
+dpo loss :-  2.692570447921753 nll loss :-  0.6812481880187988
+dpo loss :-  3.5524041652679443 nll loss :-  0.7776223421096802
+dpo loss :-  4.097465991973877 nll loss :-  0.6339063048362732
+dpo loss :-  2.684943437576294 nll loss :-  0.6377584338188171
+dpo loss :-  3.069227457046509 nll loss :-  0.7209396362304688
+dpo loss :-  1.8416863679885864 nll loss :-  0.7451117038726807
+dpo loss :-  5.513798713684082 nll loss :-  0.6728338003158569
+dpo loss :-  2.6786856651306152 nll loss :-  0.7183389067649841
+dpo loss :-  2.3268415927886963 nll loss :-  0.6847573518753052
+dpo loss :-  3.1362287998199463 nll loss :-  0.7628920078277588
+dpo loss :-  1.8408955335617065 nll loss :-  0.7458503246307373
+dpo loss :-  0.39705976843833923 nll loss :-  0.7906294465065002
+dpo loss :-  0.6496601104736328 nll loss :-  0.7442654967308044
+dpo loss :-  1.0466102361679077 nll loss :-  0.6259357929229736
+dpo loss :-  3.3208882808685303 nll loss :-  0.616141140460968
+dpo loss :-  1.2355527877807617 nll loss :-  0.7506354451179504
+dpo loss :-  3.3449201583862305 nll loss :-  0.6909589767456055
+dpo loss :-  1.3097500801086426 nll loss :-  0.7096039056777954
+dpo loss :-  0.9101995229721069 nll loss :-  0.640919029712677
+dpo loss :-  2.7927021980285645 nll loss :-  0.6446690559387207
+dpo loss :-  0.4851299226284027 nll loss :-  0.7780671715736389
+dpo loss :-  1.3187947273254395 nll loss :-  0.7496313452720642
+Epoch [1/10], Train Loss: 4.203086324991324
+TESTING
+Epoch [1/10], TEST Loss: 1.6385479010641575
+TRAINING THE TRANSFORMER
+dpo loss :-  0.4086535573005676 nll loss :-  0.7687305212020874
+dpo loss :-  2.3498592376708984 nll loss :-  0.6854979395866394
+dpo loss :-  1.7431421279907227 nll loss :-  0.7457952499389648
+dpo loss :-  1.044055461883545 nll loss :-  0.7603253126144409
+dpo loss :-  0.3211181163787842 nll loss :-  0.7442595362663269
+dpo loss :-  2.999134063720703 nll loss :-  0.6879389882087708
+dpo loss :-  2.5830960273742676 nll loss :-  0.70658278465271
+dpo loss :-  2.6689891815185547 nll loss :-  0.6464943289756775
+dpo loss :-  1.5821789503097534 nll loss :-  0.5923333168029785
+dpo loss :-  0.9799392223358154 nll loss :-  0.6640529036521912
+dpo loss :-  0.7603827714920044 nll loss :-  0.7818024754524231
+dpo loss :-  1.113804817199707 nll loss :-  0.7542300820350647
+dpo loss :-  0.7347810864448547 nll loss :-  0.8413317799568176
+dpo loss :-  0.818109393119812 nll loss :-  0.6507795453071594
+dpo loss :-  1.304807186126709 nll loss :-  0.556176483631134
+dpo loss :-  2.4358670711517334 nll loss :-  0.6579400300979614
+dpo loss :-  1.689727544784546 nll loss :-  0.6909934878349304
+dpo loss :-  1.2064478397369385 nll loss :-  0.7441006898880005
+dpo loss :-  2.640882730484009 nll loss :-  0.7826269865036011
+dpo loss :-  1.8094271421432495 nll loss :-  0.6955006718635559
+dpo loss :-  2.01944637298584 nll loss :-  0.7656853795051575
+dpo loss :-  1.95525171875488e-06 nll loss :-  0.7251869440078735
+dpo loss :-  0.9169532060623169 nll loss :-  0.7456538677215576
+dpo loss :-  0.2282138168811798 nll loss :-  0.6858081221580505
+dpo loss :-  0.05148313567042351 nll loss :-  0.8092157244682312
+dpo loss :-  2.463791847229004 nll loss :-  0.6025078892707825
+dpo loss :-  0.8220188617706299 nll loss :-  0.7834897041320801
+dpo loss :-  1.7246383428573608 nll loss :-  0.7521058320999146
+dpo loss :-  1.3227880001068115 nll loss :-  0.8506293892860413
+dpo loss :-  0.2340293824672699 nll loss :-  0.8317567110061646
+dpo loss :-  0.447447806596756 nll loss :-  0.7449679970741272
+dpo loss :-  0.30555421113967896 nll loss :-  0.81043541431427
+dpo loss :-  0.969018280506134 nll loss :-  0.6416055560112
+dpo loss :-  3.832973003387451 nll loss :-  0.726559042930603
+dpo loss :-  0.06702399253845215 nll loss :-  0.7621644139289856
+dpo loss :-  0.29228198528289795 nll loss :-  0.7127040028572083
+dpo loss :-  0.9878692626953125 nll loss :-  0.7023329138755798
+dpo loss :-  1.120166540145874 nll loss :-  0.7118092179298401
+dpo loss :-  1.4422495365142822 nll loss :-  0.7655779719352722
+Epoch [2/10], Train Loss: 1.294065885351768
+TESTING
+Epoch [2/10], TEST Loss: 0.7566382959485054
+TRAINING THE TRANSFORMER
+dpo loss :-  0.04093753173947334 nll loss :-  0.7849554419517517
+dpo loss :-  2.126797914505005 nll loss :-  0.7318264245986938
+dpo loss :-  0.37594497203826904 nll loss :-  0.6657119989395142
+dpo loss :-  0.36031436920166016 nll loss :-  0.742722749710083
+dpo loss :-  0.0009173434809781611 nll loss :-  0.6831198334693909
+dpo loss :-  2.40964937210083 nll loss :-  0.6101027131080627
+dpo loss :-  1.7326231002807617 nll loss :-  0.6993181705474854
+dpo loss :-  2.505246639251709 nll loss :-  0.72506183385849
+dpo loss :-  1.213646650314331 nll loss :-  0.8391668796539307
+dpo loss :-  1.658677339553833 nll loss :-  0.7160029411315918
+dpo loss :-  1.2861241102218628 nll loss :-  0.5587775111198425
+dpo loss :-  0.0021949170622974634 nll loss :-  0.6496585607528687
+dpo loss :-  0.9999964833259583 nll loss :-  0.6323993802070618
+dpo loss :-  0.3972160220146179 nll loss :-  0.692114531993866
+dpo loss :-  1.3700474500656128 nll loss :-  0.7616375088691711
+dpo loss :-  0.7024921178817749 nll loss :-  0.6648116707801819
+dpo loss :-  0.5607298016548157 nll loss :-  0.715916097164154
+dpo loss :-  1.8648169040679932 nll loss :-  0.7434742450714111
+dpo loss :-  1.8378205299377441 nll loss :-  0.5969900488853455
+dpo loss :-  0.9659178853034973 nll loss :-  0.605774998664856
+dpo loss :-  1.6906867027282715 nll loss :-  0.7956394553184509
+dpo loss :-  0.14973074197769165 nll loss :-  0.5952246189117432
+dpo loss :-  1.2136547565460205 nll loss :-  0.7744484543800354
+dpo loss :-  0.27592894434928894 nll loss :-  0.6544039845466614
+dpo loss :-  0.04387326166033745 nll loss :-  0.7561659812927246
+dpo loss :-  0.34075793623924255 nll loss :-  0.7146527171134949
+dpo loss :-  2.3855583667755127 nll loss :-  0.6503560543060303
+dpo loss :-  1.3403160572052002 nll loss :-  0.6767171025276184
+dpo loss :-  0.8445116281509399 nll loss :-  0.6074474453926086
+dpo loss :-  0.2647348940372467 nll loss :-  0.5579378604888916
+dpo loss :-  0.8367851376533508 nll loss :-  0.6640724539756775
+dpo loss :-  0.5291099548339844 nll loss :-  0.67012619972229
+dpo loss :-  0.9151459336280823 nll loss :-  0.6457697749137878
+dpo loss :-  0.22061467170715332 nll loss :-  0.6813144683837891
+dpo loss :-  0.4164816439151764 nll loss :-  0.6878376007080078
+dpo loss :-  0.1367870718240738 nll loss :-  0.5789739489555359
+dpo loss :-  0.9263231754302979 nll loss :-  0.7749706506729126
+dpo loss :-  3.256251335144043 nll loss :-  0.6230418682098389
+dpo loss :-  0.8711494207382202 nll loss :-  0.5926460027694702
+Epoch [3/10], Train Loss: 1.0024382746181426
+TESTING
+Epoch [3/10], TEST Loss: 1.2235092520713806
+TRAINING THE TRANSFORMER
+dpo loss :-  2.9512596130371094 nll loss :-  0.808021068572998
+dpo loss :-  0.9422496557235718 nll loss :-  0.6300115585327148
+dpo loss :-  0.9316445589065552 nll loss :-  0.6031503677368164
+dpo loss :-  0.6905319690704346 nll loss :-  0.7198487520217896
+dpo loss :-  0.648936927318573 nll loss :-  0.5816249847412109
+dpo loss :-  0.275488942861557 nll loss :-  0.6210430264472961
+dpo loss :-  0.415783166885376 nll loss :-  0.7757534384727478
+dpo loss :-  1.7222391366958618 nll loss :-  0.6528986692428589
+dpo loss :-  0.9274614453315735 nll loss :-  0.7988376617431641
+dpo loss :-  0.45564091205596924 nll loss :-  0.6392514109611511
+dpo loss :-  0.9099413752555847 nll loss :-  0.70472651720047
+dpo loss :-  0.0002112015790771693 nll loss :-  0.7093167901039124
+dpo loss :-  0.12788331508636475 nll loss :-  0.8143783807754517
+dpo loss :-  0.3595660328865051 nll loss :-  0.6933087706565857
+dpo loss :-  1.0619001388549805 nll loss :-  0.7577979564666748
+dpo loss :-  1.0221281051635742 nll loss :-  0.7942575812339783
+dpo loss :-  0.46412983536720276 nll loss :-  0.6939195990562439
+dpo loss :-  0.7124083638191223 nll loss :-  0.67168128490448
+dpo loss :-  0.30151116847991943 nll loss :-  0.6976764798164368
+dpo loss :-  0.38756442070007324 nll loss :-  0.87028968334198
+dpo loss :-  0.0003706163843162358 nll loss :-  0.8006638288497925
+dpo loss :-  1.950148105621338 nll loss :-  0.6733677387237549
+dpo loss :-  0.6409526467323303 nll loss :-  0.6978799104690552
+dpo loss :-  0.1401086449623108 nll loss :-  0.7580207586288452
+dpo loss :-  0.43491458892822266 nll loss :-  0.8049253225326538
+dpo loss :-  0.05441668629646301 nll loss :-  0.6161136031150818
+dpo loss :-  1.039305329322815 nll loss :-  0.5426598787307739
+dpo loss :-  0.3391125202178955 nll loss :-  0.7447611689567566
+dpo loss :-  1.621713638305664 nll loss :-  0.6773548722267151
+dpo loss :-  2.7594575158218504e-07 nll loss :-  0.6643784642219543
+dpo loss :-  0.04304496943950653 nll loss :-  0.7411944270133972
+dpo loss :-  0.5639318227767944 nll loss :-  0.792829692363739
+dpo loss :-  5.391714512370527e-05 nll loss :-  0.6993734240531921
+dpo loss :-  0.3708183765411377 nll loss :-  0.8758211731910706
+dpo loss :-  0.5218595862388611 nll loss :-  0.7000157833099365
+dpo loss :-  0.006039611995220184 nll loss :-  0.8831824064254761
+dpo loss :-  1.0761010646820068 nll loss :-  0.6390947699546814
+dpo loss :-  6.300550836613183e-08 nll loss :-  0.8339912295341492
+dpo loss :-  2.2805793285369873 nll loss :-  0.6357078552246094
+Epoch [4/10], Train Loss: 0.6773825572752872
+TESTING
+Epoch [4/10], TEST Loss: 1.1681317910552025
+TRAINING THE TRANSFORMER
+dpo loss :-  8.453774353256449e-05 nll loss :-  0.6992880702018738
+dpo loss :-  0.23202279210090637 nll loss :-  0.6743908524513245
+dpo loss :-  2.0163300037384033 nll loss :-  0.7332395911216736
+dpo loss :-  0.906262218952179 nll loss :-  0.6246268153190613
+dpo loss :-  0.7779714465141296 nll loss :-  0.6323910355567932
+dpo loss :-  1.3948534727096558 nll loss :-  0.7657911777496338
+dpo loss :-  3.0593185762484154e-09 nll loss :-  0.7490921020507812
+dpo loss :-  0.00013015270815230906 nll loss :-  0.6984190344810486
+dpo loss :-  0.05545113608241081 nll loss :-  0.6820679903030396
+dpo loss :-  2.73136568069458 nll loss :-  0.6883337497711182
+dpo loss :-  0.2834278643131256 nll loss :-  0.7015745639801025
+dpo loss :-  1.118988275527954 nll loss :-  0.686085045337677
+dpo loss :-  1.2477025985717773 nll loss :-  0.6647723913192749
+dpo loss :-  1.7405306100845337 nll loss :-  0.579400360584259
+dpo loss :-  1.1661756038665771 nll loss :-  0.7346231937408447
+dpo loss :-  0.3873479664325714 nll loss :-  0.6558682322502136
+dpo loss :-  0.00036533985985442996 nll loss :-  0.7152552604675293
+dpo loss :-  0.8841599822044373 nll loss :-  0.6778200268745422
+dpo loss :-  1.0884931087493896 nll loss :-  0.7860106229782104
+dpo loss :-  0.3801393210887909 nll loss :-  0.6981475949287415
+dpo loss :-  0.3050948977470398 nll loss :-  0.884209156036377
+dpo loss :-  2.189976692199707 nll loss :-  0.6726129055023193
+dpo loss :-  0.0003476012498140335 nll loss :-  0.7708855867385864
+dpo loss :-  0.5998556017875671 nll loss :-  0.653122067451477
+dpo loss :-  0.43839091062545776 nll loss :-  0.6913003325462341
+dpo loss :-  0.9008771777153015 nll loss :-  0.6918339729309082
+dpo loss :-  0.006380606442689896 nll loss :-  0.7801285982131958
+dpo loss :-  0.04915165901184082 nll loss :-  0.7792136669158936
+dpo loss :-  0.4547788202762604 nll loss :-  0.7971560955047607
+dpo loss :-  0.6460562348365784 nll loss :-  0.7117729783058167
+dpo loss :-  0.37179163098335266 nll loss :-  0.7219032645225525
+dpo loss :-  0.10879599303007126 nll loss :-  0.6321958303451538
+dpo loss :-  0.7528703212738037 nll loss :-  0.7716972827911377
+dpo loss :-  1.4789752960205078 nll loss :-  0.7149209976196289
+dpo loss :-  0.037921592593193054 nll loss :-  0.6259333491325378
+dpo loss :-  0.07836108654737473 nll loss :-  0.7697170376777649
+dpo loss :-  0.4459652602672577 nll loss :-  0.7275186777114868
+dpo loss :-  1.551110863685608 nll loss :-  0.571133553981781
+dpo loss :-  2.123274803161621 nll loss :-  0.5958230495452881
+Epoch [5/10], Train Loss: 0.7430046830991975
+TESTING
+Epoch [5/10], TEST Loss: 0.45151926204562187
+TRAINING THE TRANSFORMER
+dpo loss :-  0.5827690362930298 nll loss :-  0.7413252592086792
+dpo loss :-  0.00017952686175704002 nll loss :-  0.572646975517273
+dpo loss :-  0.11932837218046188 nll loss :-  0.6991754770278931
+dpo loss :-  0.10660550743341446 nll loss :-  0.6682702898979187
+dpo loss :-  0.19977684319019318 nll loss :-  0.7208314538002014
+dpo loss :-  0.22721019387245178 nll loss :-  0.771411120891571
+dpo loss :-  0.4185580015182495 nll loss :-  0.6931209564208984
+dpo loss :-  0.3222891390323639 nll loss :-  0.6075685024261475
+dpo loss :-  0.7882002592086792 nll loss :-  0.7069100141525269
+dpo loss :-  0.0040520960465073586 nll loss :-  0.6846906542778015
+dpo loss :-  1.9930716753005981 nll loss :-  0.7175824642181396
+dpo loss :-  0.052185941487550735 nll loss :-  0.7841646075248718
+dpo loss :-  3.03759765625 nll loss :-  0.7604164481163025
+dpo loss :-  0.8910703063011169 nll loss :-  0.7239660620689392
+dpo loss :-  0.7566787004470825 nll loss :-  0.7296541929244995
+dpo loss :-  0.14956729114055634 nll loss :-  0.6506710052490234
+dpo loss :-  3.627554860941018e-07 nll loss :-  0.7451741695404053
+dpo loss :-  4.960091590881348 nll loss :-  0.7952612638473511
+dpo loss :-  1.715494155883789 nll loss :-  0.6371884942054749
+dpo loss :-  0.0017329633701592684 nll loss :-  0.6217652559280396
+dpo loss :-  0.0006955642020329833 nll loss :-  0.7313250303268433
+dpo loss :-  0.016772348433732986 nll loss :-  0.7251961827278137
+dpo loss :-  1.3816802501678467 nll loss :-  0.714401364326477
+dpo loss :-  0.3927377164363861 nll loss :-  0.8764650225639343
+dpo loss :-  0.48176872730255127 nll loss :-  0.6735474467277527
+dpo loss :-  0.03923546522855759 nll loss :-  0.7493560910224915
+dpo loss :-  0.09930871427059174 nll loss :-  0.6795889139175415
+dpo loss :-  0.9580169916152954 nll loss :-  0.759476900100708
+dpo loss :-  0.11304143816232681 nll loss :-  0.7853650450706482
+dpo loss :-  0.7591496706008911 nll loss :-  0.7222535014152527
+dpo loss :-  0.011413846164941788 nll loss :-  0.7552825212478638
+dpo loss :-  1.0283330084348563e-05 nll loss :-  0.7067363262176514
+dpo loss :-  0.4333888292312622 nll loss :-  0.7947985529899597
+dpo loss :-  0.7205280065536499 nll loss :-  0.7054325938224792
+dpo loss :-  1.9629780054092407 nll loss :-  0.6708515286445618
+dpo loss :-  0.010811060667037964 nll loss :-  0.6657179594039917
+dpo loss :-  0.04833121970295906 nll loss :-  0.7233591079711914
+dpo loss :-  1.5277340412139893 nll loss :-  0.583364725112915
+dpo loss :-  0.34538260102272034 nll loss :-  0.6920915246009827
+Epoch [6/10], Train Loss: 0.657824601239274
+TESTING
+Epoch [6/10], TEST Loss: 1.2908749654889107
+TRAINING THE TRANSFORMER
+dpo loss :-  0.8386041522026062 nll loss :-  0.793084442615509
+dpo loss :-  0.3464277386665344 nll loss :-  0.6688850522041321
+dpo loss :-  6.856628169771284e-05 nll loss :-  0.6794192790985107
+dpo loss :-  0.004982568323612213 nll loss :-  0.744747519493103
+dpo loss :-  0.37655964493751526 nll loss :-  0.7015268206596375
+dpo loss :-  0.28448379039764404 nll loss :-  0.7078527212142944
+dpo loss :-  0.6061553955078125 nll loss :-  0.5408886075019836
+dpo loss :-  0.809275209903717 nll loss :-  0.7116751670837402
+dpo loss :-  2.2755722999572754 nll loss :-  0.8640258312225342
+dpo loss :-  1.0227580070495605 nll loss :-  0.6605134010314941
+dpo loss :-  0.45396888256073 nll loss :-  0.7869991064071655
+dpo loss :-  0.19285205006599426 nll loss :-  0.7708253264427185
+dpo loss :-  0.43557238578796387 nll loss :-  0.5934375524520874
+dpo loss :-  0.38121265172958374 nll loss :-  0.631111204624176
+dpo loss :-  0.3623059093952179 nll loss :-  0.6156558990478516
+dpo loss :-  1.4136078357696533 nll loss :-  0.7895470857620239
+dpo loss :-  0.328989177942276 nll loss :-  0.6983877420425415
+dpo loss :-  0.7179070711135864 nll loss :-  0.8525307774543762
+dpo loss :-  0.4780120253562927 nll loss :-  0.8535254597663879
+dpo loss :-  0.7006068229675293 nll loss :-  0.7186400890350342
+dpo loss :-  1.244922399520874 nll loss :-  0.7146137356758118
+dpo loss :-  0.7476224899291992 nll loss :-  0.6378739476203918
+dpo loss :-  0.0701814666390419 nll loss :-  0.6912079453468323
+dpo loss :-  0.58580082654953 nll loss :-  0.7199693322181702
+dpo loss :-  1.5843738317489624 nll loss :-  0.7835127711296082
+dpo loss :-  0.17232070863246918 nll loss :-  0.7235736846923828
+dpo loss :-  0.2405976504087448 nll loss :-  0.6274121403694153
+dpo loss :-  0.5165770649909973 nll loss :-  0.7159038782119751
+dpo loss :-  0.812614381313324 nll loss :-  0.6345048546791077
+dpo loss :-  0.3399007320404053 nll loss :-  0.6817958950996399
+dpo loss :-  0.015033806674182415 nll loss :-  0.6803984045982361
+dpo loss :-  0.299950510263443 nll loss :-  0.6871262788772583
+dpo loss :-  0.5278523564338684 nll loss :-  0.6975869536399841
+dpo loss :-  0.21056488156318665 nll loss :-  0.6244252324104309
+dpo loss :-  0.6063377261161804 nll loss :-  0.6319035887718201
+dpo loss :-  0.04564344510436058 nll loss :-  0.5735589861869812
+dpo loss :-  5.3967021813150495e-05 nll loss :-  0.7487715482711792
+dpo loss :-  1.0401841402053833 nll loss :-  0.7271682024002075
+dpo loss :-  0.5008906722068787 nll loss :-  0.7299416065216064
+Epoch [7/10], Train Loss: 0.5542757082267855
+TESTING
+Epoch [7/10], TEST Loss: 0.5315128453366924
+TRAINING THE TRANSFORMER
+dpo loss :-  1.660887598991394 nll loss :-  0.6716525554656982
+dpo loss :-  0.8741192817687988 nll loss :-  0.5931990146636963
+dpo loss :-  0.44231611490249634 nll loss :-  0.695641815662384
+dpo loss :-  0.18872369825839996 nll loss :-  0.7200110554695129
+dpo loss :-  0.0023261550813913345 nll loss :-  0.8323188424110413
+dpo loss :-  1.0177280902862549 nll loss :-  0.7434195876121521
+dpo loss :-  0.6571981906890869 nll loss :-  0.6575431227684021
+dpo loss :-  0.00010506208491278812 nll loss :-  0.7275435328483582
+dpo loss :-  1.3861392736434937 nll loss :-  0.8444442749023438
+dpo loss :-  0.05424138903617859 nll loss :-  0.767453134059906
+dpo loss :-  0.20153118669986725 nll loss :-  0.647160530090332
+dpo loss :-  0.08696867525577545 nll loss :-  0.7236773371696472
+dpo loss :-  1.2134816646575928 nll loss :-  0.7310728430747986
+dpo loss :-  0.4615831971168518 nll loss :-  0.6825848817825317
+dpo loss :-  0.022488420829176903 nll loss :-  0.6471850275993347
+dpo loss :-  0.9901921153068542 nll loss :-  0.7968243956565857
+dpo loss :-  0.2283545434474945 nll loss :-  0.715319037437439
+dpo loss :-  0.14073731005191803 nll loss :-  0.7162116765975952
+dpo loss :-  0.5796599388122559 nll loss :-  0.746665358543396
+dpo loss :-  1.4567688703536987 nll loss :-  0.6881921291351318
+dpo loss :-  0.6661170125007629 nll loss :-  0.7772318720817566
+dpo loss :-  0.06912257522344589 nll loss :-  0.6928002834320068
+dpo loss :-  0.24700509011745453 nll loss :-  0.677945613861084
+dpo loss :-  0.20911431312561035 nll loss :-  0.6021331548690796
+dpo loss :-  0.36340588331222534 nll loss :-  0.7939096689224243
+dpo loss :-  0.3325696289539337 nll loss :-  0.6300854682922363
+dpo loss :-  0.2686036229133606 nll loss :-  0.8533812165260315
+dpo loss :-  0.6699944138526917 nll loss :-  0.6210576891899109
+dpo loss :-  0.0002138235722668469 nll loss :-  0.7973906397819519
+dpo loss :-  0.8424359560012817 nll loss :-  0.8779709339141846
+dpo loss :-  0.1045980378985405 nll loss :-  0.7177824378013611
+dpo loss :-  1.0175408249324391e-07 nll loss :-  0.8540169596672058
+dpo loss :-  0.025599731132388115 nll loss :-  0.7056995630264282
+dpo loss :-  0.32649290561676025 nll loss :-  0.8551046848297119
+dpo loss :-  0.19579139351844788 nll loss :-  0.6690117120742798
+dpo loss :-  0.261276513338089 nll loss :-  0.586534857749939
+dpo loss :-  0.10590925067663193 nll loss :-  0.659993052482605
+dpo loss :-  1.8729528188705444 nll loss :-  0.6100865006446838
+dpo loss :-  0.3484594523906708 nll loss :-  0.5381174087524414
+Epoch [8/10], Train Loss: 0.476949778431728
+TESTING
+Epoch [8/10], TEST Loss: 0.5144028373761103
+TRAINING THE TRANSFORMER
+dpo loss :-  1.074321985244751 nll loss :-  0.8214932084083557
+dpo loss :-  0.6707603931427002 nll loss :-  0.7836983799934387
+dpo loss :-  0.00023653452808503062 nll loss :-  0.7065402269363403
+dpo loss :-  0.8276983499526978 nll loss :-  0.757404625415802
+dpo loss :-  1.1878023147583008 nll loss :-  0.7866992950439453
+dpo loss :-  0.4134562015533447 nll loss :-  0.7084036469459534
+dpo loss :-  5.3076204494573176e-05 nll loss :-  0.6512264609336853
+dpo loss :-  0.00021906070469412953 nll loss :-  0.7330739498138428
+dpo loss :-  0.7706885933876038 nll loss :-  0.7932059168815613
+dpo loss :-  1.0507333278656006 nll loss :-  0.6738336086273193
+dpo loss :-  0.40958693623542786 nll loss :-  0.6323355436325073
+dpo loss :-  0.8212513327598572 nll loss :-  0.7034717798233032
+dpo loss :-  1.0534472465515137 nll loss :-  0.6463192105293274
+dpo loss :-  0.2386702597141266 nll loss :-  0.7075114846229553
+dpo loss :-  0.18008464574813843 nll loss :-  0.5515080690383911
+dpo loss :-  0.6540348529815674 nll loss :-  0.6648632287979126
+dpo loss :-  1.0879873037338257 nll loss :-  0.630520761013031
+dpo loss :-  0.02673126757144928 nll loss :-  0.8082567453384399
+dpo loss :-  0.4914259910583496 nll loss :-  0.7149100303649902
+dpo loss :-  0.6948814988136292 nll loss :-  0.8998501896858215
+dpo loss :-  0.21455231308937073 nll loss :-  0.7047279477119446
+dpo loss :-  0.012190144509077072 nll loss :-  0.6388185024261475
+dpo loss :-  0.07912627607584 nll loss :-  0.6771683096885681
+dpo loss :-  0.26600590348243713 nll loss :-  0.6820822954177856
+dpo loss :-  0.0029938684310764074 nll loss :-  0.54678875207901
+dpo loss :-  0.004112435504794121 nll loss :-  0.7287962436676025
+dpo loss :-  0.7610363364219666 nll loss :-  0.7222193479537964
+dpo loss :-  0.002736719325184822 nll loss :-  0.7459242939949036
+dpo loss :-  0.7484199404716492 nll loss :-  0.6935803890228271
+dpo loss :-  0.31327351927757263 nll loss :-  0.70621258020401
+dpo loss :-  0.16519904136657715 nll loss :-  0.7232133746147156
+dpo loss :-  1.4017269611358643 nll loss :-  0.7052943706512451
+dpo loss :-  0.20033568143844604 nll loss :-  0.6164917945861816
+dpo loss :-  1.0806761980056763 nll loss :-  0.8584954738616943
+dpo loss :-  0.6342951655387878 nll loss :-  0.6344836354255676
+dpo loss :-  0.38825172185897827 nll loss :-  0.700314462184906
+dpo loss :-  0.9847211837768555 nll loss :-  0.6512593626976013
+dpo loss :-  0.26938357949256897 nll loss :-  0.7215980887413025
+dpo loss :-  0.6588646173477173 nll loss :-  0.7274205088615417
+Epoch [9/10], Train Loss: 0.509423461674044
+TESTING
+Epoch [9/10], TEST Loss: 0.4469635554269189
+TRAINING THE TRANSFORMER
+dpo loss :-  1.3542585372924805 nll loss :-  0.5973985195159912
+dpo loss :-  0.2499127984046936 nll loss :-  0.7632490992546082
+dpo loss :-  0.9445316195487976 nll loss :-  0.7486459016799927
+dpo loss :-  0.662380039691925 nll loss :-  0.7509182095527649
+dpo loss :-  0.2825358808040619 nll loss :-  0.6725447177886963
+dpo loss :-  2.259552478790283 nll loss :-  0.649078369140625
+dpo loss :-  2.6551785469055176 nll loss :-  0.6922138333320618
+dpo loss :-  1.0654382705688477 nll loss :-  0.6834831833839417
+dpo loss :-  0.0010833129053935409 nll loss :-  0.6929773092269897
+dpo loss :-  0.10522861778736115 nll loss :-  0.8279359340667725
+dpo loss :-  0.7486662864685059 nll loss :-  0.6846812963485718
+dpo loss :-  0.7364163398742676 nll loss :-  0.8366332054138184
+dpo loss :-  0.7199299335479736 nll loss :-  0.6401334404945374
+dpo loss :-  0.00033089559292420745 nll loss :-  0.6620843410491943
+dpo loss :-  0.011414128355681896 nll loss :-  0.6968309283256531
+dpo loss :-  1.5172922611236572 nll loss :-  0.7261567711830139
+dpo loss :-  0.14740002155303955 nll loss :-  0.755268931388855
+dpo loss :-  0.16288542747497559 nll loss :-  0.6566880941390991
+dpo loss :-  0.22844065725803375 nll loss :-  0.7094960808753967
+dpo loss :-  0.7578588724136353 nll loss :-  0.8132208585739136
+dpo loss :-  0.002404165221378207 nll loss :-  0.6333914399147034
+dpo loss :-  0.6790874600410461 nll loss :-  0.6239391565322876
+dpo loss :-  0.42555707693099976 nll loss :-  0.6928057074546814
+dpo loss :-  1.2959634065628052 nll loss :-  0.7813167572021484
+dpo loss :-  0.34500381350517273 nll loss :-  0.7494329214096069
+dpo loss :-  2.6406560209579766e-06 nll loss :-  0.6903918981552124
+dpo loss :-  0.21356835961341858 nll loss :-  0.652996838092804
+dpo loss :-  0.7965407967567444 nll loss :-  0.7898485660552979
+dpo loss :-  0.3080841898918152 nll loss :-  0.8077016472816467
+dpo loss :-  0.13500143587589264 nll loss :-  0.6728105545043945
+dpo loss :-  4.503048785409192e-06 nll loss :-  0.8291190266609192
+dpo loss :-  0.810663104057312 nll loss :-  0.6206670999526978
+dpo loss :-  0.006581267807632685 nll loss :-  0.6616562008857727
+dpo loss :-  0.018549716100096703 nll loss :-  0.8631236553192139
+dpo loss :-  0.9634533524513245 nll loss :-  0.8422076106071472
+dpo loss :-  0.05131813511252403 nll loss :-  0.5954601168632507
+dpo loss :-  0.028558989986777306 nll loss :-  0.6768280863761902
+dpo loss :-  0.813963770866394 nll loss :-  0.7162641882896423
+dpo loss :-  0.005014239810407162 nll loss :-  0.7224836349487305
+Epoch [10/10], Train Loss: 0.5522024621381066
+TESTING
+Epoch [10/10], TEST Loss: 0.7099195905029774
+Cycle 3/4
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 72
+gen	nevals	avg	std	min    	max
+0  	0     	inf	nan	203.812	inf
+1  	53    	215.235	43.8307	197.84 	596.67
+2  	68    	861.725	6502.03	193.704	65556 
+3  	61    	4778.54	16674.4	171.989	65556 
+4  	71    	10136.5	47457.1	171.989	405657
+5  	65    	123063 	699915 	150.566	6.87482e+06
+6  	59    	506906 	1.62854e+06	150.566	7.06398e+06
+7  	61    	8.87937e+81	8.83486e+82	110.457	8.87937e+83
+8  	56    	2.78907e+82	1.58922e+83	110.457	1.01319e+84
+9  	64    	1.58987e+302	inf        	81.5409	1.58987e+304
+10 	65    	6.09284e+290	inf        	81.5409	6.09284e+292
+11 	59    	8.87937e+81 	8.83486e+82	81.5409	8.87937e+83 
+12 	60    	2.4754e+16  	2.46298e+17	75.7387	2.47539e+18 
+13 	66    	8.53285e+81 	8.49007e+82	59.8633	8.53285e+83 
+14 	64    	3.86696e+07 	3.6347e+08 	59.8633	3.64892e+09 
+15 	59    	7.52465e+07 	5.1097e+08 	59.8633	3.64892e+09 
+Best individual: sub(tan(tanh(3)), add(mul(pi, s_3), sub(s_2, sub(s_4, add(s_1, s_2)))))
+Fitness: (59.86332583172195,)
+R2_score: 0.9999696292341914
+for 0th and 2th cycle best :-  sub(tan(tanh(3)), add(mul(pi, s_3), sub(s_2, sub(s_4, add(s_1, s_2)))))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 68
+gen	nevals	avg        	std        	min     	max        
+0  	0     	1.15923e+33	1.15305e+34	0.553623	1.15886e+35
+1  	71    	6.60911e+22	6.57598e+23	0.553623	6.60911e+24
+2  	70    	320682     	2.93791e+06	0.549332	2.94374e+07
+3  	54    	7.60166e+13	7.48855e+14	0.524484	7.52666e+15
+4  	66    	7.10939e+81	5.81119e+82	0.499273	5.67645e+83
+5  	59    	1.2693e+82 	9.32176e+82	0.38459 	8.34028e+83
+6  	63    	8.35102e+81	7.68619e+82	0.336695	7.70433e+83
+7  	64    	1.00052e+80	6.32015e+80	0.336695	4.45885e+81
+8  	55    	3.48046e+80	3.04735e+81	0.336695	3.03458e+82
+9  	59    	4.00752e+79	3.98743e+80	0.336695	4.00752e+81
+10 	52    	7.74667e+81	7.66541e+82	0.336695	7.70433e+83
+11 	57    	8.04553e+81	7.6698e+82 	0.336695	7.70433e+83
+12 	63    	1.70329e+82	9.6394e+82 	0.336695	7.73878e+83
+13 	56    	2.48664e+80	2.42927e+81	0.35869 	2.44155e+82
+14 	68    	4.90977e+79	4.45461e+80	0.336915	4.45885e+81
+15 	60    	1.34467e+79	1.33793e+80	0.353125	1.34467e+81
+Best individual: protected_exp(sub(protected_log(s_2), s_4))
+Fitness: (0.33669512731457124,)
+R2_score: 0.9999689488227808
+for 1th and 2th cycle best :-  protected_exp(sub(protected_log(s_2), s_4))
+GENERATING PREFERENCE PAIRS
+190
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 69
+gen	nevals	avg        	std        	min     	max        
+0  	0     	1.16399e+27	8.14793e+27	0.719497	5.81995e+28
+1  	56    	1.81379e+214	inf        	0.719497	1.81379e+216
+2  	60    	7.86795e+10 	7.82851e+11	0.45051 	7.86795e+12 
+3  	59    	6.1146e+30  	6.08395e+31	0.45051 	6.1146e+32  
+4  	60    	3.99562e+24 	3.97559e+25	0.45051 	3.99562e+26 
+5  	59    	68482       	414915     	0.45051 	3.47787e+06 
+6  	61    	96819.1     	519942     	0.45051 	3.47787e+06 
+7  	71    	6.17963e+234	inf        	0.622566	6.17963e+236
+8  	64    	15656.5     	104841     	0.266001	972488      
+9  	63    	4162.97     	38551.3    	0.45051 	386830      
+10 	63    	26660.9     	249759     	0.45051 	2.50976e+06 
+11 	48    	1631.71     	6364.62    	0.482482	27525.8     
+12 	60    	700.116     	3952.28    	0.641694	26679.4     
+13 	52    	4405.89     	38624.7    	0.641694	386917      
+14 	38    	4166.93     	38560      	0.641694	386917      
+15 	46    	181.31      	1525.09    	0.548481	15116.9     
+Best individual: add(protected_log(s_4), protected_sqrt(abs(add(s_3, s_3))))
+Fitness: (0.26600067298398783,)
+R2_score: 0.9999815128877975
+for 2th and 2th cycle best :-  add(protected_log(s_4), protected_sqrt(abs(add(s_3, s_3))))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 73
+num_cores  128
+Total seed expressions: 73, Valid expressions used: 8
+gen	nevals	avg    	std    	min     	max    
+0  	0     	1886.03	11076.8	0.062106	98600.4
+1  	58    	4.98028e+164	inf    	0.0565889	4.98028e+166
+2  	60    	1382.79     	10474.2	0.0465601	98612       
+3  	53    	2.84944e+13 	2.83516e+14	0.0465601	2.84944e+15 
+4  	63    	inf         	nan        	0.0205323	inf         
+5  	58    	58548.8     	562721     	0.0284435	5.65508e+06 
+6  	62    	107.029     	519.369    	0.0284435	4043.51     
+7  	55    	8.54495e+24 	8.50212e+25	0.0284435	8.54495e+26 
+8  	60    	1e+12       	9.94987e+12	0.0284435	1e+14       
+9  	48    	1e+12       	9.94987e+12	0.0205323	1e+14       
+10 	69    	169386      	1.66888e+06	0.0205323	1.67738e+07 
+11 	67    	35.4926     	293.526    	0.020859 	2936.21     
+12 	68    	32494.8     	323015     	0.0142071	3.24645e+06 
+13 	66    	5.55055e+10 	5.52273e+11	0.0223763	5.55055e+12 
+14 	56    	5.55055e+10 	5.52273e+11	0.0298951	5.55055e+12 
+15 	60    	7.02589e+92 	6.99067e+93	0.00747326	7.02589e+94 
+Best individual: protected_div(protected_log(s_1), s_2)
+Fitness: (0.007473258910351076,)
+R2_score: 0.9999918026052157
+for 3th and 2th cycle best :-  protected_div(protected_log(s_1), s_2)
+GENERATING PREFERENCE PAIRS
+190
+Length of seed expression array :- 72
+num_cores  128
+Total seed expressions: 72, Valid expressions used: 70
+gen	nevals	avg        	std        	min    	max        
+0  	0     	8.87793e+30	5.67943e+31	417.197	4.05246e+32
+1  	58    	inf        	nan        	393.382	inf        
+2  	61    	8.73102e+81	8.68725e+82	407.377	8.73102e+83
+3  	57    	2.21504e+30	2.20394e+31	355.997	2.21504e+32
+4  	73    	2.38087e+30	2.20845e+31	355.997	2.21504e+32
+5  	71    	inf        	nan        	397.788	inf        
+6  	67    	inf        	nan        	354.42 	inf        
+7  	55    	82997.8    	646315     	359.287	6.24594e+06
+8  	74    	55513.4    	471152     	315.081	4.71832e+06
+9  	47    	129206     	1.0563e+06 	315.081	1.03705e+07
+10 	46    	135478     	1.11008e+06	305.39 	1.09251e+07
+11 	59    	inf        	nan        	341.248	inf        
+12 	49    	7.8246e+11 	7.78528e+12	341.248	7.8245e+13 
+13 	60    	7.31681e+07	6.99689e+08	338.703	7.03109e+09
+14 	66    	2.20681e+15	1.54477e+16	325.934	1.10341e+17
+15 	64    	1.10341e+15	1.09788e+16	335.776	1.10341e+17
+Best individual: mul(mul(tan(1), sin(s_4)), mul(pi, 3))
+Fitness: (305.3895248381108,)
+R2_score: 0.9999640013428284
+for 4th and 2th cycle best :-  mul(mul(tan(1), sin(s_4)), mul(pi, 3))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 71
+gen	nevals	avg        	std        	min    	max        
+0  	0     	1.25579e+33	1.24693e+34	653.671	1.25323e+35
+1  	59    	3.55064e+08	3.51715e+09	271.041	3.53502e+10
+2  	53    	7.09148e+29	6.70865e+30	241.391	6.73669e+31
+3  	69    	8.52116e+12	8.12525e+13	202.633	8.16191e+14
+4  	46    	1.03711e+13	1.03134e+14	202.633	1.03654e+15
+5  	60    	295822     	2.65112e+06	202.633	2.65667e+07
+6  	64    	24978.1    	102098     	202.633	848081     
+7  	52    	19813.3    	109308     	202.633	1.0206e+06 
+8  	64    	28459.5    	113795     	202.633	818097     
+9  	56    	14820.3    	57168.8    	202.633	432400     
+10 	69    	inf        	nan        	202.633	inf        
+11 	64    	inf        	nan        	202.633	inf        
+12 	63    	230766     	2.25401e+06	238.023	2.2657e+07 
+13 	54    	288774     	1.77635e+06	238.023	1.54174e+07
+14 	55    	212290     	1.26999e+06	238.023	1.06335e+07
+15 	65    	1.07073e+14	1.06536e+15	238.023	1.07073e+16
+Best individual: mul(mul(mul(s_1, 4), s_4), sin(sin(s_5)))
+Fitness: (202.63331535897993,)
+R2_score: 0.999985182517481
+for 5th and 2th cycle best :-  mul(mul(mul(s_1, 4), s_4), sin(sin(s_5)))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 7
+gen	nevals	avg        	std        	min     	max        
+0  	0     	1.26852e+82	1.26216e+83	0.327875	1.26852e+84
+1  	62    	14078.9    	98589.2    	0.260734	941117     
+2  	46    	9.68373e+81	9.63519e+82	0.260734	9.68373e+83
+3  	68    	8.75113e+81	8.70726e+82	0.260734	8.75113e+83
+4  	50    	inf        	nan        	0.260734	inf        
+5  	60    	76.0367    	525.663    	0.260734	4518.11    
+6  	63    	43.2148    	384.889    	0.260734	3868.77    
+7  	60    	1.74903e+10	1.74026e+11	0.260734	1.74903e+12
+8  	52    	28.0377    	260.981    	0.260734	2624.52    
+9  	53    	1e+12      	9.94987e+12	0.260734	1e+14      
+10 	56    	1.49153e+09	1.48405e+10	0.260734	1.49153e+11
+11 	54    	56.0369    	365.258    	0.260734	2666.79    
+12 	68    	1659.15    	15320.3    	0.260734	153810     
+13 	56    	3.25266    	13.212     	0.260734	114.041    
+14 	64    	2070.62    	20302.2    	0.216873	204056     
+15 	61    	2203.27    	20347.7    	0.260734	204056     
+Best individual: protected_sqrt(mul(s_1, protected_log(s_2)))
+Fitness: (0.21687334447308776,)
+R2_score: 0.9999760414847723
+for 6th and 2th cycle best :-  protected_sqrt(mul(s_1, protected_log(s_2)))
+GENERATING PREFERENCE PAIRS
+186
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 12
+gen	nevals	avg    	std    	min      	max   
+0  	0     	16947.9	98128.8	0.0683674	935246
+1  	63    	9.87163e+80	9.82215e+81	0.0621932	9.87163e+82
+2  	55    	3.48145e+189	inf        	0.056773 	3.48145e+191
+3  	59    	460329      	4.28995e+06	0.056773 	4.30424e+07 
+4  	69    	6.03051e+20 	6.00028e+21	0.056773 	6.03051e+22 
+5  	57    	6.61952e+14 	6.57245e+15	0.056773 	6.60569e+16 
+6  	48    	5402.65     	52825.3    	0.0418061	530962      
+7  	56    	79.4373     	683.913    	0.0418061	6835.35     
+8  	65    	4500.19     	43773.9    	0.0418061	439985      
+9  	63    	166.936     	970.015    	0.0367815	6835.35     
+10 	62    	1.50498e+12 	1.07739e+13	0.0367815	9.1215e+13  
+11 	66    	581.244     	5669.83    	0.0367815	56991.7     
+12 	57    	53.2348     	506.454    	0.0367815	5091.41     
+13 	61    	60383       	600335     	0.0367815	6.03364e+06 
+14 	59    	128.026     	688.845    	0.0367815	4226.94     
+15 	67    	8.218e+11   	8.17681e+12	0.0298252	8.218e+13   
+Best individual: tanh(protected_div(protected_sqrt(protected_div(pi, s_3)), s_2))
+Fitness: (0.029825184673095435,)
+R2_score: 0.9999760139311769
+for 7th and 2th cycle best :-  tanh(protected_div(protected_sqrt(protected_div(pi, s_3)), s_2))
+GENERATING PREFERENCE PAIRS
+190
+Length of seed expression array :- 73
+num_cores  128
+Total seed expressions: 73, Valid expressions used: 67
+gen	nevals	avg	std	min      	max
+0  	0     	inf	nan	0.0408348	inf
+1  	46    	inf	nan	0.0408348	inf
+2  	68    	57.2009	327.424	0.0408348	2754.34
+3  	48    	642.252	6181.05	0.0408348	62121.2
+4  	71    	8057.92	80145.4	0.0408348	805494 
+5  	65    	54709.1	543642 	0.0408348	5.46388e+06
+6  	54    	20.8334	196.729	0.0408348	1978.17    
+7  	68    	inf    	nan    	0.0408348	inf        
+8  	66    	inf    	nan    	0.0408348	inf        
+9  	62    	inf    	nan    	0.0408348	inf        
+10 	67    	inf    	nan    	0.0408348	inf        
+11 	50    	2.1991e+31	2.18478e+32	0.0408348	2.19582e+33
+12 	70    	2.19582e+31	2.18481e+32	0.0408348	2.19582e+33
+13 	63    	inf        	nan        	0.0408348	inf        
+14 	49    	inf        	nan        	0.0408348	inf        
+15 	58    	inf        	nan        	0.0408348	inf        
+Best individual: mul(mul(mul(s_1, s_2), s_3), s_4)
+Fitness: (0.040834781714137534,)
+R2_score: 0.9999958061967167
+for 8th and 2th cycle best :-  mul(mul(mul(s_1, s_2), s_3), s_4)
+GENERATING PREFERENCE PAIRS
+170
+TRAINING THE TRANSFORMER
+dpo loss :-  47.48681640625 nll loss :-  0.6475381255149841
+dpo loss :-  5.384158611297607 nll loss :-  0.8029156923294067
+dpo loss :-  8.653292655944824 nll loss :-  0.7167544960975647
+dpo loss :-  8.135665893554688 nll loss :-  0.5662464499473572
+dpo loss :-  5.536831855773926 nll loss :-  0.7257230877876282
+dpo loss :-  5.739895820617676 nll loss :-  0.7121390104293823
+dpo loss :-  5.119329452514648 nll loss :-  0.6333285570144653
+dpo loss :-  4.530218124389648 nll loss :-  0.6414506435394287
+dpo loss :-  15.713541030883789 nll loss :-  0.6945698261260986
+dpo loss :-  17.868209838867188 nll loss :-  0.5884526968002319
+dpo loss :-  5.4969987869262695 nll loss :-  0.6025089621543884
+dpo loss :-  5.00067663192749 nll loss :-  0.7659884095191956
+dpo loss :-  19.436145782470703 nll loss :-  0.636066734790802
+dpo loss :-  4.588297367095947 nll loss :-  0.7711547613143921
+dpo loss :-  6.659298896789551 nll loss :-  0.671690821647644
+dpo loss :-  7.813958644866943 nll loss :-  0.7488486170768738
+dpo loss :-  3.7637124061584473 nll loss :-  0.7801327705383301
+dpo loss :-  3.4516496658325195 nll loss :-  0.7468631863594055
+dpo loss :-  4.928136825561523 nll loss :-  0.786736011505127
+dpo loss :-  6.0119781494140625 nll loss :-  0.6634138822555542
+dpo loss :-  6.20421028137207 nll loss :-  0.6576671600341797
+dpo loss :-  2.1285367012023926 nll loss :-  0.8118079304695129
+dpo loss :-  4.565966606140137 nll loss :-  0.7320449352264404
+dpo loss :-  0.5909917950630188 nll loss :-  0.7401952147483826
+dpo loss :-  5.983464241027832 nll loss :-  0.9004354476928711
+dpo loss :-  1.8020007610321045 nll loss :-  0.7204446792602539
+dpo loss :-  3.224050521850586 nll loss :-  0.7087005376815796
+dpo loss :-  3.12192440032959 nll loss :-  0.7337077260017395
+dpo loss :-  2.9630842208862305 nll loss :-  0.7411026358604431
+dpo loss :-  4.896481513977051 nll loss :-  0.8702215552330017
+dpo loss :-  1.8795125484466553 nll loss :-  0.813589870929718
+dpo loss :-  0.4811401963233948 nll loss :-  0.7544368505477905
+dpo loss :-  5.441012382507324 nll loss :-  0.7518205046653748
+dpo loss :-  5.652557849884033 nll loss :-  0.8042913675308228
+dpo loss :-  2.18841290473938 nll loss :-  0.8012527227401733
+dpo loss :-  2.057826280593872 nll loss :-  0.7017530798912048
+dpo loss :-  3.0542826652526855 nll loss :-  0.787635862827301
+dpo loss :-  5.182112216949463 nll loss :-  0.7390918731689453
+dpo loss :-  4.310596942901611 nll loss :-  0.7948278188705444
+dpo loss :-  1.9864659309387207 nll loss :-  0.7369401454925537
+dpo loss :-  1.7875945568084717 nll loss :-  0.7952508926391602
+dpo loss :-  1.6573625802993774 nll loss :-  0.7568154335021973
+dpo loss :-  0.09123533219099045 nll loss :-  0.7353959679603577
+dpo loss :-  1.0939850807189941 nll loss :-  0.5736184120178223
+dpo loss :-  0.5591392517089844 nll loss :-  0.6845965385437012
+dpo loss :-  0.8102308511734009 nll loss :-  0.7501733303070068
+dpo loss :-  0.944922149181366 nll loss :-  0.6385918259620667
+Epoch [1/10], Train Loss: 5.659777717387422
+TESTING
+Epoch [1/10], TEST Loss: 2.007400009036064
+TRAINING THE TRANSFORMER
+dpo loss :-  0.49724605679512024 nll loss :-  0.7958601713180542
+dpo loss :-  1.8862870931625366 nll loss :-  0.6403363347053528
+dpo loss :-  1.5261516571044922 nll loss :-  0.7955952286720276
+dpo loss :-  8.867049217224121 nll loss :-  0.7642295360565186
+dpo loss :-  2.8495078086853027 nll loss :-  0.7446581125259399
+dpo loss :-  0.20990300178527832 nll loss :-  0.6466054320335388
+dpo loss :-  2.6392006874084473 nll loss :-  0.6250655055046082
+dpo loss :-  3.363400936126709 nll loss :-  0.7400877475738525
+dpo loss :-  0.7360138893127441 nll loss :-  0.7544362545013428
+dpo loss :-  0.9973213076591492 nll loss :-  0.7453896999359131
+dpo loss :-  1.2899690866470337 nll loss :-  0.7118831872940063
+dpo loss :-  4.265175819396973 nll loss :-  0.7086662650108337
+dpo loss :-  0.03657541796565056 nll loss :-  0.742830753326416
+dpo loss :-  1.657311201095581 nll loss :-  0.7741170525550842
+dpo loss :-  0.2849953770637512 nll loss :-  0.7773164510726929
+dpo loss :-  1.5545098781585693 nll loss :-  0.684887170791626
+dpo loss :-  2.018843650817871 nll loss :-  0.7072345018386841
+dpo loss :-  2.916349411010742 nll loss :-  0.6399059295654297
+dpo loss :-  0.929933488368988 nll loss :-  0.7141881585121155
+dpo loss :-  2.934995174407959 nll loss :-  0.7082050442695618
+dpo loss :-  1.4652637243270874 nll loss :-  0.7953264117240906
+dpo loss :-  2.4663543701171875 nll loss :-  0.6577193737030029
+dpo loss :-  0.7300424575805664 nll loss :-  0.6177018880844116
+dpo loss :-  1.8068865537643433 nll loss :-  0.755836009979248
+dpo loss :-  0.38716429471969604 nll loss :-  0.7674595713615417
+dpo loss :-  1.9388713836669922 nll loss :-  0.6369985342025757
+dpo loss :-  0.7114430665969849 nll loss :-  0.8446671962738037
+dpo loss :-  1.446553111076355 nll loss :-  0.5413184762001038
+dpo loss :-  0.002456043381243944 nll loss :-  0.6778481602668762
+dpo loss :-  0.7916254997253418 nll loss :-  0.6177608370780945
+dpo loss :-  0.505860447883606 nll loss :-  0.7458059787750244
+dpo loss :-  0.8451815843582153 nll loss :-  0.7186834812164307
+dpo loss :-  0.04141336306929588 nll loss :-  0.6526798009872437
+dpo loss :-  6.487158298492432 nll loss :-  0.8129156827926636
+dpo loss :-  0.6731253862380981 nll loss :-  0.8441011309623718
+dpo loss :-  0.669511079788208 nll loss :-  0.7959061861038208
+dpo loss :-  0.41794636845588684 nll loss :-  0.7553081512451172
+dpo loss :-  0.5315322875976562 nll loss :-  0.7348802089691162
+dpo loss :-  6.19110107421875 nll loss :-  0.8036298751831055
+dpo loss :-  1.1852552890777588 nll loss :-  0.8059877753257751
+dpo loss :-  0.27405425906181335 nll loss :-  0.7259911894798279
+dpo loss :-  0.4176216125488281 nll loss :-  0.601631760597229
+dpo loss :-  1.0505269765853882 nll loss :-  0.6390945911407471
+dpo loss :-  0.09781144559383392 nll loss :-  0.611101508140564
+dpo loss :-  0.3496571183204651 nll loss :-  0.717688798904419
+dpo loss :-  2.0154519081115723 nll loss :-  0.6716533303260803
+dpo loss :-  0.15233266353607178 nll loss :-  0.7349671721458435
+Epoch [2/10], Train Loss: 1.5988123463962147
+TESTING
+Epoch [2/10], TEST Loss: 0.8728655909188092
+TRAINING THE TRANSFORMER
+dpo loss :-  1.3998103141784668 nll loss :-  0.7522279024124146
+dpo loss :-  0.018125981092453003 nll loss :-  0.6121858358383179
+dpo loss :-  0.9358166456222534 nll loss :-  0.6404846906661987
+dpo loss :-  0.5087333917617798 nll loss :-  0.7521671652793884
+dpo loss :-  1.4440679550170898 nll loss :-  0.7184002995491028
+dpo loss :-  2.3829703330993652 nll loss :-  0.6832391023635864
+dpo loss :-  1.5102732181549072 nll loss :-  0.6891592741012573
+dpo loss :-  0.616921603679657 nll loss :-  0.5981464385986328
+dpo loss :-  1.7113746404647827 nll loss :-  0.8316643834114075
+dpo loss :-  0.0005722736241295934 nll loss :-  0.5902343392372131
+dpo loss :-  0.3047877550125122 nll loss :-  0.5508028864860535
+dpo loss :-  1.1637349128723145 nll loss :-  0.7235704660415649
+dpo loss :-  1.5552059412002563 nll loss :-  0.5461118221282959
+dpo loss :-  1.5314327478408813 nll loss :-  0.8536194562911987
+dpo loss :-  0.0001879704650491476 nll loss :-  0.6377288103103638
+dpo loss :-  0.978195309638977 nll loss :-  0.6975789070129395
+dpo loss :-  0.7471317052841187 nll loss :-  0.7794302701950073
+dpo loss :-  1.0485568054718897e-05 nll loss :-  0.7297675013542175
+dpo loss :-  1.413055419921875 nll loss :-  0.6258870959281921
+dpo loss :-  1.6119778156280518 nll loss :-  0.6842800378799438
+dpo loss :-  2.0262956619262695 nll loss :-  0.7029469013214111
+dpo loss :-  0.8469353318214417 nll loss :-  0.7251598238945007
+dpo loss :-  1.1505402326583862 nll loss :-  0.699842631816864
+dpo loss :-  8.390663424506783e-05 nll loss :-  0.6407429575920105
+dpo loss :-  4.144137382507324 nll loss :-  0.6954069137573242
+dpo loss :-  1.0555061101913452 nll loss :-  0.9270917773246765
+dpo loss :-  0.00047304562758654356 nll loss :-  0.8092701435089111
+dpo loss :-  0.30963677167892456 nll loss :-  0.7330118417739868
+dpo loss :-  0.17166867852210999 nll loss :-  0.7294467687606812
+dpo loss :-  0.9874451756477356 nll loss :-  0.7963069677352905
+dpo loss :-  0.9512147307395935 nll loss :-  0.625122606754303
+dpo loss :-  0.0625482127070427 nll loss :-  0.747819721698761
+dpo loss :-  1.2081313133239746 nll loss :-  0.6539658904075623
+dpo loss :-  1.0325722694396973 nll loss :-  0.7809633612632751
+dpo loss :-  0.4995385706424713 nll loss :-  0.6597738265991211
+dpo loss :-  0.04842390492558479 nll loss :-  0.6942814588546753
+dpo loss :-  2.2048184871673584 nll loss :-  0.7107232213020325
+dpo loss :-  0.5364944934844971 nll loss :-  0.6926530599594116
+dpo loss :-  0.8345330357551575 nll loss :-  0.7697504758834839
+dpo loss :-  0.1332693099975586 nll loss :-  0.7614467740058899
+dpo loss :-  0.13129697740077972 nll loss :-  0.6913468837738037
+dpo loss :-  0.8282443284988403 nll loss :-  0.7279898524284363
+dpo loss :-  0.5955862998962402 nll loss :-  0.786847710609436
+dpo loss :-  0.6286271810531616 nll loss :-  0.7836378812789917
+dpo loss :-  0.1445591151714325 nll loss :-  0.6621471643447876
+dpo loss :-  0.6133826971054077 nll loss :-  0.7298217415809631
+dpo loss :-  0.8951805233955383 nll loss :-  0.702104389667511
+Epoch [3/10], Train Loss: 0.8916260902621248
+TESTING
+Epoch [3/10], TEST Loss: 1.1550728619098662
+TRAINING THE TRANSFORMER
+dpo loss :-  1.0530167818069458 nll loss :-  0.7778582572937012
+dpo loss :-  0.24804963171482086 nll loss :-  0.6127552390098572
+dpo loss :-  0.42433100938796997 nll loss :-  0.6510805487632751
+dpo loss :-  0.7999870777130127 nll loss :-  0.759200394153595
+dpo loss :-  0.25216054916381836 nll loss :-  0.7497065663337708
+dpo loss :-  0.2759946882724762 nll loss :-  0.6254026889801025
+dpo loss :-  1.2233227491378784 nll loss :-  0.6006887555122375
+dpo loss :-  0.24292083084583282 nll loss :-  0.6946244835853577
+dpo loss :-  0.7395361661911011 nll loss :-  0.7274072170257568
+dpo loss :-  0.26163047552108765 nll loss :-  0.6226761341094971
+dpo loss :-  0.8534215688705444 nll loss :-  0.7969654202461243
+dpo loss :-  1.1573926210403442 nll loss :-  0.7513030171394348
+dpo loss :-  0.002881521126255393 nll loss :-  0.6570070385932922
+dpo loss :-  0.1172332763671875 nll loss :-  0.6764060258865356
+dpo loss :-  0.11930543184280396 nll loss :-  0.6648587584495544
+dpo loss :-  2.3430161476135254 nll loss :-  0.8073589205741882
+dpo loss :-  0.20057795941829681 nll loss :-  0.8249759674072266
+dpo loss :-  1.381697177886963 nll loss :-  0.6943857669830322
+dpo loss :-  0.8960753679275513 nll loss :-  0.6900030970573425
+dpo loss :-  1.519247055053711 nll loss :-  0.6112678647041321
+dpo loss :-  0.8813018798828125 nll loss :-  0.6936875581741333
+dpo loss :-  3.657473564147949 nll loss :-  0.786088764667511
+dpo loss :-  0.2121133953332901 nll loss :-  0.7352064251899719
+dpo loss :-  1.007420539855957 nll loss :-  0.7213774919509888
+dpo loss :-  1.4828060865402222 nll loss :-  0.7516704797744751
+dpo loss :-  0.42707177996635437 nll loss :-  0.8280760645866394
+dpo loss :-  0.46000540256500244 nll loss :-  0.7073492407798767
+dpo loss :-  0.01392495445907116 nll loss :-  0.7670674920082092
+dpo loss :-  0.9937602877616882 nll loss :-  0.7619830965995789
+dpo loss :-  0.2764565646648407 nll loss :-  0.8892238736152649
+dpo loss :-  1.943920612335205 nll loss :-  0.6924121975898743
+dpo loss :-  1.585658311843872 nll loss :-  0.7596620321273804
+dpo loss :-  4.611242294311523 nll loss :-  0.656570315361023
+dpo loss :-  3.0359654426574707 nll loss :-  0.9140600562095642
+dpo loss :-  0.582403302192688 nll loss :-  0.6667273044586182
+dpo loss :-  0.17786455154418945 nll loss :-  0.8105210065841675
+dpo loss :-  0.6513376235961914 nll loss :-  0.6869311332702637
+dpo loss :-  0.49721285700798035 nll loss :-  0.6874710321426392
+dpo loss :-  2.9877264499664307 nll loss :-  0.8833582401275635
+dpo loss :-  2.105625629425049 nll loss :-  0.7246102094650269
+dpo loss :-  2.0647075176239014 nll loss :-  0.6480882167816162
+dpo loss :-  0.5904317498207092 nll loss :-  0.6551118493080139
+dpo loss :-  8.643302917480469 nll loss :-  0.7458880543708801
+dpo loss :-  0.8864906430244446 nll loss :-  0.7289355993270874
+dpo loss :-  1.3754819631576538 nll loss :-  0.8017373085021973
+dpo loss :-  1.1723809242248535 nll loss :-  0.6604853868484497
+dpo loss :-  1.6689509153366089 nll loss :-  0.6427568793296814
+Epoch [4/10], Train Loss: 1.2369436091802857
+TESTING
+Epoch [4/10], TEST Loss: 1.9205826070159673
+TRAINING THE TRANSFORMER
+dpo loss :-  0.9115548133850098 nll loss :-  0.809660017490387
+dpo loss :-  0.6924389600753784 nll loss :-  0.7182154059410095
+dpo loss :-  2.4230692386627197 nll loss :-  0.6751066446304321
+dpo loss :-  2.54510498046875 nll loss :-  0.7261704802513123
+dpo loss :-  0.15632031857967377 nll loss :-  0.6536670923233032
+dpo loss :-  1.841497778892517 nll loss :-  0.6792833805084229
+dpo loss :-  1.058897614479065 nll loss :-  0.7241769433021545
+dpo loss :-  0.22339104115962982 nll loss :-  0.7658261060714722
+dpo loss :-  9.9302339553833 nll loss :-  0.7889946699142456
+dpo loss :-  0.5277854204177856 nll loss :-  0.5591958165168762
+dpo loss :-  0.18380117416381836 nll loss :-  0.7149155139923096
+dpo loss :-  1.1005805730819702 nll loss :-  0.6884147524833679
+dpo loss :-  0.7082220315933228 nll loss :-  0.8626903295516968
+dpo loss :-  1.4351682662963867 nll loss :-  0.6986363530158997
+dpo loss :-  5.026430130004883 nll loss :-  0.8096884489059448
+dpo loss :-  3.0808558464050293 nll loss :-  0.690721869468689
+dpo loss :-  0.08151563256978989 nll loss :-  0.7046844959259033
+dpo loss :-  0.42156246304512024 nll loss :-  0.7025953531265259
+dpo loss :-  0.5704597234725952 nll loss :-  0.7027028799057007
+dpo loss :-  1.5190485715866089 nll loss :-  0.6272297501564026
+dpo loss :-  0.20803262293338776 nll loss :-  0.7081344723701477
+dpo loss :-  3.804522752761841 nll loss :-  0.6898208856582642
+dpo loss :-  0.19688422977924347 nll loss :-  0.8618118762969971
+dpo loss :-  0.09128245711326599 nll loss :-  0.8431211113929749
+dpo loss :-  0.8584856986999512 nll loss :-  0.7933043241500854
+dpo loss :-  0.3599076271057129 nll loss :-  0.6537491679191589
+dpo loss :-  0.7762230634689331 nll loss :-  0.7623512744903564
+dpo loss :-  0.7933310270309448 nll loss :-  0.7172573208808899
+dpo loss :-  0.6177666783332825 nll loss :-  0.8027065396308899
+dpo loss :-  0.38120609521865845 nll loss :-  0.7091546654701233
+dpo loss :-  0.2807009816169739 nll loss :-  0.6271343231201172
+dpo loss :-  0.664164662361145 nll loss :-  0.8113476634025574
+dpo loss :-  0.7110812664031982 nll loss :-  0.7134389877319336
+dpo loss :-  1.4394313097000122 nll loss :-  0.7271845936775208
+dpo loss :-  0.634649395942688 nll loss :-  0.7679271101951599
+dpo loss :-  0.6657459139823914 nll loss :-  0.6347125172615051
+dpo loss :-  0.1793958842754364 nll loss :-  0.8293044567108154
+dpo loss :-  0.7677569389343262 nll loss :-  0.6759266257286072
+dpo loss :-  0.008068585768342018 nll loss :-  0.7505286335945129
+dpo loss :-  0.018705524504184723 nll loss :-  0.620646059513092
+dpo loss :-  0.015456010587513447 nll loss :-  0.6877008080482483
+dpo loss :-  3.0306732654571533 nll loss :-  0.6912527084350586
+dpo loss :-  0.880542516708374 nll loss :-  0.7307491302490234
+dpo loss :-  0.051544059067964554 nll loss :-  0.7700478434562683
+dpo loss :-  0.4426670968532562 nll loss :-  0.7572959065437317
+dpo loss :-  5.489716053009033 nll loss :-  0.7735170722007751
+dpo loss :-  1.0389640010544099e-05 nll loss :-  0.6703445911407471
+Epoch [5/10], Train Loss: 1.2305846402676717
+TESTING
+Epoch [5/10], TEST Loss: 0.6652980014681816
+TRAINING THE TRANSFORMER
+dpo loss :-  0.20947138965129852 nll loss :-  0.7402566075325012
+dpo loss :-  3.0399374961853027 nll loss :-  0.6329919695854187
+dpo loss :-  1.119400978088379 nll loss :-  0.7703807950019836
+dpo loss :-  0.9137689471244812 nll loss :-  0.7755182385444641
+dpo loss :-  1.1921608448028564 nll loss :-  0.6086214780807495
+dpo loss :-  0.5997753143310547 nll loss :-  0.7083619236946106
+dpo loss :-  0.4323357343673706 nll loss :-  0.6894527673721313
+dpo loss :-  0.0525238923728466 nll loss :-  0.541934609413147
+dpo loss :-  1.250791311264038 nll loss :-  0.7377008199691772
+dpo loss :-  0.4118780493736267 nll loss :-  0.7544807195663452
+dpo loss :-  5.841655731201172 nll loss :-  0.7194759249687195
+dpo loss :-  0.183927983045578 nll loss :-  0.7421397566795349
+dpo loss :-  0.9973607659339905 nll loss :-  0.6845411658287048
+dpo loss :-  0.032741446048021317 nll loss :-  0.7520459294319153
+dpo loss :-  0.04653548821806908 nll loss :-  0.7054407596588135
+dpo loss :-  4.501628875732422 nll loss :-  0.7480524182319641
+dpo loss :-  0.13571225106716156 nll loss :-  0.8339192867279053
+dpo loss :-  0.01757894642651081 nll loss :-  0.9017055034637451
+dpo loss :-  1.0021414756774902 nll loss :-  0.8343575596809387
+dpo loss :-  0.012813215143978596 nll loss :-  0.7519354224205017
+dpo loss :-  0.21542921662330627 nll loss :-  0.7137009501457214
+dpo loss :-  0.9046778082847595 nll loss :-  0.7169641852378845
+dpo loss :-  0.13205693662166595 nll loss :-  0.7346816062927246
+dpo loss :-  0.7447435855865479 nll loss :-  0.7832561135292053
+dpo loss :-  0.12308067828416824 nll loss :-  0.7829462885856628
+dpo loss :-  5.797551155090332 nll loss :-  0.6927228569984436
+dpo loss :-  0.6257225275039673 nll loss :-  0.7558780908584595
+dpo loss :-  0.12145772576332092 nll loss :-  0.7057300209999084
+dpo loss :-  0.47138848900794983 nll loss :-  0.6955740451812744
+dpo loss :-  0.5777996778488159 nll loss :-  0.7061653733253479
+dpo loss :-  0.9739912152290344 nll loss :-  0.6948368549346924
+dpo loss :-  0.15185466408729553 nll loss :-  0.6927393674850464
+dpo loss :-  0.0004081327933818102 nll loss :-  0.68258136510849
+dpo loss :-  0.6196905970573425 nll loss :-  0.7898165583610535
+dpo loss :-  0.00018479261780157685 nll loss :-  0.680923581123352
+dpo loss :-  0.5965507626533508 nll loss :-  0.816529393196106
+dpo loss :-  0.0004023475630674511 nll loss :-  0.7575445771217346
+dpo loss :-  1.0407768487930298 nll loss :-  0.8270500302314758
+dpo loss :-  0.4644792675971985 nll loss :-  0.7695375680923462
+dpo loss :-  1.5555353164672852 nll loss :-  0.7757698893547058
+dpo loss :-  0.041665736585855484 nll loss :-  0.6569263339042664
+dpo loss :-  4.048492883157451e-06 nll loss :-  0.7474254965782166
+dpo loss :-  0.26612886786460876 nll loss :-  0.5959579348564148
+dpo loss :-  0.05879026651382446 nll loss :-  0.8202035427093506
+dpo loss :-  0.0006367056048475206 nll loss :-  0.7148496508598328
+dpo loss :-  0.6279427409172058 nll loss :-  0.7778347730636597
+dpo loss :-  0.30148395895957947 nll loss :-  0.7194821238517761
+Epoch [6/10], Train Loss: 0.8178828362452283
+TESTING
+Epoch [6/10], TEST Loss: 2.272056605236139
+TRAINING THE TRANSFORMER
+dpo loss :-  0.00865601934492588 nll loss :-  0.694197952747345
+dpo loss :-  4.278908729553223 nll loss :-  0.7965093851089478
+dpo loss :-  0.1710103303194046 nll loss :-  0.7762279510498047
+dpo loss :-  1.6564286947250366 nll loss :-  0.8564971685409546
+dpo loss :-  0.49234339594841003 nll loss :-  0.7305695414543152
+dpo loss :-  0.485472708940506 nll loss :-  0.6889026165008545
+dpo loss :-  0.2021617591381073 nll loss :-  0.7902194857597351
+dpo loss :-  0.15146200358867645 nll loss :-  0.7106786370277405
+dpo loss :-  0.000624254229478538 nll loss :-  0.6535161733627319
+dpo loss :-  1.1504008769989014 nll loss :-  0.6115157604217529
+dpo loss :-  1.6563663482666016 nll loss :-  0.623123288154602
+dpo loss :-  0.05665506795048714 nll loss :-  0.7418829798698425
+dpo loss :-  1.8264400959014893 nll loss :-  0.646753191947937
+dpo loss :-  0.21645067632198334 nll loss :-  0.6936919689178467
+dpo loss :-  0.2582535147666931 nll loss :-  0.7113040685653687
+dpo loss :-  0.1455734670162201 nll loss :-  0.7208377122879028
+dpo loss :-  0.27644604444503784 nll loss :-  0.675757884979248
+dpo loss :-  1.1403956413269043 nll loss :-  0.7514075040817261
+dpo loss :-  1.1373693943023682 nll loss :-  0.6828454732894897
+dpo loss :-  0.01805907115340233 nll loss :-  0.7162306904792786
+dpo loss :-  0.3553711175918579 nll loss :-  0.7034454345703125
+dpo loss :-  3.6376118659973145 nll loss :-  0.8089548349380493
+dpo loss :-  0.13557223975658417 nll loss :-  0.7706047892570496
+dpo loss :-  0.11858121305704117 nll loss :-  0.6929717659950256
+dpo loss :-  1.5585823059082031 nll loss :-  0.6822729110717773
+dpo loss :-  1.5732678174972534 nll loss :-  0.8432489633560181
+dpo loss :-  3.2510297298431396 nll loss :-  0.6697468161582947
+dpo loss :-  0.6228403449058533 nll loss :-  0.7385116815567017
+dpo loss :-  0.5596620440483093 nll loss :-  0.7998405694961548
+dpo loss :-  0.4194813370704651 nll loss :-  0.7372621893882751
+dpo loss :-  0.2868696451187134 nll loss :-  0.6576946377754211
+dpo loss :-  1.9838314056396484 nll loss :-  0.6049795150756836
+dpo loss :-  0.47347205877304077 nll loss :-  0.6855098605155945
+dpo loss :-  0.44986072182655334 nll loss :-  0.7221390604972839
+dpo loss :-  0.016252746805548668 nll loss :-  0.7700721025466919
+dpo loss :-  0.6074279546737671 nll loss :-  0.6020401120185852
+dpo loss :-  0.10200225561857224 nll loss :-  0.7727665901184082
+dpo loss :-  1.3631807565689087 nll loss :-  0.7521894574165344
+dpo loss :-  9.111141844186932e-05 nll loss :-  0.7181403636932373
+dpo loss :-  0.04903516545891762 nll loss :-  0.7765526175498962
+dpo loss :-  0.49721458554267883 nll loss :-  0.7032425999641418
+dpo loss :-  0.17265787720680237 nll loss :-  0.7669998407363892
+dpo loss :-  0.0011326315579935908 nll loss :-  0.8082841634750366
+dpo loss :-  0.27804625034332275 nll loss :-  0.6784026026725769
+dpo loss :-  0.052038148045539856 nll loss :-  0.7112927436828613
+dpo loss :-  0.0697684958577156 nll loss :-  0.7606865763664246
+dpo loss :-  9.570965353589145e-09 nll loss :-  0.6978121399879456
+Epoch [7/10], Train Loss: 0.7233145869884422
+TESTING
+Epoch [7/10], TEST Loss: 0.7469138435088098
+TRAINING THE TRANSFORMER
+dpo loss :-  1.0741008520126343 nll loss :-  0.7599204182624817
+dpo loss :-  1.9681369066238403 nll loss :-  0.8295596837997437
+dpo loss :-  5.488521992447204e-07 nll loss :-  0.8052679896354675
+dpo loss :-  0.15265710651874542 nll loss :-  0.7150684595108032
+dpo loss :-  0.3834328055381775 nll loss :-  0.7254265546798706
+dpo loss :-  0.48208847641944885 nll loss :-  0.746317982673645
+dpo loss :-  0.11235231906175613 nll loss :-  0.7433746457099915
+dpo loss :-  0.5716177225112915 nll loss :-  0.730703592300415
+dpo loss :-  0.579228937625885 nll loss :-  0.7232767343521118
+dpo loss :-  0.282705157995224 nll loss :-  0.8197304606437683
+dpo loss :-  0.3041440546512604 nll loss :-  0.7010562419891357
+dpo loss :-  0.5291023254394531 nll loss :-  0.7186799645423889
+dpo loss :-  0.5477416515350342 nll loss :-  0.7161388397216797
+dpo loss :-  0.500459611415863 nll loss :-  0.7370097041130066
+dpo loss :-  0.18905951082706451 nll loss :-  0.6461646556854248
+dpo loss :-  0.003449305659160018 nll loss :-  0.7260605692863464
+dpo loss :-  0.9558032751083374 nll loss :-  0.6188644766807556
+dpo loss :-  0.09091205894947052 nll loss :-  0.6616820096969604
+dpo loss :-  0.9717535972595215 nll loss :-  0.7123370170593262
+dpo loss :-  0.057050373405218124 nll loss :-  0.6913495063781738
+dpo loss :-  0.08041465282440186 nll loss :-  0.6771891117095947
+dpo loss :-  0.7195076942443848 nll loss :-  0.6824732422828674
+dpo loss :-  0.447704017162323 nll loss :-  0.8012440204620361
+dpo loss :-  0.38781073689460754 nll loss :-  0.7576960325241089
+dpo loss :-  0.719488263130188 nll loss :-  0.8163164258003235
+dpo loss :-  1.0250370502471924 nll loss :-  0.7405160069465637
+dpo loss :-  0.1204664409160614 nll loss :-  0.7701225876808167
+dpo loss :-  1.2154674530029297 nll loss :-  0.6499637961387634
+dpo loss :-  1.9679827690124512 nll loss :-  0.6589298248291016
+dpo loss :-  0.29573771357536316 nll loss :-  0.7385974526405334
+dpo loss :-  0.14731505513191223 nll loss :-  0.6303066611289978
+dpo loss :-  0.0003367699682712555 nll loss :-  0.8121050000190735
+dpo loss :-  2.043884038925171 nll loss :-  0.7406070828437805
+dpo loss :-  0.7859296202659607 nll loss :-  0.7529152631759644
+dpo loss :-  0.11146038770675659 nll loss :-  0.8034757375717163
+dpo loss :-  0.0008890739409253001 nll loss :-  0.6764954328536987
+dpo loss :-  0.00607682578265667 nll loss :-  0.717567503452301
+dpo loss :-  0.037218593060970306 nll loss :-  0.6946903467178345
+dpo loss :-  0.5792200565338135 nll loss :-  0.6904202699661255
+dpo loss :-  0.009138328023254871 nll loss :-  0.6573007106781006
+dpo loss :-  0.2626284956932068 nll loss :-  0.709147036075592
+dpo loss :-  1.2252942323684692 nll loss :-  0.7595934271812439
+dpo loss :-  0.41094693541526794 nll loss :-  0.7181025743484497
+dpo loss :-  0.46276116371154785 nll loss :-  0.7627028822898865
+dpo loss :-  0.10594697296619415 nll loss :-  0.7642546892166138
+dpo loss :-  0.240968257188797 nll loss :-  0.6605973243713379
+dpo loss :-  0.875947892665863 nll loss :-  0.7597993016242981
+Epoch [8/10], Train Loss: 0.5121916657093258
+TESTING
+Epoch [8/10], TEST Loss: 1.7470708098262548
+TRAINING THE TRANSFORMER
+dpo loss :-  0.07813999056816101 nll loss :-  0.7299712896347046
+dpo loss :-  0.48433494567871094 nll loss :-  0.7370589971542358
+dpo loss :-  8.57867780723609e-06 nll loss :-  0.7293176651000977
+dpo loss :-  1.2944376468658447 nll loss :-  0.7834981083869934
+dpo loss :-  0.0423915758728981 nll loss :-  0.7543415427207947
+dpo loss :-  0.28434330224990845 nll loss :-  0.7153666019439697
+dpo loss :-  0.27457717061042786 nll loss :-  0.6948751211166382
+dpo loss :-  0.0019303493900224566 nll loss :-  0.6617738008499146
+dpo loss :-  0.34981510043144226 nll loss :-  0.7099947929382324
+dpo loss :-  0.0358416810631752 nll loss :-  0.6709575057029724
+dpo loss :-  1.488881230354309 nll loss :-  0.6597387790679932
+dpo loss :-  0.6600375771522522 nll loss :-  0.6370838284492493
+dpo loss :-  0.15666702389717102 nll loss :-  0.7079853415489197
+dpo loss :-  0.02529916539788246 nll loss :-  0.7140621542930603
+dpo loss :-  0.27090781927108765 nll loss :-  0.7698742151260376
+dpo loss :-  0.05348014831542969 nll loss :-  0.7430142760276794
+dpo loss :-  0.6423649787902832 nll loss :-  0.7771801352500916
+dpo loss :-  3.003443717956543 nll loss :-  0.6619938015937805
+dpo loss :-  0.9779379963874817 nll loss :-  0.6405101418495178
+dpo loss :-  0.03133348375558853 nll loss :-  0.7402788996696472
+dpo loss :-  0.0346052385866642 nll loss :-  0.6354404091835022
+dpo loss :-  0.0013542685192078352 nll loss :-  0.7018142342567444
+dpo loss :-  0.5600718855857849 nll loss :-  0.5982992649078369
+dpo loss :-  0.6583606600761414 nll loss :-  0.8259647488594055
+dpo loss :-  1.242737054824829 nll loss :-  0.7974148392677307
+dpo loss :-  0.12442753463983536 nll loss :-  0.6538918614387512
+dpo loss :-  0.2526976764202118 nll loss :-  0.8738291263580322
+dpo loss :-  0.3556581437587738 nll loss :-  0.7026522755622864
+dpo loss :-  0.10059019923210144 nll loss :-  0.7770841121673584
+dpo loss :-  0.0210587028414011 nll loss :-  0.720422625541687
+dpo loss :-  0.09411323070526123 nll loss :-  0.7726835608482361
+dpo loss :-  2.96897554397583 nll loss :-  0.7077463865280151
+dpo loss :-  0.006330156233161688 nll loss :-  0.912128210067749
+dpo loss :-  0.05655122548341751 nll loss :-  0.7011573314666748
+dpo loss :-  0.6441865563392639 nll loss :-  0.7321125864982605
+dpo loss :-  0.4545038938522339 nll loss :-  0.6818248629570007
+dpo loss :-  0.2638242244720459 nll loss :-  0.6462522745132446
+dpo loss :-  3.212860107421875 nll loss :-  0.6870395541191101
+dpo loss :-  0.0002897783706430346 nll loss :-  0.7206554412841797
+dpo loss :-  0.2657448947429657 nll loss :-  0.8347510099411011
+dpo loss :-  0.6313849091529846 nll loss :-  0.6194631457328796
+dpo loss :-  2.9142067432403564 nll loss :-  0.7128186821937561
+dpo loss :-  0.2737431526184082 nll loss :-  0.8295104503631592
+dpo loss :-  0.23270964622497559 nll loss :-  0.7764379978179932
+dpo loss :-  0.06790143996477127 nll loss :-  0.7006620764732361
+dpo loss :-  0.012264023534953594 nll loss :-  0.6481268405914307
+dpo loss :-  0.2614322602748871 nll loss :-  0.675304651260376
+Epoch [9/10], Train Loss: 0.5510672345990315
+TESTING
+Epoch [9/10], TEST Loss: 0.8422729194164276
+TRAINING THE TRANSFORMER
+dpo loss :-  0.688017725944519 nll loss :-  0.7515234351158142
+dpo loss :-  4.7449788098674617e-07 nll loss :-  0.7782214879989624
+dpo loss :-  0.7286125421524048 nll loss :-  0.8019828796386719
+dpo loss :-  0.8224807977676392 nll loss :-  0.7983011603355408
+dpo loss :-  0.45162907242774963 nll loss :-  0.78408282995224
+dpo loss :-  0.29248130321502686 nll loss :-  0.7611879110336304
+dpo loss :-  4.707698826678097e-05 nll loss :-  0.7777756452560425
+dpo loss :-  0.2715621292591095 nll loss :-  0.6854661107063293
+dpo loss :-  0.26501524448394775 nll loss :-  0.6471734642982483
+dpo loss :-  0.01176835224032402 nll loss :-  0.6374085545539856
+dpo loss :-  0.006906827911734581 nll loss :-  0.6287075281143188
+dpo loss :-  0.00042523175943642855 nll loss :-  0.7083909511566162
+dpo loss :-  0.4600242078304291 nll loss :-  0.6312457919120789
+dpo loss :-  0.00484851561486721 nll loss :-  0.877975344657898
+dpo loss :-  0.2455037236213684 nll loss :-  0.6594109535217285
+dpo loss :-  0.5949099659919739 nll loss :-  0.8095232248306274
+dpo loss :-  0.5732488036155701 nll loss :-  0.8107813596725464
+dpo loss :-  0.2994678020477295 nll loss :-  0.6609700322151184
+dpo loss :-  0.18601468205451965 nll loss :-  0.7892683744430542
+dpo loss :-  0.036541495472192764 nll loss :-  0.8440945744514465
+dpo loss :-  1.1845790147781372 nll loss :-  0.7179040908813477
+dpo loss :-  0.5966313481330872 nll loss :-  0.7210013270378113
+dpo loss :-  0.06383782625198364 nll loss :-  0.7364006042480469
+dpo loss :-  0.14222708344459534 nll loss :-  0.710853099822998
+dpo loss :-  0.2848667800426483 nll loss :-  0.7163827419281006
+dpo loss :-  0.004323700442910194 nll loss :-  0.7451280355453491
+dpo loss :-  1.6307556629180908 nll loss :-  0.6281473636627197
+dpo loss :-  2.3206539154052734 nll loss :-  0.6528998017311096
+dpo loss :-  0.3832628130912781 nll loss :-  0.835452675819397
+dpo loss :-  0.061961088329553604 nll loss :-  0.7820220589637756
+dpo loss :-  0.09322404116392136 nll loss :-  0.6748589873313904
+dpo loss :-  1.983752965927124 nll loss :-  0.6861211657524109
+dpo loss :-  0.5899540781974792 nll loss :-  0.6123247146606445
+dpo loss :-  0.007461790461093187 nll loss :-  0.9318546056747437
+dpo loss :-  0.00014790476416237652 nll loss :-  0.6782801151275635
+dpo loss :-  0.5501362085342407 nll loss :-  0.653235912322998
+dpo loss :-  1.258472204208374 nll loss :-  0.6088821887969971
+dpo loss :-  0.16765543818473816 nll loss :-  0.7589519619941711
+dpo loss :-  0.4936865568161011 nll loss :-  0.8086281418800354
+dpo loss :-  1.123901938626659e-06 nll loss :-  0.5895180702209473
+dpo loss :-  2.104069232940674 nll loss :-  0.8239551782608032
+dpo loss :-  0.005731103476136923 nll loss :-  0.72633957862854
+dpo loss :-  0.5178274512290955 nll loss :-  0.6793270111083984
+dpo loss :-  0.32915210723876953 nll loss :-  0.689315915107727
+dpo loss :-  0.21297471225261688 nll loss :-  0.8130242228507996
+dpo loss :-  0.10273347795009613 nll loss :-  0.6889289617538452
+dpo loss :-  0.26661133766174316 nll loss :-  0.7804132103919983
+Epoch [10/10], Train Loss: 0.4537868022539732
+TESTING
+Epoch [10/10], TEST Loss: 0.44056078770663587
+Cycle 4/4
+Length of seed expression array :- 73
+num_cores  128
+Total seed expressions: 73, Valid expressions used: 41
+gen	nevals	avg   	std        	min   	max        
+0  	0     	139658	1.09398e+06	66.377	1.09152e+07
+1  	53    	9339.31	32217.4    	66.377	183970     
+2  	58    	29184.4	255991     	66.377	2.57176e+06
+3  	53    	9.30493e+81	9.25828e+82	66.377	9.30493e+83
+4  	63    	160290     	939383     	66.0974	8.74085e+06
+5  	71    	2.49502e+06	2.41167e+07	66.0974	2.4242e+08 
+6  	57    	67912.5    	405093     	65.6088	3.68414e+06
+7  	46    	270519     	1.71232e+06	8.31412e-13	1.66803e+07
+8  	62    	481377     	3.29898e+06	8.31412e-13	2.70278e+07
+9  	62    	198448     	1.49663e+06	8.31412e-13	1.39254e+07
+10 	68    	229839     	2.27575e+06	8.31412e-13	2.28732e+07
+11 	60    	70290.3    	500151     	8.31412e-13	4.26989e+06
+12 	73    	20572.4    	125575     	8.31412e-13	968514     
+13 	54    	47788      	463866     	8.31412e-13	4.66281e+06
+14 	64    	115569     	1.12959e+06	8.31412e-13	1.13544e+07
+15 	56    	19754.4    	167726     	8.31412e-13	1.67208e+06
+Best individual: mul(mul(mul(-1, protected_div(s_2, s_4)), s_1), s_3)
+Fitness: (8.314121567130249e-13,)
+R2_score: 1.0
+for 0th and 3th cycle best :-  mul(mul(mul(-1, protected_div(s_2, s_4)), s_1), s_3)
+GENERATING PREFERENCE PAIRS
+96
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 40
+gen	nevals	avg        	std       	min     	max        
+0  	0     	8.82554e+81	8.7813e+82	0.597612	8.82554e+83
+1  	54    	1.76511e+82	1.23558e+83	0.552335	8.82554e+83
+2  	54    	2079.63    	12787.5    	0.455456	98298.4    
+3  	59    	4.954e+11  	4.92917e+12	0.455456	4.954e+13  
+4  	56    	4.954e+11  	4.92917e+12	0.534429	4.954e+13  
+5  	67    	inf        	nan        	0.432592	inf        
+6  	54    	4.95402e+11	4.92917e+12	0.432592	4.954e+13  
+7  	61    	1289.83    	8133       	0.44813 	68504.5    
+8  	62    	1201.93    	8066.59    	0.44813 	68504.5    
+9  	61    	7.70433e+81	7.66572e+82	0.307671	7.70433e+83
+10 	65    	55356.8    	547436     	0.307671	5.50224e+06
+11 	48    	1055.81    	9051.86    	0.307671	89850.9    
+12 	63    	1.3492e+28 	1.34244e+29	0.307671	1.3492e+30 
+13 	51    	15787.2    	130963     	0.363011	1.30362e+06
+14 	60    	5801.44    	52955.4    	0.367862	532014     
+15 	51    	8.31358e+140	8.27191e+141	0.367862	8.31358e+142
+Best individual: protected_div(s_2, protected_pow(add(protected_log(1), s_4), 3))
+Fitness: (0.3076707768094925,)
+R2_score: 0.9999716255477408
+for 1th and 3th cycle best :-  protected_div(s_2, protected_pow(add(protected_log(1), s_4), 3))
+GENERATING PREFERENCE PAIRS
+185
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 40
+gen	nevals	avg        	std        	min     	max        
+0  	0     	8.32023e+81	8.27853e+82	0.741995	8.32023e+83
+1  	65    	4.93631e+187	inf        	0.72517 	4.93631e+189
+2  	59    	5.31349e+144	5.28686e+145	0.72517 	5.31349e+146
+3  	62    	5171.16     	24445.5     	0.719497	149198      
+4  	54    	9.99999e+11 	9.94987e+12 	0.645918	9.99999e+13 
+5  	63    	3.55011e+07 	3.53206e+08 	0.565468	3.54986e+09 
+6  	58    	4.50221e+09 	4.47964e+10 	0.565468	4.50221e+11 
+7  	50    	5.0365e+11  	5.01125e+12 	0.565468	5.0365e+13  
+8  	55    	1.01626e+80 	1.01116e+81 	0.417325	1.01626e+82 
+9  	75    	165126      	1.64145e+06 	0.417325	1.64973e+07 
+10 	65    	40.6451     	264.586     	0.0900869	2576.29     
+11 	69    	4.647e+11   	4.6237e+12  	0.0900869	4.647e+13   
+12 	52    	747536      	4.72036e+06 	0.0900869	4.171e+07   
+13 	49    	1654.2      	15954       	0.0900869	160351      
+14 	58    	9.99999e+11 	9.94986e+12 	0.0900869	9.99999e+13 
+15 	63    	4305.79     	38617.1     	0.0900869	386830      
+Best individual: abs(protected_sqrt(mul(s_3, s_4)))
+Fitness: (0.09008694405074229,)
+R2_score: 0.9999937389352291
+for 2th and 3th cycle best :-  abs(protected_sqrt(mul(s_3, s_4)))
+GENERATING PREFERENCE PAIRS
+178
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 4
+gen	nevals	avg	std	min      	max
+0  	0     	inf	nan	0.0298994	inf
+1  	57    	1006.29	9014.38	0.0298994	90355.3
+2  	66    	0.645321	1.7889 	0.0298994	10.7386
+3  	68    	25.7016 	252.992	0.0298994	2542.94
+4  	62    	1.50813 	9.61177	0.0298994	95.1505
+5  	58    	77158.4 	767589 	0.0298994	7.71457e+06
+6  	57    	975.531 	8997.19	0.0298994	90355.3    
+7  	49    	6.92381e+13	6.88911e+14	0.0298994	6.92381e+15
+8  	64    	65.6372    	608.663    	0.00464546	6109.59    
+9  	69    	469.708    	3815.43    	0.00464546	37898.1    
+10 	61    	270.152    	2123.95    	0.00464546	20478.1    
+11 	59    	19.5669    	149.193    	0.00464546	1451.08    
+12 	64    	32.9366    	268.571    	0.00464546	2655.38    
+13 	53    	1001.98    	9956.48    	0.00747326	100068     
+14 	59    	8.43464    	72.2332    	0.00747326	720.315    
+15 	67    	3.30687    	17.1514    	0.023982  	126.231    
+Best individual: protected_div(protected_div(s_1, pi), s_2)
+Fitness: (0.004645455235789499,)
+R2_score: 0.9999949044143956
+for 3th and 3th cycle best :-  protected_div(protected_div(s_1, pi), s_2)
+GENERATING PREFERENCE PAIRS
+191
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 67
+gen	nevals	avg        	std        	min   	max        
+0  	0     	2.13189e+14	1.49214e+15	310.51	1.06581e+16
+1  	51    	inf        	nan        	310.51	inf        
+2  	62    	inf        	nan        	310.51	inf        
+3  	64    	4.37939e+133	4.35744e+134	310.51	4.37939e+135
+4  	53    	1.99903e+202	inf         	371.84	1.99903e+204
+5  	70    	inf         	nan         	366.729	inf         
+6  	66    	inf         	nan         	403.772	inf         
+7  	53    	1.06702e+72 	1.06167e+73 	388.328	1.06702e+74 
+8  	65    	61418.6     	366375      	392.941	3.23854e+06 
+9  	54    	1.58299e+202	inf         	378.038	1.58299e+204
+10 	70    	4.0594e+82  	4.03905e+83 	346.656	4.0594e+84  
+11 	62    	2.02069e+22 	1.97795e+23 	386.681	1.98797e+24 
+12 	53    	3.43053e+12 	3.41334e+13 	386.681	3.43053e+14 
+13 	54    	128456      	1.00694e+06 	386.681	1.0001e+07  
+14 	66    	5.54661e+83 	5.48284e+84 	326.305	5.51071e+85 
+15 	79    	935147      	8.19756e+06 	356.452	8.20477e+07 
+Best individual: protected_div(sub(s_4, s_5), cos(2))
+Fitness: (310.5103857299012,)
+R2_score: 0.9999633977068138
+for 4th and 3th cycle best :-  protected_div(sub(s_4, s_5), cos(2))
+GENERATING PREFERENCE PAIRS
+95
+Length of seed expression array :- 74
+num_cores  128
+Total seed expressions: 74, Valid expressions used: 66
+gen	nevals	avg        	std       	min    	max        
+0  	0     	1.03399e+13	1.0288e+14	653.671	1.03399e+15
+1  	69    	1.16733e+84	1.16148e+85	653.671	1.16733e+86
+2  	61    	1.07927e+14	1.07217e+15	653.671	1.07758e+16
+3  	57    	1.05356e+13	1.03146e+14	477.99 	1.03669e+15
+4  	64    	3.93584e+12	3.91611e+13	672.811	3.93584e+14
+5  	63    	1.52807e+08	1.42453e+09	653.584	1.43035e+10
+6  	47    	8.36206e+06	8.0091e+07 	596.223	8.04765e+08
+7  	45    	5.64709e+30	5.61879e+31	596.223	5.64709e+32
+8  	53    	735416     	6.04887e+06	596.223	6.04718e+07
+9  	65    	1.00499e+65	9.99955e+65	470.241	1.00499e+67
+10 	56    	1.14031e+06	8.22724e+06	571.506	7.86019e+07
+11 	60    	3.51028e+77	3.49268e+78	472.544	3.51028e+79
+12 	59    	4.04314e+78	4.02287e+79	472.544	4.04314e+80
+13 	59    	1.66431e+06	1.15655e+07	472.544	1.13985e+08
+14 	65    	1.68283e+10	1.67437e+11	470.241	1.6828e+12 
+15 	52    	inf        	nan        	470.241	inf        
+Best individual: mul(mul(s_1, s_2), protected_div(pi, s_5))
+Fitness: (470.2406058550145,)
+R2_score: 0.9999656138382546
+for 5th and 3th cycle best :-  mul(mul(s_1, s_2), protected_div(pi, s_5))
+GENERATING PREFERENCE PAIRS
+0
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 2
+gen	nevals	avg    	std   	min     	max        
+0  	0     	88438.6	820844	0.323199	8.25089e+06
+1  	61    	inf    	nan   	0.323199	inf        
+2  	67    	198.706	1688.88	0.323199	16793.2    
+3  	57    	1e+12  	9.94987e+12	0.323199	1e+14      
+4  	62    	10320.2	101015     	0.327803	1.01536e+06
+5  	52    	4.588e+11	4.565e+12  	0.327803	4.588e+13  
+6  	62    	316.116  	3086.17    	0.294978	31022      
+7  	54    	557.448  	5263.45    	0.294978	52861.6    
+8  	60    	46532.4  	462589     	0.245435	4.64924e+06
+9  	66    	4.6545e+11	4.63117e+12	0.245435	4.6545e+13 
+10 	46    	99890.8   	993870     	0.245435	9.98877e+06
+11 	70    	7.848e+11 	7.80866e+12	0.245435	7.848e+13  
+12 	57    	4159.67   	41075      	0.245435	412841     
+13 	48    	5.84915e+81	5.81983e+82	0.245435	5.84915e+83
+14 	41    	1.23227    	2.90796    	0.245435	23.2662    
+15 	57    	208.48     	1710.74    	0.178309	16793.2    
+Best individual: protected_sqrt(protected_div(add(add(add(protected_log(2), protected_sqrt(add(cos(protected_sqrt(sub(3, s_1))), protected_exp(s_1)))), 3), protected_div(s_1, pi)), s_3))
+Fitness: (0.17830914633640263,)
+R2_score: 0.9999803017636486
+for 6th and 3th cycle best :-  protected_sqrt(protected_div(add(add(add(protected_log(2), protected_sqrt(add(cos(protected_sqrt(sub(3, s_1))), protected_exp(s_1)))), 3), protected_div(s_1, pi)), s_3))
+GENERATING PREFERENCE PAIRS
+192
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 2
+gen	nevals	avg	std	min      	max
+0  	0     	inf	nan	0.0633304	inf
+1  	69    	178649	1.76123e+06	0.0633304	1.77024e+07
+2  	56    	24451.6	221588     	0.0621932	2.22721e+06
+3  	55    	2.97834e+16	2.96341e+17	0.0603241	2.97834e+18
+4  	59    	26015.7    	180080     	0.0540522	1.4002e+06 
+5  	59    	6280.64    	59796.9    	0.0433618	600981     
+6  	52    	2.64892e+08	2.63562e+09	0.0433618	2.6489e+10 
+7  	47    	49.8787    	326.33     	0.0574479	2451.38    
+8  	53    	60.4604    	491.859    	0.0485601	4895.41    
+9  	65    	7.48168e+60	7.44418e+61	0.0338624	7.48168e+62
+10 	64    	3.21705e+23	3.20092e+24	0.0291168	3.21705e+25
+11 	57    	97.3034    	808.36     	0.0338624	8030.49    
+12 	52    	106.347    	544.576    	0.0338624	4278.98    
+13 	59    	30.2271    	174.738    	0.0338624	1570.42    
+14 	75    	38.5358    	188.806    	0.0275639	1684.78    
+15 	49    	2086.07    	20107.5    	0.0275639	202086     
+Best individual: protected_div(protected_log(s_1), s_2)
+Fitness: (0.027563932671449205,)
+R2_score: 0.99997783247972
+for 7th and 3th cycle best :-  protected_div(protected_log(s_1), s_2)
+GENERATING PREFERENCE PAIRS
+182
+Length of seed expression array :- 75
+num_cores  128
+Total seed expressions: 75, Valid expressions used: 50
+gen	nevals	avg        	std        	min      	max        
+0  	0     	1.18803e+15	1.18208e+16	0.0408348	1.18803e+17
+1  	54    	5109.81    	45350.8    	0.0408348	454490     
+2  	64    	48395.9    	378715     	0.0408348	3.65576e+06
+3  	50    	9945.82    	82802      	0.0408348	825515     
+4  	64    	1.10115e+06	1.08854e+07	0.0408348	1.09408e+08
+5  	51    	205098     	1.53109e+06	0.0408348	1.49043e+07
+6  	47    	307144     	2.72964e+06	0.0408348	2.72511e+07
+7  	60    	272817     	2.71142e+06	0.0408348	2.72511e+07
+8  	54    	1.9476e+15 	1.93784e+16	0.0408348	1.9476e+17 
+9  	61    	2.65064e+45	2.63735e+46	0.0408348	2.65064e+47
+10 	52    	12303.5    	111940     	0.0408348	1.1214e+06 
+11 	65    	13778.6    	112338     	0.0408348	1.1214e+06 
+12 	67    	1.13648e+65	1.13079e+66	0.0408348	1.13648e+67
+13 	56    	15.6264    	90.5405    	0.00898331	731.99     
+14 	56    	54760      	544831     	0.00898331	5.47576e+06
+15 	69    	10848.3    	82503.1    	0.00898331	771202     
+Best individual: mul(mul(mul(s_1, tan(s_2)), s_4), s_3)
+Fitness: (0.008983314680366892,)
+R2_score: 0.9999990773979186
+for 8th and 3th cycle best :-  mul(mul(mul(s_1, tan(s_2)), s_4), s_3)
+GENERATING PREFERENCE PAIRS
+180
